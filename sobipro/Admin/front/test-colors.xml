@@ -1,0 +1,368 @@
+<div class="card-body">
+	<p class="card-title">
+		<text value="Test colours!"/>
+	</p>
+	<div class="alert alert-outline-alpha">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-alpha)."/>
+		</span>
+	</div>
+	<div class="alert alert-alpha">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (alpha)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-beta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-beta)."/>
+		</span>
+	</div>
+	<div class="alert alert-beta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (beta)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-gamma">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-gamma)."/>
+		</span>
+	</div>
+	<div class="alert alert-gamma">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (gamma)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-delta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-delta)."/>
+		</span>
+	</div>
+	<div class="alert alert-delta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (delta)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-secondary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-secondary)."/>
+		</span>
+	</div>
+	<div class="alert alert-secondary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (secondary)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-primary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-primary)."/>
+		</span>
+	</div>
+	<div class="alert alert-primary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (primary)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-success">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-success)."/>
+		</span>
+	</div>
+	<div class="alert alert-success">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (success)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-danger">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-danger)."/>
+		</span>
+	</div>
+	<div class="alert alert-danger">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (danger)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-warning">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-warning)."/>
+		</span>
+	</div>
+	<div class="alert alert-warning">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (warning)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-info">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-info)."/>
+		</span>
+	</div>
+	<div class="alert alert-info">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (info)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-light">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-light)."/>
+		</span>
+	</div>
+	<div class="alert alert-light">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (light)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-dark">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-dark)."/>
+		</span>
+	</div>
+	<div class="alert alert-dark">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (dark)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-sobi-blue">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-sobi-blue)."/>
+		</span>
+	</div>
+	<div class="alert alert-sobi-blue">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (sobi-blue)."/>
+		</span>
+	</div>
+
+	<div class="alert alert-outline-sobi-red">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-sobi-red)."/>
+		</span>
+	</div>
+	<div class="alert alert-sobi-red">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (sobi-red)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-alpha">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-alpha)."/>
+		</span>
+	</div>
+	<div class="notice notice-alpha">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (alpha)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-beta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-beta)."/>
+		</span>
+	</div>
+	<div class="notice notice-beta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (beta)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-gamma">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-gamma)."/>
+		</span>
+	</div>
+	<div class="notice notice-gamma">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (gamma)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-delta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-delta)."/>
+		</span>
+	</div>
+	<div class="notice notice-delta">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (delta)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-secondary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-secondary)."/>
+		</span>
+	</div>
+	<div class="notice notice-secondary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (secondary)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-primary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-primary)."/>
+		</span>
+	</div>
+	<div class="notice notice-primary">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (primary)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-success">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-success)."/>
+		</span>
+	</div>
+	<div class="notice notice-success">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (success)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-danger">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-danger)."/>
+		</span>
+	</div>
+	<div class="notice notice-danger">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (danger)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-warning">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-warning)."/>
+		</span>
+	</div>
+	<div class="notice notice-warning">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (warning)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-info">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-info)."/>
+		</span>
+	</div>
+	<div class="notice notice-info">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (info)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-light">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-light)."/>
+		</span>
+	</div>
+	<div class="notice notice-light">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (light)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-dark">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-dark)."/>
+		</span>
+	</div>
+	<div class="notice notice-dark">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (dark)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-sobi-blue">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-sobi-blue)."/>
+		</span>
+	</div>
+	<div class="notice notice-sobi-blue">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (sobi-blue)."/>
+		</span>
+	</div>
+
+	<div class="notice notice-outline-sobi-red">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (outline-sobi-red)."/>
+		</span>
+	</div>
+	<div class="notice notice-sobi-red">
+		<div class="fas fa-hand-point-down" aria-hidden="true"></div>
+		<span>
+			<text value="SobiPro Test Message (sobi-red)."/>
+		</span>
+	</div>
+</div>

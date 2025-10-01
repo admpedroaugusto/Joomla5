@@ -1,0 +1,537 @@
+// @package Default Template V8 for SobiPro multi-directory component with content construction support
+
+// @author
+// Authors: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+// Url: https://www.Sigsiu.NET
+
+// @copyright Copyright (C) 2006–2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+// @license GNU/GPL Version 3
+// This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation, and under the additional terms according to section 7 of GPL v3.
+// See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// Helper file for Bootstrap 5 styles
+
+.SobiPro {
+	&.popover {
+		border-radius: @corner-radius-small;
+
+		.popover-header {
+			border-top-left-radius: @corner-radius-small;
+			border-top-right-radius: @corner-radius-small;
+		}
+	}
+}
+
+.SobiPro.default8 {
+
+	// Radius setting
+	// -----------------------------------------
+	.card {
+		border-radius: @corner-radius;
+	}
+
+	// Payment popup/list
+	// ----------------------------------------
+	.sp-payment {
+		td {
+			line-height: .85rem;
+		}
+	}
+
+	// Sigsiu Tree
+	// ----------------------------------------
+	.sp-field-category {
+		.spctrl-sigsiutree-container {
+			width: unset;
+		}
+	}
+
+	// Menu toggle button
+	// ----------------------------------------
+	.sp-topmenu .navbar-toggler {
+		margin: .5rem;
+	}
+
+	.navbar > .container-fluid {
+		justify-content: end;
+	}
+
+	// Entry form
+	// ----------------------------------------
+	.sp-entry-edit {
+		.form-text.right {
+			margin-top: 0;
+			@media (max-width: 575.98px) {
+				margin-top: 0.25rem;
+			}
+		}
+
+		// Validation
+		.form-control.is-valid {
+			border-color: @success-color;
+		}
+
+		.form-control.is-invalid {
+			border-color: @error-color;
+		}
+
+		.invalid-feedback,
+		.form-check-input.is-invalid ~ .form-check-label {
+			color: @error-color;
+		}
+
+		.form-floating > label {
+			color: @gray-600;
+		}
+
+		.badge.suffix {
+			margin-top: .625rem;
+		}
+
+		.spctrl-field-image-upload.required input {
+			border: .0625rem solid @delta-color;
+		}
+
+		.sp-paybox .form-check-input:checked {
+			border-color: @gamma-color;
+			background-color: @gamma-color;
+			color: @gamma-text-color
+		}
+	}
+
+	// Search and Entry form
+	// ----------------------------------------
+	.sp-entry-edit,
+	.sp-search-form {
+		.form-check-input:checked {
+			color: @delta-text-color;
+			border-color: @delta-color;
+			background-color: @delta-color;
+		}
+
+		.form-floating label {
+			font-weight: normal !important;
+		}
+
+		// Bug in Bootstrap 5 (inline-block will be overwritten with block)
+		.form-check-inline {
+			display: inline-block;
+		}
+
+		&.twocolumns.col-form-label {
+			padding-bottom: 0;
+		}
+
+		.sp-field-url,
+		.sp-field-button {
+			select {
+				flex: 0 1 auto;
+				width: unset;
+			}
+		}
+	}
+
+	.input-group-text {
+		font-size: @font-size;
+		border-radius: @corner-radius;
+	}
+
+	// Search form
+	// ----------------------------------------
+	.sp-search-form {
+		.sp-search-top {
+			input {
+				width: 100%;
+			}
+
+			@media (max-width: 767.98px) {
+				input {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	// Pagination
+	// -----------------------------------------------
+	.pagination {
+		.spctrl-pagination-input.page-link {
+			padding: 0;
+
+			&.open {
+				padding: .175rem 0;
+			}
+
+			cursor: pointer;
+
+			span.sp-navdots {
+				padding: .375rem .75rem;
+				display: inline-block;
+			}
+
+			input[type="number"] {
+				height: 1.625rem;
+				margin: 0;
+				padding: 0 .375rem 0 0;
+				color: @text-color;
+				width: 5.8rem;
+				font-size: calc(@font-size - .1rem);
+			}
+		}
+
+		&.pagination-round {
+			.page-item {
+				.spctrl-pagination-input.page-link {
+					border: 0;
+					background-color: transparent;
+					color: @text-color;
+
+					&.open {
+						width: unset;
+					}
+
+					span.sp-navdots {
+						padding: unset;
+					}
+				}
+			}
+		}
+
+		&.pagination-sm {
+			.spctrl-pagination-input.page-link {
+				padding: 0;
+
+				&.open {
+					padding: 0;
+				}
+
+				span.sp-navdots {
+					padding: .25rem .5rem;
+				}
+
+				input[type="number"] {
+					height: 1.375rem;
+					margin: .0875rem 0;
+					font-size: calc(@font-size - .2rem);
+				}
+			}
+
+			&.pagination-round {
+				.spctrl-pagination-input.page-link {
+					padding: 0.1rem 0;
+
+					input[type="number"] {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		&.pagination-lg {
+			.spctrl-pagination-input.page-link {
+				span.sp-navdots {
+					padding: .25rem .75rem;
+				}
+
+				input[type="number"] {
+					height: 1.625rem;
+					margin: .0875rem 0;
+					font-size: calc(@font-size - .2rem);
+				}
+			}
+
+			&.pagination-round {
+				.spctrl-pagination-input.page-link {
+					input[type="number"] {
+						height: 2.2rem;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Popover Settings
+	// ----------------------------------------
+	.popover {
+		font-size: calc(@font-size - .0625rem);
+		border-radius: @corner-radius-small;
+
+		h3 {
+			font-size: calc(@font-size + .0625rem);
+		}
+
+		.popover-header {
+			border-top-left-radius: @corner-radius-small;
+			border-top-right-radius: @corner-radius-small;
+		}
+
+		.popover-body {
+			color: @text-color;
+
+			img {
+				padding: .25rem;
+				background-color: @white;
+				border: .0625rem solid rgba(0, 0, 0, 0.2);
+				box-shadow: 0 .0625rem .1875rem rgba(0, 0, 0, 0.1);
+				margin: 0 .315rem .315rem 0;
+				border-radius: @corner-radius-small;
+			}
+
+		}
+	}
+
+	// Tooltip Settings
+	// -----------------------------------------------
+	.tooltip {
+		.tooltip-inner {
+			background-color: @alpha-color;
+			color: @alpha-text-color;
+		}
+
+		&.bs-tooltip-top .tooltip-arrow {
+			border-top-color: @alpha-color;
+		}
+
+		&.bs-tooltip-bottom .tooltip-arrow {
+			border-bottom-color: @alpha-color;
+		}
+
+		&.bs-tooltip-left .tooltip-arrow {
+			border-left-color: @alpha-color;
+		}
+
+		&.bs-tooltip-right .tooltip-arrow {
+			border-right-color: @alpha-color;
+		}
+	}
+
+	// Dropdowns
+	// -----------------------------------------------
+	.dropdown-item {
+		color: @text-color;
+
+		&.active,
+		&:active,
+			//&:hover,
+		&:focus {
+			color: @beta-text-color;
+			background-color: @beta-color;
+		}
+	}
+
+	.dropdown-menu::after {
+		top: -1.4rem;
+	}
+
+	// Tabs / Pills / Staples
+	// ----------------------------------------
+	.nav-tabs.sp-navtabs,
+	.nav-pills.sp-navtabs {
+		background-color: transparent;
+		border: 0;
+		box-shadow: none;
+
+		.nav-link {
+			color: @link-color;
+			text-decoration: none;
+			box-shadow: none;
+			padding: 0.75em 1em;
+
+			&.active {
+				color: @text-color;
+
+				&::after {
+					position: relative;
+				}
+			}
+		}
+	}
+
+	// correct what Joomla's Cassiopaia template is doing
+	.nav-tabs.sp-navtabs + .tab-content {
+		border: 0;
+		box-shadow: none;
+	}
+
+	.nav.nav-tabs.sp-navtabs {
+		//.nav-item {
+		//	margin: 0;
+		//}
+
+		.nav-item:first-of-type .nav-link.active {
+			box-shadow: none;
+			border-top-left-radius: @corner-radius;
+			border-top-right-radius: @corner-radius;
+		}
+	}
+
+	// Carousel Slider Settings
+	// -----------------------------------------------
+	.carousel {
+		background-color: transparent;
+		border-radius: @carousel-image-radius;
+
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+
+		@media (max-width: 991.98px) {
+			width: 100%;
+		}
+
+		.carousel-inner {
+			.carousel-caption {
+				background-color: transparent;
+				color: @carousel-caption-color;
+				font-weight: 600;
+			}
+
+			img.sp-carousel-image {
+				margin-left: auto;
+				margin-right: auto;
+				height: auto;
+				border-radius: @carousel-image-radius;
+
+				// Small devices (landscape phones, less than 768px)
+				@media (min-width: 768px) {
+					height: @carousel-image;
+				}
+			}
+		}
+
+		.carousel-indicators {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+
+			.sp-carousel-target {
+				background-color: @carousel-indicator-color;
+			}
+		}
+
+		.carousel-control-prev,
+		.carousel-control-next {
+			font-size: 2em;
+			color: @carousel-control-color;
+
+			@media (max-width: 991.98px) {
+				width: 10%;
+			}
+		}
+	}
+
+	// Alerts
+	// -----------------------------------------------
+	//.alert-dismissible .btn-close {
+	//	padding: 1rem;
+	//}
+
+	// Alphalist, Orderingslist
+	// ----------------------------------------
+	.pagination ul.sp-alpha {
+		.page-link,
+		li {
+			line-height: 1.5;
+			margin-right: inherit;
+
+			a, span {
+				display: inline-block;
+			}
+		}
+	}
+
+	.sp-alpha-list {
+		.dropdown-item {
+			color: @text-color;
+
+			&.active,
+			&:active,
+				//&:hover,
+			&:focus {
+				color: @delta-text-color;
+				background-color: @delta-color;
+				background-image: none;
+			}
+		}
+	}
+
+	// Tables
+	// ----------------------------------------
+	.table > :not(:first-child) {
+		border-top: 1px solid screen(@text-color, @object-colour-11);
+	}
+
+	.table > :first-child {
+		border-top: 0;
+	}
+
+	.table > :not(:last-child) > :last-child > * {
+		border-bottom-color: screen(@text-color, @object-colour-11);
+	}
+
+	.table-dark,
+	.thead-dark {
+		> :not(caption) {
+			color: @text-color-opposite;
+			background-color: @text-color;
+		}
+	}
+
+	// autoComplete script
+	// ----------------------------------------
+	.sp-autocomplete-suggest {
+		.dropdown-item,
+		.list-group-item {
+			&.active {
+				z-index: 2;
+				color: @alpha-text-color;
+				background-color: @alpha-color;
+				border-color: @alpha-color;
+				cursor: pointer;
+
+				mark.sp-highlight {
+					color: @alpha-text-color;
+				}
+			}
+
+			&:hover {
+				mark.sp-highlight {
+					color: @alpha-text-color;
+				}
+			}
+
+			mark.sp-highlight {
+				padding: 0 1px 0 1px;
+				font-weight: bolder;
+				background-color: unset;
+				color: @text-color;
+			}
+		}
+	}
+
+	.btn {
+		align-self: normal;
+	}
+
+	// Joomla 3 sets this to 0. Used for top menu.
+	// ----------------------------------------
+	.collapse {
+		height: unset;
+	}
+
+	// Styles BS does no longer define, but we still use
+	// ----------------------------------------
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	.pull-right {
+		float: right !important;
+	}
+}

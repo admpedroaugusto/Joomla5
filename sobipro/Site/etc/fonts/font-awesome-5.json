@@ -1,0 +1,6425 @@
+[
+  {
+    "element": "span",
+    "class": "fas fa-yin-yang"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-yen-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-x-ray"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wrench"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-won-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wine-glass-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wine-glass"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wine-bottle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-window-restore"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-window-minimize"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-window-maximize"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-window-close"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wind"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wifi"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wheelchair"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-weight-hanging"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-weight"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wave-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-water"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-warehouse"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-wallet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-walking"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vr-cardboard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vote-yea"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-volume-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-volume-off"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-volume-mute"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-volume-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-volleyball-ball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-voicemail"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-viruses"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-virus-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-virus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vihara"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-video-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-video"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vials"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vial"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vest-patches"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vest"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-venus-mars"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-venus-double"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-venus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-vector-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-utensils"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-utensil-spoon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-users-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-users-cog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-users"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-times"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-tie"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-tag"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-shield"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-secret"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-plus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-nurse"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-ninja"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-minus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-md"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-lock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-injured"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-graduate"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-friends"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-edit"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-cog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-clock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-check"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-astronaut"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-alt-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-user"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-upload"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-unlock-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-unlock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-unlink"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-university"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-universal-access"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-undo-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-undo"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-underline"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-umbrella-beach"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-umbrella"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tv"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tty"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tshirt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-truck-pickup"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-truck-moving"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-truck-monster"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-truck-loading"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-truck"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trophy"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tree"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trash-restore-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trash-restore"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trash-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-transgender-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-transgender"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tram"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-train"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trailer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-traffic-light"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-trademark"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tractor"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-torii-gate"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-torah"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tooth"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tools"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-toolbox"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-toilet-paper-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-toilet-paper"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-toilet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-toggle-on"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-toggle-off"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tired"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tint-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-times-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-times"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ticket-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thumbtack"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thumbs-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thumbs-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thermometer-three-quarters"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thermometer-quarter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thermometer-half"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thermometer-full"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thermometer-empty"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-thermometer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-theater-masks"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-th-list"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-th-large"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-th"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-text-width"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-text-height"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-terminal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tenge"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-temperature-low"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-temperature-high"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-teeth-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-teeth"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-taxi"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tasks"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tape"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tags"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tag"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tachometer-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tablets"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tablet-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-tablet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-table-tennis"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-table"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-syringe"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sync-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sync"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-synagogue"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-swimming-pool"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-swimmer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-swatchbook"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-surprise"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-superscript"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sun"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-suitcase-rolling"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-suitcase"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-subway"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-subscript"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stroopwafel"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-strikethrough"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-street-view"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stream"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-store-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-store-alt-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-store-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-store"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stopwatch-20"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stopwatch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stop-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stop"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sticky-note"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stethoscope"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-step-forward"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-step-backward"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-star-of-life"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-star-of-david"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-star-half-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-star-half"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-star-and-crescent"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-star"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-stamp"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-square-root-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-square-full"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-spray-can"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-splotch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-spinner"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-spider"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-spell-check"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-space-shuttle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-spa"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-numeric-up-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-numeric-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-numeric-down-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-numeric-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-amount-up-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-amount-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-amount-down-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-amount-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-alpha-up-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-alpha-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-alpha-down-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort-alpha-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sort"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-solar-panel"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-socks"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-soap"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-snowplow"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-snowman"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-snowflake"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-snowboarding"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sms"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-smoking-ban"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-smoking"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-smog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-smile-wink"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-smile-beam"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-smile"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sliders-h"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sleigh"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-skull-crossbones"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-skull"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-skiing-nordic"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-skiing"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-skating"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sitemap"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sink"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sim-card"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-signature"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-signal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sign-out-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sign-language"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sign-in-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shuttle-van"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shower"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shopping-cart"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shopping-basket"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shopping-bag"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shoe-prints"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shipping-fast"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ship"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shield-virus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shield-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shekel-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-share-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-share-alt-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-share-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-share"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-shapes"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-server"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-seedling"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-search-plus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-search-minus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-search-location"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-search-dollar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-search"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sd-card"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-scroll"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-screwdriver"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-school"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-save"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-satellite-dish"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-satellite"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sad-tear"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-sad-cry"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-rupee-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-running"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ruler-vertical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ruler-horizontal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ruler-combined"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ruler"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ruble-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-rss-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-rss"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-route"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-rocket"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-robot"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-road"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ring"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ribbon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-retweet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-restroom"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-republican"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-reply-all"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-reply"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-remove-format"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-registered"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-redo-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-redo"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-recycle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-record-vinyl"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-receipt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-random"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-rainbow"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-radiation-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-radiation"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-quran"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-quote-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-quote-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-quidditch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-question-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-question"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-qrcode"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-puzzle-piece"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pump-soap"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pump-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-project-diagram"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-procedures"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-print"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-prescription-bottle-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-prescription-bottle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-prescription"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-praying-hands"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pray"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-power-off"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pound-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-portrait"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-poop"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-poo-storm"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-poo"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-poll-h"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-poll"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-podcast"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plus-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plus-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plug"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-play-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-play"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plane-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plane-departure"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plane-arrival"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-plane"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-place-of-worship"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pizza-slice"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pills"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-piggy-bank"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-photo-video"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-phone-volume"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-phone-square-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-phone-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-phone-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-phone-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-phone"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-person-booth"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-percentage"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-percent"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pepper-hot"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-people-carry"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-people-arrows"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pencil-ruler"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pencil-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pen-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pen-nib"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pen-fancy"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pen-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pen"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-peace"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paw"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pause-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pause"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paste"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pastafarianism"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-passport"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-parking"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paragraph"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-parachute-box"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paperclip"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paper-plane"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pallet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-palette"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paint-roller"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-paint-brush"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-pager"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-outdent"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-otter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-om"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-oil-can"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-object-ungroup"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-object-group"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-notes-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-not-equal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-newspaper"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-neuter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-network-wired"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-music"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mug-hot"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mouse-pointer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mouse"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mountain"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-motorcycle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mosque"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mortar-pestle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-moon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-monument"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-money-check-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-money-check"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-money-bill-wave-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-money-bill-wave"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-money-bill-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-money-bill"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mobile-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mobile"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mitten"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-minus-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-minus-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-minus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-microscope"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-microphone-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-microphone-alt-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-microphone-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-microphone"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-microchip"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-meteor"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mercury"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-menorah"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-memory"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-meh-rolling-eyes"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-meh-blank"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-meh"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-medkit"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-medal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mask"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mars-stroke-v"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mars-stroke-h"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mars-stroke"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mars-double"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mars"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-marker"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map-signs"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map-pin"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map-marker-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map-marker"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map-marked-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map-marked"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-map"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-male"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-mail-bulk"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-magnet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-magic"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lungs-virus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lungs"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-luggage-cart"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-low-vision"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-long-arrow-alt-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-long-arrow-alt-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-long-arrow-alt-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-long-arrow-alt-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lock-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-location-arrow"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-list-ul"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-list-ol"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-list-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-list"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lira-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-link"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lightbulb"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-life-ring"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-level-up-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-level-down-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-less-than-equal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-less-than"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-lemon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-leaf"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-layer-group"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laugh-wink"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laugh-squint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laugh-beam"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laugh"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laptop-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laptop-house"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laptop-code"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-laptop"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-language"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-landmark"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-kiwi-bird"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-kiss-wink-heart"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-kiss-beam"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-kiss"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-khanda"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-keyboard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-key"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-kaaba"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-journal-whills"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-joint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-jedi"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-italic"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-info-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-info"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-infinity"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-industry"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-indent"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-inbox"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-images"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-image"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-igloo"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-id-card-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-id-card"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-id-badge"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-icons"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-icicles"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ice-cream"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-i-cursor"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hryvnia"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-house-user"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-house-damage"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hourglass-start"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hourglass-half"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hourglass-end"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hourglass"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hotel"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hotdog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hot-tub"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hospital-user"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hospital-symbol"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hospital-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hospital"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-horse-head"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-horse"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-home"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-holly-berry"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hockey-puck"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-history"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hippo"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hiking"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-highlighter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-helicopter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-heartbeat"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-heart-broken"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-heart"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-headset"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-headphones-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-headphones"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-heading"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-head-side-virus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-head-side-mask"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-head-side-cough-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-head-side-cough"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hdd"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hat-wizard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hat-cowboy-side"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hat-cowboy"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hashtag"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hard-hat"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hanukiah"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-handshake-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-handshake-alt-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-handshake"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hands-wash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hands-helping"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hands"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-spock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-sparkles"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-scissors"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-rock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-pointer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-point-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-point-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-point-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-point-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-peace"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-paper"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-middle-finger"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-lizard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-holding-water"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-holding-usd"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-holding-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-holding-heart"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hand-holding"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hamsa"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hammer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-hamburger"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-h-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-guitar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grip-vertical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grip-lines-vertical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grip-lines"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grip-horizontal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-wink"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-tongue-wink"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-tongue-squint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-tongue"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-tears"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-stars"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-squint-tears"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-squint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-hearts"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-beam-sweat"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-beam"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grin"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-grimace"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-greater-than-equal"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-greater-than"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-graduation-cap"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gopuram"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-golf-ball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-globe-europe"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-globe-asia"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-globe-americas"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-globe-africa"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-globe"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-glasses"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-glass-whiskey"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-glass-martini-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-glass-martini"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-glass-cheers"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gifts"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gift"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ghost"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-genderless"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gem"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gavel"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gas-pump"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-gamepad"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-futbol"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-funnel-dollar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-frown-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-frown"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-frog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-forward"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-football-ball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-font"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-folder-plus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-folder-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-folder-minus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-folder"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-flushed"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-flask"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-flag-usa"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-flag-checkered"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-flag"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fist-raised"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fish"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-first-aid"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fire-extinguisher"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fire-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fire"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fingerprint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-filter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-film"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fill-drip"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fill"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-word"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-video"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-upload"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-signature"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-prescription"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-powerpoint"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-pdf"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-medical-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-invoice-dollar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-invoice"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-import"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-image"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-export"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-excel"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-download"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-csv"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-contract"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-code"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-audio"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-archive"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-file"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fighter-jet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-female"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-feather-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-feather"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fax"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-faucet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fast-forward"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fast-backward"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-fan"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-eye-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-eye-dropper"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-eye"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-external-link-square-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-external-link-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-expand-arrows-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-expand-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-expand"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-exclamation-triangle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-exclamation-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-exclamation"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-exchange-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-euro-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ethernet"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-eraser"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-equals"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-envelope-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-envelope-open-text"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-envelope-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-envelope"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ellipsis-v"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ellipsis-h"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-eject"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-egg"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-edit"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dungeon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dumpster-fire"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dumpster"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dumbbell"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-drumstick-bite"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-drum-steelpan"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-drum"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-draw-polygon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dragon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-drafting-compass"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-download"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dove"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dot-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-door-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-door-closed"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-donate"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dolly-flatbed"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dolly"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dollar-sign"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dna"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dizzy"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-divide"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-disease"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-directions"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-digital-tachograph"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-two"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-three"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-six"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-one"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-four"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-five"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-d6"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice-d20"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dice"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-diagnoses"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-dharmachakra"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-desktop"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-democrat"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-deaf"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-database"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cut"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cubes"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cube"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-crutch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-crown"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-crow"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-crosshairs"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cross"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-crop-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-crop"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-credit-card"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-couch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-copyright"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-copy"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cookie-bite"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cookie"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-concierge-bell"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-compress-arrows-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-compress-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-compress"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-compass"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-compact-disc"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comments-dollar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comments"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comment-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comment-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comment-dots"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comment-dollar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comment-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-comment"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-columns"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-coins"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cogs"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-coffee"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-code-branch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-code"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cocktail"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-upload-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-sun-rain"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-sun"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-showers-heavy"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-rain"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-moon-rain"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-moon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-meatball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud-download-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cloud"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-closed-captioning"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-clone"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-clock"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-clipboard-list"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-clipboard-check"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-clipboard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-clinic-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-city"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-circle-notch"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-church"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-child"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-circle-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-circle-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-circle-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chevron-circle-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-rook"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-queen"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-pawn"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-knight"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-king"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-board"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess-bishop"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chess"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cheese"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-check-square"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-check-double"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-check-circle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-check"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chart-pie"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chart-line"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chart-bar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chart-area"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-charging-station"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chalkboard-teacher"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chalkboard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-chair"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-certificate"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cat"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cash-register"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cart-plus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cart-arrow-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-carrot"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-square-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-square-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-square-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-square-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caret-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-caravan"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-car-side"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-car-crash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-car-battery"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-car-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-car"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-capsules"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-cannabis"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-candy-cane"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-campground"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-camera-retro"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-camera"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-week"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-times"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-plus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-minus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-day"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-check"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calendar"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-calculator"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-business-time"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bus-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bus"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-burn"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bullseye"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bullhorn"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-building"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bug"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-brush"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-broom"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-broadcast-tower"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-briefcase-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-briefcase"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bread-slice"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-brain"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-braille"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-boxes"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-box-tissue"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-box-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-box"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bowling-ball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-border-style"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-border-none"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-border-all"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bookmark"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-book-reader"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-book-open"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-book-medical"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-book-dead"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-book"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bong"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bone"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bomb"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bolt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bold"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-blog"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-blind"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-blender-phone"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-blender"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-birthday-cake"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-biohazard"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-binoculars"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-biking"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bicycle"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bible"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bezier-curve"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bell-slash"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bell"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-beer"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bed"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-battery-three-quarters"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-battery-quarter"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-battery-half"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-battery-full"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-battery-empty"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bath"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-basketball-ball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-baseball-ball"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bars"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-barcode"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-band-aid"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ban"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-balance-scale-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-balance-scale-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-balance-scale"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bahai"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bacterium"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bacteria"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-bacon"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-backward"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-backspace"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-baby-carriage"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-baby"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-award"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-audio-description"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-atom"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-atlas"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-at"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-asterisk"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-assistive-listening-systems"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrows-alt-v"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrows-alt-h"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrows-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-circle-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-circle-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-circle-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-circle-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-alt-circle-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-alt-circle-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-alt-circle-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-arrow-alt-circle-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-archway"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-archive"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-apple-alt"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ankh"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angry"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-double-up"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-double-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-double-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-angle-double-down"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-anchor"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-american-sign-language-interpreting"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ambulance"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-allergies"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-align-right"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-align-left"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-align-justify"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-align-center"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-air-freshener"
+  },
+  {"element": "span", "class": "fas fa-adjust"},
+  {
+    "element": "span",
+    "class": "fas fa-address-card"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-address-book"
+  },
+  {
+    "element": "span",
+    "class": "fas fa-ad"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-zhihu"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-youtube-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-youtube"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yoast"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yelp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yarn"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yandex-international"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yandex"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yammer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-yahoo"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-y-combinator"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-xing-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-xing"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-xbox"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wpressr"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wpforms"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wpexplorer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wpbeginner"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wordpress-simple"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wordpress"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wolf-pack-battalion"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wodu"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wizards-of-the-coast"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wix"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-windows"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-wikipedia-w"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-whmcs"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-whatsapp-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-whatsapp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-weixin"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-weibo"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-weebly"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-waze"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-watchman-monitoring"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vuejs"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vnv"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vk"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vine"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vimeo-v"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vimeo-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vimeo"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-viber"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-viadeo-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-viadeo"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-viacoin"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-vaadin"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ussunnah"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-usps"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-usb"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ups"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-untappd"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-unsplash"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-unity"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-uniregistry"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-uncharted"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-umbraco"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-uikit"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ubuntu"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-uber"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-typo3"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-twitter-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-twitter"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-twitch"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-tumblr-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-tumblr"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-trello"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-trade-federation"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-tiktok"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-think-peaks"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-themeisle"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-themeco"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-the-red-yeti"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-tencent-weibo"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-telegram-plane"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-telegram"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-teamspeak"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-symfony"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-swift"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-suse"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-supple"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-superpowers"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stumbleupon-circle"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stumbleupon"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-studiovinari"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stripe-s"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stripe"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-strava"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sticker-mule"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-steam-symbol"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-steam-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-steam"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-staylinked"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stackpath"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stack-overflow"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-stack-exchange"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-squarespace"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-spotify"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-speaker-deck"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-speakap"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sourcetree"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-soundcloud"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-snapchat-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-snapchat-ghost"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-snapchat"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-slideshare"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-slack-hash"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-slack"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-skype"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-skyatlas"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sketch"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sith"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sistrix"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-simplybuilt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-shopware"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-shopify"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-shirtsinbulk"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-servicestack"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sellsy"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sellcast"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-searchengin"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-scribd"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-schlix"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-sass"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-salesforce"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-safari"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-rust"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-rockrms"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-rocketchat"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-rev"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-resolving"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-researchgate"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-replyd"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-renren"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-redhat"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-reddit-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-reddit-alien"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-reddit"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-red-river"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-rebel"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-readme"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-reacteurope"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-react"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ravelry"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-raspberry-pi"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-r-project"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-quora"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-quinscape"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-qq"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-python"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pushed"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-product-hunt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-playstation"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pinterest-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pinterest-p"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pinterest"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pied-piper-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pied-piper-pp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pied-piper-hat"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pied-piper-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pied-piper"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-php"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-phoenix-squadron"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-phoenix-framework"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-phabricator"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-periscope"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-perbyte"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-penny-arcade"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-paypal"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-patreon"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-palfed"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-pagelines"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-page4"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-osi"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-orcid"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-optin-monster"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-opera"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-openid"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-opencart"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-old-republic"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-odnoklassniki-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-odnoklassniki"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-octopus-deploy"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-nutritionix"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ns8"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-npm"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-node-js"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-node"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-nimblr"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-neos"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-napster"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-monero"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-modx"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mizuni"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mixer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mixcloud"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mix"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-microsoft"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-microblog"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mendeley"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-megaport"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-meetup"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-medrt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-medium-m"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-medium"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-medapps"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mdb"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-maxcdn"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mastodon"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-markdown"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mandalorian"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-mailchimp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-magento"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-lyft"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-linux"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-linode"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-linkedin-in"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-linkedin"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-line"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-less"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-leanpub"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-lastfm-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-lastfm"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-laravel"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-korvue"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-kickstarter-k"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-kickstarter"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-keycdn"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-keybase"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-kaggle"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-jsfiddle"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-js-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-js"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-joomla"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-joget"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-jira"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-jenkins"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-jedi-order"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-java"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-itunes-note"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-itunes"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-itch-io"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ioxhost"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-invision"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-internet-explorer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-intercom"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-instalod"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-instagram-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-instagram"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-innosoft"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-imdb"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ideal"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hubspot"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-html5"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-houzz"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hotjar"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hornbill"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hooli"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hive"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hire-a-helper"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hips"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hackerrank"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hacker-news-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-hacker-news"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gulp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-guilded"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-grunt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gripfire"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-grav"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gratipay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-wallet"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-plus-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-plus-g"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-plus"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-play"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-pay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google-drive"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-google"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-goodreads-g"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-goodreads"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gofore"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-glide-g"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-glide"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gitter"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gitlab"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gitkraken"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-github-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-github-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-github"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-git-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-git-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-git"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gg-circle"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-gg"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-get-pocket"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-galactic-senate"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-galactic-republic"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fulcrum"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-freebsd"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-free-code-camp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-foursquare"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-forumbee"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fort-awesome-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fort-awesome"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fonticons-fi"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fonticons"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-font-awesome-flag"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-font-awesome-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-font-awesome"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fly"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-flipboard"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-flickr"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-firstdraft"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-first-order-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-first-order"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-firefox-browser"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-firefox"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-figma"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fedora"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fedex"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-fantasy-flight-games"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-facebook-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-facebook-messenger"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-facebook-f"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-facebook"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-expeditedssl"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-evernote"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-etsy"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ethereum"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-erlang"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-envira"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-empire"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ember"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ello"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-elementor"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-edge-legacy"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-edge"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-ebay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-earlybirds"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dyalog"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-drupal"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dropbox"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dribbble-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dribbble"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-draft2digital"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-docker"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dochub"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-discourse"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-discord"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-digital-ocean"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-digg"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-diaspora"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dhl"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-deviantart"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dev"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-deskpro"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-deploydog"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-delicious"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-deezer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dashcube"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-dailymotion"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-d-and-d-beyond"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-d-and-d"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cuttlefish"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-css3-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-css3"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-critical-role"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-zero"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-share"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-sampling-plus"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-sampling"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-sa"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-remix"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-pd-alt"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-pd"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-nd"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-nc-jp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-nc-eu"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-nc"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons-by"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-creative-commons"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cpanel"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cotton-bureau"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-contao"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-connectdevelop"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-confluence"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-codiepie"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-codepen"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cloudversify"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cloudsmith"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cloudscale"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cloudflare"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-chromecast"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-chrome"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-centos"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-centercode"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-visa"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-stripe"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-paypal"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-mastercard"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-jcb"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-discover"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-diners-club"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-apple-pay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-amex"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-cc-amazon-pay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-canadian-maple-leaf"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-buysellads"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-buy-n-large"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-buromobelexperte"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-buffer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-btc"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bootstrap"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bluetooth-b"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bluetooth"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-blogger-b"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-blogger"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-blackberry"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-black-tie"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bity"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bitcoin"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bitbucket"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bimobject"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-behance-square"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-behance"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-battle-net"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-bandcamp"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-aws"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-aviato"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-avianex"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-autoprefixer"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-audible"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-atlassian"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-asymmetrik"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-artstation"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-apple-pay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-apple"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-apper"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-app-store-ios"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-app-store"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-angular"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-angrycreative"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-angellist"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-android"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-amilia"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-amazon-pay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-amazon"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-alipay"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-algolia"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-airbnb"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-affiliatetheme"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-adversal"
+  },
+  {"element": "span", "class": "fab fa-adn"},
+  {
+    "element": "span",
+    "class": "fab fa-acquisitions-incorporated"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-accusoft"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-accessible-icon"
+  },
+  {
+    "element": "span",
+    "class": "fab fa-500px"
+  },
+  {
+    "element": "span",
+    "class": "far fa-window-restore"
+  },
+  {
+    "element": "span",
+    "class": "far fa-window-minimize"
+  },
+  {
+    "element": "span",
+    "class": "far fa-window-maximize"
+  },
+  {
+    "element": "span",
+    "class": "far fa-window-close"
+  },
+  {
+    "element": "span",
+    "class": "far fa-user-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-user"
+  },
+  {
+    "element": "span",
+    "class": "far fa-trash-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-tired"
+  },
+  {
+    "element": "span",
+    "class": "far fa-times-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-thumbs-up"
+  },
+  {
+    "element": "span",
+    "class": "far fa-thumbs-down"
+  },
+  {
+    "element": "span",
+    "class": "far fa-surprise"
+  },
+  {
+    "element": "span",
+    "class": "far fa-sun"
+  },
+  {
+    "element": "span",
+    "class": "far fa-stop-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-sticky-note"
+  },
+  {
+    "element": "span",
+    "class": "far fa-star-half"
+  },
+  {
+    "element": "span",
+    "class": "far fa-star"
+  },
+  {
+    "element": "span",
+    "class": "far fa-square"
+  },
+  {
+    "element": "span",
+    "class": "far fa-snowflake"
+  },
+  {
+    "element": "span",
+    "class": "far fa-smile-wink"
+  },
+  {
+    "element": "span",
+    "class": "far fa-smile-beam"
+  },
+  {
+    "element": "span",
+    "class": "far fa-smile"
+  },
+  {
+    "element": "span",
+    "class": "far fa-share-square"
+  },
+  {
+    "element": "span",
+    "class": "far fa-save"
+  },
+  {
+    "element": "span",
+    "class": "far fa-sad-tear"
+  },
+  {
+    "element": "span",
+    "class": "far fa-sad-cry"
+  },
+  {
+    "element": "span",
+    "class": "far fa-registered"
+  },
+  {
+    "element": "span",
+    "class": "far fa-question-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-plus-square"
+  },
+  {
+    "element": "span",
+    "class": "far fa-play-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-pause-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-paper-plane"
+  },
+  {
+    "element": "span",
+    "class": "far fa-object-ungroup"
+  },
+  {
+    "element": "span",
+    "class": "far fa-object-group"
+  },
+  {
+    "element": "span",
+    "class": "far fa-newspaper"
+  },
+  {
+    "element": "span",
+    "class": "far fa-moon"
+  },
+  {
+    "element": "span",
+    "class": "far fa-money-bill-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-minus-square"
+  },
+  {
+    "element": "span",
+    "class": "far fa-meh-rolling-eyes"
+  },
+  {
+    "element": "span",
+    "class": "far fa-meh-blank"
+  },
+  {
+    "element": "span",
+    "class": "far fa-meh"
+  },
+  {
+    "element": "span",
+    "class": "far fa-map"
+  },
+  {
+    "element": "span",
+    "class": "far fa-list-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-lightbulb"
+  },
+  {
+    "element": "span",
+    "class": "far fa-life-ring"
+  },
+  {
+    "element": "span",
+    "class": "far fa-lemon"
+  },
+  {
+    "element": "span",
+    "class": "far fa-laugh-wink"
+  },
+  {
+    "element": "span",
+    "class": "far fa-laugh-squint"
+  },
+  {
+    "element": "span",
+    "class": "far fa-laugh-beam"
+  },
+  {
+    "element": "span",
+    "class": "far fa-laugh"
+  },
+  {
+    "element": "span",
+    "class": "far fa-kiss-wink-heart"
+  },
+  {
+    "element": "span",
+    "class": "far fa-kiss-beam"
+  },
+  {
+    "element": "span",
+    "class": "far fa-kiss"
+  },
+  {
+    "element": "span",
+    "class": "far fa-keyboard"
+  },
+  {
+    "element": "span",
+    "class": "far fa-images"
+  },
+  {
+    "element": "span",
+    "class": "far fa-image"
+  },
+  {
+    "element": "span",
+    "class": "far fa-id-card"
+  },
+  {
+    "element": "span",
+    "class": "far fa-id-badge"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hourglass"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hospital"
+  },
+  {
+    "element": "span",
+    "class": "far fa-heart"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hdd"
+  },
+  {
+    "element": "span",
+    "class": "far fa-handshake"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-spock"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-scissors"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-rock"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-pointer"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-point-up"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-point-right"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-point-left"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-point-down"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-peace"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-paper"
+  },
+  {
+    "element": "span",
+    "class": "far fa-hand-lizard"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-wink"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-tongue-wink"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-tongue-squint"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-tongue"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-tears"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-stars"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-squint-tears"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-squint"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-hearts"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-beam-sweat"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-beam"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grin"
+  },
+  {
+    "element": "span",
+    "class": "far fa-grimace"
+  },
+  {
+    "element": "span",
+    "class": "far fa-gem"
+  },
+  {
+    "element": "span",
+    "class": "far fa-futbol"
+  },
+  {
+    "element": "span",
+    "class": "far fa-frown-open"
+  },
+  {
+    "element": "span",
+    "class": "far fa-frown"
+  },
+  {
+    "element": "span",
+    "class": "far fa-folder-open"
+  },
+  {
+    "element": "span",
+    "class": "far fa-folder"
+  },
+  {
+    "element": "span",
+    "class": "far fa-flushed"
+  },
+  {
+    "element": "span",
+    "class": "far fa-flag"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-word"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-video"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-powerpoint"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-pdf"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-image"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-excel"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-code"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-audio"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-archive"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-file"
+  },
+  {
+    "element": "span",
+    "class": "far fa-eye-slash"
+  },
+  {
+    "element": "span",
+    "class": "far fa-eye"
+  },
+  {
+    "element": "span",
+    "class": "far fa-envelope-open"
+  },
+  {
+    "element": "span",
+    "class": "far fa-envelope"
+  },
+  {
+    "element": "span",
+    "class": "far fa-edit"
+  },
+  {
+    "element": "span",
+    "class": "far fa-dot-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-dizzy"
+  },
+  {
+    "element": "span",
+    "class": "far fa-credit-card"
+  },
+  {
+    "element": "span",
+    "class": "far fa-copyright"
+  },
+  {
+    "element": "span",
+    "class": "far fa-copy"
+  },
+  {
+    "element": "span",
+    "class": "far fa-compass"
+  },
+  {
+    "element": "span",
+    "class": "far fa-comments"
+  },
+  {
+    "element": "span",
+    "class": "far fa-comment-dots"
+  },
+  {
+    "element": "span",
+    "class": "far fa-comment-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-comment"
+  },
+  {
+    "element": "span",
+    "class": "far fa-closed-captioning"
+  },
+  {
+    "element": "span",
+    "class": "far fa-clone"
+  },
+  {
+    "element": "span",
+    "class": "far fa-clock"
+  },
+  {
+    "element": "span",
+    "class": "far fa-clipboard"
+  },
+  {
+    "element": "span",
+    "class": "far fa-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-check-square"
+  },
+  {
+    "element": "span",
+    "class": "far fa-check-circle"
+  },
+  {
+    "element": "span",
+    "class": "far fa-chart-bar"
+  },
+  {
+    "element": "span",
+    "class": "far fa-caret-square-up"
+  },
+  {
+    "element": "span",
+    "class": "far fa-caret-square-right"
+  },
+  {
+    "element": "span",
+    "class": "far fa-caret-square-left"
+  },
+  {
+    "element": "span",
+    "class": "far fa-caret-square-down"
+  },
+  {
+    "element": "span",
+    "class": "far fa-calendar-times"
+  },
+  {
+    "element": "span",
+    "class": "far fa-calendar-plus"
+  },
+  {
+    "element": "span",
+    "class": "far fa-calendar-minus"
+  },
+  {
+    "element": "span",
+    "class": "far fa-calendar-check"
+  },
+  {
+    "element": "span",
+    "class": "far fa-calendar-alt"
+  },
+  {
+    "element": "span",
+    "class": "far fa-calendar"
+  },
+  {
+    "element": "span",
+    "class": "far fa-building"
+  },
+  {
+    "element": "span",
+    "class": "far fa-bookmark"
+  },
+  {
+    "element": "span",
+    "class": "far fa-bell-slash"
+  },
+  {"element": "span", "class": "far fa-bell"},
+  {
+    "element": "span",
+    "class": "far fa-arrow-alt-circle-up"
+  },
+  {
+    "element": "span",
+    "class": "far fa-arrow-alt-circle-right"
+  },
+  {
+    "element": "span",
+    "class": "far fa-arrow-alt-circle-left"
+  },
+  {
+    "element": "span",
+    "class": "far fa-arrow-alt-circle-down"
+  },
+  {
+    "element": "span",
+    "class": "far fa-angry"
+  },
+  {
+    "element": "span",
+    "class": "far fa-address-card"
+  },
+  {
+    "element": "span",
+    "class": "far fa-address-book"
+  }
+]

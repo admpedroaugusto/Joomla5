@@ -1,0 +1,308 @@
+// @package Default Template V7 for SobiPro multi-directory component with content construction support
+
+// @author
+// Authors: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+// Url: https://www.Sigsiu.NET
+
+// @copyright Copyright (C) 2006 - 2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+// @license GNU/GPL Version 3
+// This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+// See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// @modified 26 April 2024 by Sigrid Suski
+
+// Helper file for elevated styles
+
+// elevated Shadow Mixins
+// ----------------------------------------
+@shadow-a: 0.2;
+@shadow-b: 0.14;
+@shadow-c: 0.12;
+
+.shadow-2dp() {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, @shadow-b),
+	0 3px 1px -2px rgba(0, 0, 0, @shadow-a),
+	0 1px 5px 0 rgba(0, 0, 0, @shadow-c);
+}
+
+.shadow-3dp() {
+	box-shadow: 0 3px 4px 0 rgba(0, 0, 0, @shadow-b),
+	0 3px 3px -2px rgba(0, 0, 0, @shadow-a),
+	0 1px 8px 0 rgba(0, 0, 0, @shadow-c);
+}
+
+.shadow-4dp() {
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, @shadow-b),
+	0 1px 10px 0 rgba(0, 0, 0, @shadow-c),
+	0 2px 4px -1px rgba(0, 0, 0, @shadow-a);
+}
+
+.shadow-6dp() {
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, @shadow-b),
+	0 1px 18px 0 rgba(0, 0, 0, @shadow-c),
+	0 3px 5px -1px rgba(0, 0, 0, @shadow-a);
+}
+
+.shadow-8dp() {
+	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, @shadow-b),
+	0 3px 14px 2px rgba(0, 0, 0, @shadow-c),
+	0 5px 5px -3px rgba(0, 0, 0, @shadow-a);
+}
+
+.shadow-16dp() {
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, @shadow-b),
+	0 6px 30px 5px rgba(0, 0, 0, @shadow-c),
+	0 8px 10px -5px rgba(0, 0, 0, @shadow-a);
+}
+
+.shadow-24dp() {
+	box-shadow: 0 9px 46px 8px rgba(0, 0, 0, @shadow-b),
+	0 11px 15px -7px rgba(0, 0, 0, @shadow-c),
+	0 24px 38px 3px rgba(0, 0, 0, @shadow-a);
+}
+
+.textshadow-2dp() {
+	text-shadow: 0 2px 2px rgba(0, 0, 0, @shadow-b),
+	0 3px 1px rgba(0, 0, 0, @shadow-a),
+	0 1px 5px rgba(0, 0, 0, @shadow-c);
+}
+
+.alert.alert- {
+	border-color: @gamma-color;
+	.shadow-2dp;
+	font-variant: small-caps;
+	font-size: calc(@font-size + .0625rem);
+	font-weight: 500;
+
+	h4 {
+		font-variant: small-caps;
+		font-size: calc(.125rem);
+		font-weight: 500;
+
+		&:hover {
+		}
+	}
+}
+
+.SobiPro.default7 {
+	textarea:focus,
+	select:focus,
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="date"]:focus,
+	input[type="month"]:focus,
+	input[type="time"]:focus,
+	input[type="week"]:focus,
+	input[type="number"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="color"]:focus,
+	.uneditable-input:focus {
+		box-shadow: 0 3px 4px rgba(0, 0, 0, 0.075), 0 3px 3px -2px rgba(0, 0, 0, @shadow-a), 0 1px 8px 0 rgba(red(@alpha-color), green(@alpha-color), blue(@alpha-color), 60%);
+	}
+
+	// Modify the tables
+	// ----------------------------------------
+	.table {
+		.shadow-2dp();
+
+		th {
+			font-variant: small-caps;
+			font-size: calc(@font-size + .0625rem);
+			font-weight: 500;
+		}
+	}
+
+	// Modify the pagination
+	// ----------------------------------------
+	.pagination ul.sp-alpha li a,
+	.pagination > ul > li > a.active,
+	.pagination > ul > li > a:hover,
+	.pagination > ul > li > a:focus,
+	.pagination > li > a.active,
+	.pagination > li > a:hover,
+	.pagination > li > a:focus,
+	.pagination > .active > a,
+	.pagination > .active > span {
+		.shadow-2dp();
+	}
+
+	.pagination ul > .disabled > span,
+	.pagination ul > .disabled > a,
+	.pagination ul > .disabled > a:hover,
+	.pagination ul > .disabled > a:focus,
+	.pagination > .disabled > span,
+	.pagination > .disabled > a,
+	.pagination > .disabled > a:hover,
+	.pagination > .disabled > a:focus {
+		box-shadow: none;
+	}
+
+	.CodeMirror-focused {
+		.shadow-2dp();
+	}
+
+	// Modify the buttons
+	// ----------------------------------------
+	.btn,
+	.badge, .label {
+		box-shadow: none;
+		font-variant: small-caps;
+		font-weight: 500;
+		.shadow-2dp();
+
+		&:hover,
+		&:active,
+		&.active {
+			.shadow-3dp();
+		}
+
+		&.disabled:hover {
+			box-shadow: none;
+		}
+	}
+
+	// Modify the card and co.
+	// ----------------------------------------
+	.card, .list-group, .tab-pane, .jumbotron, .well, .thumbnail {
+		box-shadow: none;
+		.shadow-2dp();
+	}
+
+	// Modify nav (tabs, pills)
+	// ----------------------------------------
+	.nav-tabs.sp-navtabs .nav-link.active, .nav-tabs.sp-navtabs .nav-item.show .nav-link {
+		border-bottom-width: 0;
+	}
+
+	.nav li {
+		a {
+			font-variant: small-caps;
+			font-weight: 500;
+
+			&.active {
+				.shadow-2dp();
+			}
+
+			&.active:hover {
+				.shadow-3dp();
+			}
+		}
+	}
+
+	// Modify the alerts
+	// ----------------------------------------
+	.alert {
+		.shadow-2dp;
+		font-variant: small-caps;
+		font-size: calc(@font-size + .0625rem);
+		font-weight: 500;
+
+		h4 {
+			font-variant: small-caps;
+			font-size: calc(@font-size + .125rem);
+			font-weight: 500;
+		}
+	}
+
+	.sp-message {
+		.alert-error,
+		.alert-danger {
+			border-color: lighten(@error-color, 62%);
+			.shadow-2dp;
+		}
+
+		.alert-success {
+			.shadow-2dp;
+		}
+	}
+
+	.sp-topmenu {
+		font-variant: small-caps;
+		font-size: calc(@font-size + .125rem);
+		font-weight: 500;
+
+		&.standard {
+			li {
+				a {
+					font-variant: small-caps;
+					font-weight: 500;
+
+					&.active,
+					&:hover {
+						.shadow-3dp();
+					}
+				}
+			}
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-variant: small-caps;
+		font-weight: 500;
+	}
+
+	.sp-category-icon [class^="fa-"],
+	.sp-category-icon [class*=" fa-"],
+	.sp-category-icon [class^="icon-"],
+	.sp-category-icon [class*=" icon-"],
+	.sp-category-icon [class^="material-icons"],
+	.sp-category-icon [class*="material-icons"] {
+		&.active,
+		&:active,
+		&:hover {
+			.textshadow-2dp;
+		}
+	}
+
+	.sp-tablist {
+		li {
+			font-variant: small-caps;
+			font-weight: 500;
+
+			&.active a {
+				.shadow-2dp;
+			}
+		}
+	}
+
+	.sp-noimage.css {
+		box-shadow: none;
+		.shadow-2dp;
+
+		&:hover {
+			.shadow-4dp;
+		}
+	}
+
+	.sp-noimage-container .sp-noimage,
+	.popover,
+	.spClassViewImage {
+		img {
+			border-radius: @corner-radius;
+			padding: 0;
+			border: none;
+			box-shadow: none;
+			.shadow-2dp;
+
+			&:hover {
+				.shadow-4dp;
+			}
+		}
+	}
+
+	// SP-GeoMap Field
+	// -----------------------------------------------
+	div.spClassMap {
+		border-radius: @corner-radius;
+		.shadow-4dp();
+	}
+}

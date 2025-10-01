@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://xml.sigsiu.net/SobiPro/template.xsd">
+	<name>Front Template</name>
+	<id>front</id>
+	<authorName>Sigrid Suski and Radek Suski</authorName>
+	<authorEmail>sobi[at]sigsiu.net</authorEmail>
+	<authorUrl>https://www.Sigsiu.NET</authorUrl>
+	<copyright>Copyright (C) 2006-2021 Sigsiu.NET GmbH</copyright>
+	<license>GNU General Public License</license>
+	<creationDate>2021-05-01</creationDate>
+	<version>2.0</version>
+	<description>
+		Default SobiPro template for the SobiPro component frontpage. Not used at the moment.
+	</description>
+	<files>
+		<file path="default.xsl">
+			Template for the list of all sections - not used at the moment
+		</file>
+		<file path="default.php">
+			Template for the list of all sections in PHP format - not used at the moment
+		</file>
+	</files>
+	<install/>
+</template>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 31 January 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+	</header>
+
+	<toolbar title="SEC.ADD_SITE_TITLE" class="section edit">
+		<buttons icon="globe" buttons="languages-list" label="TB.LANGUAGES"/>
+		<button task="section.apply" type="apply" trim="true" colour="save"/>
+		<button type="exit" task="section.cancel" colour="exit"/>
+		<button type="help" target="_blank"/>
+	</toolbar>
+
+	<body disable-menu="true">
+		<message id="spctrl-message"/>
+		<tabs invert-condition="trim">
+			<tab label="CAT.CATEGORY_GENERAL_DATA">
+				<fieldset>
+					<field type="text" name="section.name" label="SECN.ADD_SECTION_NAME" width="5" required="true" translatable="true"/>
+					<field type="text" name="section.nid" label="SECN.ADD_SECTION_ALIAS" width="5" placeholder="FM.NAME_PLACEHOLDER_ALIAS" translatable="true"/>
+					<field type="textarea" name="section.description" label="SEC.ADD_DESC" editor="true" width="9" rows="4" style="" translatable="true"/>
+				</fieldset>
+				<legend class="text-muted small">
+					<param icon="fas fa-star dk-sup" value="ENTRY_REQUIRED_MESSAGE" parse="true"/>
+					<param icon="fas fa-globe dk-sup" condition="multilingual" value="ENTRY_TRANSLATABLE_MESSAGE" parse="true"/>
+				</legend>
+			</tab>
+
+			<tab label="META_DATA">
+				<fieldset>
+					<field type="textarea" name="section.metaDesc" label="DESCRIPTION" editor="false" width="9" rows="2" style="" translatable="true"/>
+					<field type="textarea" name="section.metaKeys" label="KEYS" editor="false" width="8" rows="2" style="" translatable="true"/>
+					<field type="text" name="section.metaAuthor" label="AUTHOR" width="4" maxlength="255"/>
+					<field type="select" label="ROBOTS" name="section.metaRobots" selected="section.metaRobots" width="5" maxlength="255">
+						<values>
+							<option value="" label="ROBOTS_NONE"/>
+							<option value="index, follow" label="index, follow"/>
+							<option value="index, nofollow" label="index, nofollow"/>
+							<option value="noindex, follow" label="noindex, follow"/>
+							<option value="noindex, nofollow" label="noindex, nofollow"/>
+						</values>
+					</field>
+				</fieldset>
+				<legend class="text-muted small">
+					<param icon="fas fa-globe dk-sup" condition="multilingual" value="ENTRY_TRANSLATABLE_MESSAGE" parse="true"/>
+				</legend>
+			</tab>
+
+			<tab label="CATN.CATEGORY_PUBLISHING">
+				<fieldset>
+					<field type="toggle" name="section.state" label="ENABLED" prefix="yes_no"/>
+				</fieldset>
+				<fieldset label="SECN.CFG.PUBLISHING">
+					<field type="datepicker" label="CREATED_AT" name="section.createdTime" width="4" dateFormat="cfg:publishing_format" icon="calendar"/>
+					<field type="datepicker" label="VALID_SINCE" name="section.validSince" width="4" dateFormat="cfg:publishing_format" icon="unlock"/>
+					<field type="datepicker" label="VALID_UNTIL" name="section.validUntil" width="4" dateFormat="cfg:publishing_format" icon="lock"/>
+				</fieldset>
+			</tab>
+		</tabs>
+		<div class="sp-feature" condition="trim">
+			<file filename="about.information.info" type="html" translatable="true" start-path="administrator"/>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

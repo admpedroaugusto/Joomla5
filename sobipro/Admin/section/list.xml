@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @created 7 September 2012 by Radek Suski
+ @modified 02 November 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header/>
+
+	<toolbar title="ENTRIES_CATEGORIES_SITE_TITLE" subtitle="var:[category_name]" class="section list">
+		<buttons type="entry" condition="acl.entry.visible">
+			<button type="url" sid="true" task="entry.add" label="TB.ADD_NEW" condition="acl.entry.add" colour="new" icon="plus"/>
+			<button type="delete" task="entry.delete" confirm="TB.JS_DELETE_ENTRIES_WARN" condition="acl.entry.delete" colour="delete"/>
+			<dropdown-header label="TB.PUBLISHING"/>
+			<button type="publish" task="entry.publish" condition="acl.entry.publish"/>
+			<button type="hide" task="entry.hide" condition="acl.entry.publish"/>
+			<dropdown-header label="TB.APPROVAL"/>
+			<button type="approve" task="entry.approve" condition="acl.entry.approve"/>
+			<button type="revoke" task="entry.unapprove" condition="acl.entry.approve"/>
+		</buttons>
+		<buttons type="category" condition="acl.category.visible">
+			<button type="edit" sid="true" task="category.edit" invert-condition="root" label="AMN.EDIT" icon="file-alt" condition="acl.category.edit"/>
+			<dropdown-header label="TB.SUBCATEGORY"/>
+			<button type="url" sid="true" task="category.add" label="AMN.ADD" icon="plus" condition="acl.category.add" colour="new"/>
+			<button type="delete" task="category.delete" confirm="TB.JS_DELETE_CATEGORIES_WARN" condition="acl.category.delete" colour="delete"/>
+			<dropdown-header label="TB.PUBLISHING"/>
+			<button type="publish" task="category.publish" condition="acl.category.edit"/>
+			<button type="hide" task="category.hide" condition="acl.category.edit"/>
+			<dropdown-header label="TB.APPROVAL"/>
+			<button type="approve" task="category.approve" condition="acl.category.edit"/>
+			<button type="revoke" task="category.unapprove" condition="acl.category.edit"/>
+		</buttons>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<header label="CATEGORIES_IN_LIST_HEAD" condition="categories" icon="folder-open">
+					<div class="input-group-sm d-flex gap-1"> <!--  id="spCategoriesFilterHead" -->
+						<field type="select" name="corder" selected="corder" aria-label="ACCESSIBILITY.LIST_SELECT_ORDER_CATEGORIES" class="form-select" data-spctrl="submit">
+							<values>
+								<values label="ORDER_BY"/>
+								<option value="c_sid.asc" label="ORDER_BY_ID_ASC"/>
+								<option value="c_sid.desc" label="ORDER_BY_ID_DESC"/>
+								<option value="name.asc" label="ORDER_BY_NAME_ASC"/>
+								<option value="name.desc" label="ORDER_BY_NAME_DESC"/>
+								<option value="state.asc" label="ORDER_BY_STATE_ASC"/>
+								<option value="state.desc" label="ORDER_BY_STATE_DESC"/>
+								<option value="createdTime.asc" label="ORDER_BY_CREATION_DATE_ASC"/>
+								<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+								<option value="updatedTime.asc" label="ORDER_BY_UPDATE_DATE_ASC"/>
+								<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+								<option value="approved.asc" label="ORDER_BY_APPROVAL_ASC"/>
+								<option value="approved.desc" label="ORDER_BY_APPROVAL_DESC"/>
+								<option value="position.asc" label="ORDER_BY_POSITION_ASC"/>
+								<option value="position.desc" label="ORDER_BY_POSITION_DESC"/>
+								<option value="owner.desc" label="CREATED_BY"/>
+							</values>
+						</field>
+						<field type="select" name="climit" selected="categories-limit" aria-label="ACCESSIBILITY.LIST_NUMBER_CATEGORIES" data-spctrl="submit">
+							<values>
+								<values label="LISTING_LIMIT"/>
+								<option value="5"/>
+								<option value="15"/>
+								<option value="25"/>
+								<option value="50"/>
+								<option value="100"/>
+							</values>
+						</field>
+						<field type="button" name="save-ordering" icon="save" aria-label="ACCESSIBILITY.LIST_SAVE_CATEGORIES" class="btn btn-sm btn-info spctrl-default-ordering"
+						       data-target="categories"/>
+					</div>
+				</header>
+				<div class="dk-progress mb-2 hidden" id="spctrl-progress">
+					<message type="info" class="alert-sm"/>
+					<div class="progress active" id="spctrl-progress">
+						<div class="progress-bar bg-info progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"/>
+					</div>
+				</div>
+				<div class="table-responsive mb-5" condition="categories">
+					<table>
+						<head>
+							<cell type="text" label="HEADER_ID" class="dk-cell text-center"/>
+							<cell type="checkbox" rel="c_sid" class="dk-cell text-center" aria-label="ACCESSIBILITY.CATEGORY_CHECK_ALL"/>
+							<cell type="text" label="HEADER_CATS_NAME" class="dk-cell text-start"/>
+							<cell type="text" label="HEADER_CATS_STATE" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_CATS_APPROVAL" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_MODIFIEDDATE" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_CATS_AUTHOR" class="dk-cell text-center"/>
+							<cell condition="acl.category.edit and corder.contains(position)" type="ordering" label="HEADER_CATS_POSITION" class="dk-cell dk-position w-10"
+							      rel="category"/>
+						</head>
+						<loop subject="categories">
+							<cell type="text" value="id" class="dk-cell text-center"/>
+							<cell type="checkbox" name="c_sid" value="id" class="dk-cell text-center" aria-label="ACCESSIBILITY.CATEGORY_CHECK" checked-out-time="coutTime"
+							      checked-out-by="cout"
+							      checked-out-icon="lock"/>
+							<cell class="dk-cell text-start">
+								<cell type="link" value="name">
+									<url type="intern">
+										<param name="task" value="category.edit"/>
+										<param name="sid" value="id" parse="true"/>
+									</url>
+								</cell>
+							</cell>
+							<cell type="ticker" value="state" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle'}" fa="far"
+							      colors="{'0':'dk-text-red','1':'dk-text-green'}"
+							      aria-labels="{'0':'ACCESSIBILITY.TICKER_CATEGORY_ENABLE','1':'ACCESSIBILITY.TICKER_CATEGORY_DISABLE'}"
+							      valid-since="validSince" valid-until="validUntil">
+								<url type="intern" class="dk-enabled" link-condition="/acl.category.edit">
+									<param name="task" value="category.toggle.enabled"/>
+									<param name="sid" value="id" parse="true"/>
+								</url>
+							</cell>
+							<cell type="ticker" value="approved" class="dk-cell text-center" colors="{'0':'dk-text-red','1':'dk-text-azure'}"
+							      icons="{'0':'thumbs-down','1':'thumbs-up'}" aria-labels="{'0':'ACCESSIBILITY.TICKER_CATEGORY_GRANT','1':'ACCESSIBILITY.TICKER_CATEGORY_REVOKE'}">
+								<url type="intern" class="dk-approved" link-condition="/acl.category.edit">
+									<param name="task" value="category.toggle.approval"/>
+									<param name="sid" value="id" parse="true"/>
+								</url>
+							</cell>
+							<cell type="text" value="updatedTime" dateFormat="cfg:list_format" class="dk-cell text-center"/>
+							<cell type="text" value="owner" class="dk-cell text-center text-nowrap "/>
+							<cell condition="/acl.category.edit and /corder.contains(position)" class="dk-cell dk-position w-10">
+								<cell type="ordering" value="position" name="cp_sid[var:[id]]" class="input-group input-group-sm">
+									<cell type="link" icon="chevron-up" aria-label="ACCESSIBILITY.POSITION_UP">
+										<url type="intern" class="btn btn-secondary btn-sm" role="button">
+											<param name="task" value="category.up"/>
+											<param name="sid" value="id" parse="true"/>
+											<param name="pid" value="request.sid" parse="true" subject="skip"/>
+										</url>
+									</cell>
+									<cell type="link" icon="chevron-down" aria-label="ACCESSIBILITY.POSITION_DOWN">
+										<url type="intern" class="btn btn-secondary btn-sm" role="button">
+											<param name="task" value="category.down"/>
+											<param name="sid" value="id" parse="true"/>
+											<param name="pid" value="request.sid" parse="true" subject="skip"/>
+										</url>
+									</cell>
+								</cell>
+							</cell>
+						</loop>
+						<foot>
+							<navigation/>
+						</foot>
+					</table>
+				</div>
+				<div condition="showhint">
+					<div condition="root">
+						<hint label="CATEGORY.NO_CATEGORIES" icon="folder-open" description="CATEGORY.EXPL" help="section.view"
+						      btn1="{'task':'category.add','param':'section','caption':'CATEGORY.ADDNEW'}"/>
+					</div>
+					<div condition="subcategory">
+						<hint label="CATEGORY.NO_SUBCATEGORIES" icon="folder-open" description="CATEGORY.SUB_EXPL" help="category.view"
+						      btn1="{'task':'category.add','param':'sid','caption':'CATEGORY.SUB_ADDNEW'}"
+						      btn2="{'task':'entry.add','param':'sid','caption':'ENTRY.SUB_ADDNEW'}"/>
+					</div>
+				</div>
+				<pagination set="cSite" class="justify-content-center" inputbox="right" type="icon">
+					<param name="count" value="categories-count" parse="true"/>
+					<param name="limit" value="categories-limit" parse="true"/>
+					<param name="current" value="categories-site" parse="true"/>
+					<param name="url">
+						<param name="option" value="com_sobipro"/>
+						<param name="sid" value="request.sid" parse="true"/>
+					</param>
+				</pagination>
+
+				<header label="CAT.ENTRIES_LIST_HEAD" icon="file-alt" condition="entries">
+					<div class="input-group-sm d-flex ms-auto">
+						<field type="select" name="eorder" selected="eorder" values="entriesOrdering" aria-label="ACCESSIBILITY.LIST_SELECT_ORDER_ENTRIES" class="me-2"
+						       data-spctrl="submit"/>
+						<field type="select" name="elimit" selected="entries-limit" aria-label="ACCESSIBILITY.LIST_NUMBER_ENTRIES" class="me-2" data-spctrl="submit">
+							<values>
+								<values label="LISTING_LIMIT"/>
+								<option value="5"/>
+								<option value="15"/>
+								<option value="25"/>
+								<option value="50"/>
+								<option value="100"/>
+							</values>
+						</field>
+					</div>
+					<field type="button" name="save-ordering" icon="save" aria-label="ACCESSIBILITY.LIST_SAVE_ENTRIES" class="btn btn-info btn-sm spctrl-default-ordering"
+					       data-target="entries"/>
+				</header>
+
+				<div class="table-responsive" condition="entries">
+					<table condition="entries.length">
+						<head>
+							<cell type="text" label="HEADER_ID" class="dk-cell text-center"/>
+							<cell type="checkbox" rel="e_sid" class="dk-cell text-center" aria-label="ACCESSIBILITY.ENTRY_CHECK_ALL"/>
+							<cell type="text" label="HEADER_ENTRIES_NAME" class="dk-cell text-start"/>
+							<cells type="text" value="customHeader" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_ENTRIES_STATE" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_ENTRIES_APPROVAL" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_MODIFIEDDATE" class="dk-cell text-center"/>
+							<cell type="text" label="HEADER_FIELD_AUTHOR" class="dk-cell text-center"/>
+							<cell condition="acl.entry.edit and eorder.contains(position)" type="ordering" label="HEADER_FIELD_POSITION" class="dk-cell dk-position w-10"
+							      rel="entry"/>
+						</head>
+
+						<loop subject="entries">
+							<cell type="text" value="id" class="dk-cell text-center"/>
+							<cell type="checkbox" name="e_sid" value="id" aria-label="ACCESSIBILITY.ENTRY_CHECK" checked-out-time="coutTime"
+							      checked-out-by="cout" class="dk-cell text-center"/>
+							<cell class="dk-cell text-start">
+								<cell type="link" value="name" class="var:[valid] var:[primary]" aria-label="ACCESSIBILITY.ENTRY_EDIT">
+									<url type="intern">
+										<param name="task" value="entry.edit"/>
+										<param name="sid" value="id" parse="true"/>
+										<param name="pid" value="request.sid" parse="true" subject="skip"/>
+									</url>
+								</cell>
+							</cell>
+							<cells value="customFields" class="dk-cell text-center"/>
+							<cell type="ticker" value="state" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle'}" fa="far"
+							      colors="{'0':'dk-text-red','1':'dk-text-green'}"
+							      aria-labels="{'0':'ACCESSIBILITY.TICKER_ENTRY_ENABLE','1':'ACCESSIBILITY.TICKER_ENTRY_DISABLE'}"
+							      valid-since="validSince" valid-until="validUntil">
+								<url type="intern" class="dk-enabled" link-condition="/acl.entry.publish">
+									<param name="task" value="entry.toggle.enabled"/>
+									<param name="sid" value="id" parse="true"/>
+								</url>
+							</cell>
+							<cell type="ticker" value="approved" class="dk-cell text-center" icons="{'0':'thumbs-down','1':'thumbs-up'}"
+							      colors="{'0':'dk-text-red','1':'dk-text-azure'}"
+							      aria-labels="{'0':'ACCESSIBILITY.TICKER_ENTRY_GRANT','1':'ACCESSIBILITY.TICKER_ENTRY_REVOKE'}">
+								<url type="intern" class="dk-approved" link-condition="/acl.entry.approve">
+									<param name="task" value="entry.toggle.approval"/>
+									<param name="sid" value="id" parse="true"/>
+								</url>
+							</cell>
+							<cell type="text" value="updatedTime" dateFormat="cfg:list_format" class="dk-cell text-center"/>
+							<cell type="text" value="owner" class="dk-cell text-center text-nowrap" aria-label="ACCESSIBILITY.USER_EDIT"/>
+							<cell condition="/acl.entry.edit and /eorder.contains(position)" class="dk-cell dk-position w-10">
+								<cell type="ordering" value="position" name="ep_sid[var:[id]]" class="input-group input-group-sm">
+									<cell type="link" icon="chevron-up" aria-label="ACCESSIBILITY.POSITION_UP">
+										<url type="intern" class="btn btn-secondary btn-sm" role="button">
+											<param name="task" value="entry.up"/>
+											<param name="sid" value="id" parse="true"/>
+											<param name="pid" value="request.sid" parse="true" subject="skip"/>
+										</url>
+									</cell>
+									<cell type="link" icon="chevron-down" aria-label="ACCESSIBILITY.POSITION_DOWN">
+										<url type="intern" class="btn btn-secondary btn-sm" role="button">
+											<param name="task" value="entry.down"/>
+											<param name="sid" value="id" parse="true"/>
+											<param name="pid" value="request.sid" parse="true" subject="skip"/>
+										</url>
+									</cell>
+								</cell>
+							</cell>
+						</loop>
+						<foot>
+							<navigation/>
+						</foot>
+					</table>
+				</div>
+
+				<pagination set="eSite" class="justify-content-center" inputbox="right" type="icon">
+					<param name="count" value="entries-count" parse="true"/>
+					<param name="limit" value="entries-limit" parse="true"/>
+					<param name="current" value="entries-site" parse="true"/>
+					<param name="url">
+						<param name="option" value="com_sobipro"/>
+						<param name="sid" value="request.sid" parse="true"/>
+					</param>
+				</pagination>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="sid" default=""/>
+		</hidden>
+	</config>
+</definition>

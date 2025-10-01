@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2022 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @created 01 August 2012 by Radek Suski
+ @modified 06 February 2023 by Sigrid Suski
+-->
+
+<metadata>
+	<menu>
+		<options var="task">
+			<default name="SP.SOBI_NATIVE_TASKS" msg="SP.SOBI_NATIVE_TASKS_EXPL"/>
+		</options>
+		<fields name="request">
+			<fieldset name="request" label="COM_MENUS_BASIC_FIELDSET_LABEL" addfieldpath="/components/com_sobipro/lib/cms/joomla_common/elements">
+				<field name="sid" type="native" required="true" label="SP.SOBI_SELECT_SECTION"/>
+				<field name="special" type="native" label="SP.SOBI_SELECT_FUNCTIONALITY"/>
+			</fieldset>
+		</fields>
+		<fields name="params">
+			<fieldset name="menu-options" label="COM_MENUS_LINKTYPE_OPTIONS_LABEL">
+				<field name="sobiprosettings" type="textarea" label="" class="hidden spctrl-menu-settings"/>
+			</fieldset>
+		</fields>
+	</menu>
+</metadata>

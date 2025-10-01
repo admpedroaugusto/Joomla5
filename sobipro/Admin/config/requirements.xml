@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006–2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according to section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 24 September 2024 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<title value="GB.REQUIREMENTS"/>
+		<file type="script" filename="adm.requirements"/>
+		<style>
+			.contentpane.component { background-color: hsl(214, 40%, 90%); padding-top: 10px !important; }
+		</style>
+	</header>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-12 sp-main-area">
+				<message id="spctrl-message"/>
+				<div class="row">
+					<div class="col-lg-6">
+						<div>
+							<message label="REQ.MOREINFO" type="outline-info" class="message"/>
+						</div>
+						<div>
+							<message label="REQ.CHECKING_REQUIREMENTS" type="primary" class="alert-sm spctrl-checkstatus"/>
+						</div>
+						<div class="progress">
+							<div class="progress-bar bg-primary progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+							     style="width: 0%;"/>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="spctrl-buttons mt-3 hidden">
+							<field type="button" value-text="REQ.NEXT_BT" class="btn btn-outline-primary me-2 mb-3 spctrl-next" stand-alone="true"/>
+							<field type="button" value-text="REQ.CHECK_AGAIN_BT" class="btn btn-outline-primary me-2 mb-3 spctrl-repeat" icon="redo" stand-alone="true"/>
+							<field type="button" value-text="REQ.DOWNLOAD_BT" class="btn btn-outline-secondary mb-3 spctrl-download" icon="download" stand-alone="true"/>
+							<div condition="samples">
+								<message label="REQ.SAMPLES_DESC" type="outline-delta" class="alert-sm spctrl-install-samples"/>
+								<field type="button" value-text="REQ.SAMPLES" class="btn btn-delta spctrl-samples" icon="eye" stand-alone="true"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<fieldset label="REQ.CMS">
+					<field type="output" value="" label="REQ.CMS_VERSION" id="cms"/>
+					<!--					<field type="output" value="" label="REQ.FTP_LAYER" id="cmsFtp"/>-->
+					<field type="output" value="" label="REQ.ENCODING" id="cmsEncoding"/>
+				</fieldset>
+				<fieldset label="REQ.WEB_SERVER">
+					<field type="output" value="" label="REQ.WEB_SERVER_VERSION_NAME" id="webServer"/>
+				</fieldset>
+				<fieldset label="REQ.PHP_SETTINGS">
+					<field type="output" value="" label="REQ.PHP_VERSION" id="phpVersion"/>
+					<!--					<field type="output" value="" label="REQ.SAFE_MODE" id="safeMode"/>-->
+					<!--					<field type="output" value="" label="REQ.REGISTER_GLOBALS" id="registerGlobals"/>-->
+					<field type="output" value="" label="REQ.PARSE_INI" id="iniParse"/>
+					<field type="output" value="" label="REQ.GD_LIBRARY" id="gDlib"/>
+					<field type="output" value="" label="REQ.WEBP" id="webp"/>
+					<field type="output" value="" label="REQ.DOM" id="DOM"/>
+					<field type="output" value="" label="REQ.XSL" id="XSL"/>
+					<field type="output" value="" label="REQ.XPATH" id="XPath"/>
+					<field type="output" value="" label="REQ.TIDY" id="tidy"/>
+					<field type="output" value="" label="REQ.SPL" id="spl"/>
+					<field type="output" value="" label="REQ.FILTER" id="filterFunctions"/>
+					<field type="output" value="" label="REQ.REPC" id="PCRE"/>
+					<field type="output" value="" label="REQ.CURL" id="CURL"/>
+					<field type="output" value="" label="REQ.SQLITE" id="SQLite"/>
+					<field type="output" value="" label="REQ.SOAP" id="SOAP"/>
+					<field type="output" value="" label="REQ.OPENSSL" id="OpenSSL"/>
+					<field type="output" value="" label="REQ.MAX_EXE_TIME" id="maxExecutionTime"/>
+					<field type="output" value="" label="REQ.MEMORY_LIMIT" id="memoryLimit"/>
+					<field type="output" value="" label="REQ.ZIPARCHIVE" id="ZipArchive"/>
+					<field type="output" value="" label="REQ.REFLECTION" id="reflection"/>
+					<field type="output" value="" label="REQ.SYSTEM" id="exec"/>
+				</fieldset>
+				<fieldset label="REQ.MYSQL_SETTINGS">
+					<field type="output" value="" label="REQ.MYSQL_NAME" id="mySQLname"/>
+					<field type="output" value="" label="REQ.MYSQL_VERSION" id="mySQLversion"/>
+					<field type="output" value="" label="REQ.MYSQL_CHARSET" id="mySQLcharset"/>
+					<field type="output" value="" label="REQ.MYSQL_PROCEDURE" id="createProcedure"/>
+					<field type="output" value="" label="REQ.MYSQL_VIEW" id="createView"/>
+					<field type="output" value="" label="REQ.MYSQL_CACHE" id="mySQLCache"/>
+				</fieldset>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

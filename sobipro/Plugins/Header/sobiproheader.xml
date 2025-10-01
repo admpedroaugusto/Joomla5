@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade" overwrite="true">
+	<name>plg_sobipro_header</name>
+	<creationDate>14 August 2023</creationDate>
+	<author>Sigsiu.NET GmbH</author>
+	<authorEmail>sobi[at]sigsiu.net</authorEmail>
+	<authorUrl>https://www.Sigsiu.NET</authorUrl>
+	<copyright>Copyright (C) 2006-2023 Sigsiu.NET GmbH</copyright>
+	<license>GNU General Public License v3</license>
+	<version>2.0.2</version>
+	<element>sobiproheader</element>
+	<description><![CDATA[SobiPro 2 Header Plugin - please do not disable!<br/>
+The SobiPro 2 Header Plugin is necessary for the correct functionality of SobiPro 2. If it is disabled SobiPro won't work at all.]]>
+	</description>
+	<files>
+		<filename plugin="sobiproheader">sobiproheader.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_sobiproheader.sys.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="SobiPro Updates (Header Plugin)">
+			<![CDATA[https://xml.sigsiu.net/SobiPro/SobiPro-Header-Plugin.xml]]>
+		</server>
+	</updateservers>
+</extension>

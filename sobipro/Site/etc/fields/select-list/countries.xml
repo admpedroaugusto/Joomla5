@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2021 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 15 December 2021 by Sigrid Suski
+-->
+
+<definition prefix="countries" translation="SpApp.select-list.countries">
+	<option id="africa" child-type="country">
+		<option id="algeria"/>
+		<option id="angola"/>
+		<option id="benin"/>
+		<option id="botswana"/>
+		<option id="burkina"/>
+		<option id="burundi"/>
+		<option id="cameroon"/>
+		<option id="cape-verde"/>
+		<option id="central-african-republic"/>
+		<option id="chad"/>
+		<option id="comoros"/>
+		<option id="congo"/>
+		<option id="congo-democratic-republic-of"/>
+		<option id="djibouti"/>
+		<option id="egypt"/>
+		<option id="equatorial-guinea"/>
+		<option id="eritrea"/>
+		<option id="ethiopia"/>
+		<option id="gabon"/>
+		<option id="gambia"/>
+		<option id="ghana"/>
+		<option id="guinea"/>
+		<option id="guinea-bissau"/>
+		<option id="ivory-coast"/>
+		<option id="kenya"/>
+		<option id="lesotho"/>
+		<option id="liberia"/>
+		<option id="libya"/>
+		<option id="madagascar"/>
+		<option id="malawi"/>
+		<option id="mali"/>
+		<option id="mauritania"/>
+		<option id="mauritius"/>
+		<option id="morocco"/>
+		<option id="mozambique"/>
+		<option id="namibia"/>
+		<option id="niger"/>
+		<option id="nigeria"/>
+		<option id="rwanda"/>
+		<option id="sao-tome-and-principe"/>
+		<option id="senegal"/>
+		<option id="seychelles"/>
+		<option id="sierra-leone"/>
+		<option id="somalia"/>
+		<option id="south-africa"/>
+		<option id="south-sudan"/>
+		<option id="sudan"/>
+		<option id="swaziland"/>
+		<option id="tanzania"/>
+		<option id="togo"/>
+		<option id="tunisia"/>
+		<option id="uganda"/>
+		<option id="zambia"/>
+		<option id="zimbabwe"/>
+	</option>
+	<option id="asia" child-type="country">
+		<option id="afghanistan"/>
+		<option id="bahrain"/>
+		<option id="bangladesh"/>
+		<option id="bhutan"/>
+		<option id="brunei"/>
+		<option id="burma"/>
+		<option id="cambodia"/>
+		<option id="china"/>
+		<option id="east-timor"/>
+		<option id="india"/>
+		<option id="indonesia"/>
+		<option id="iran"/>
+		<option id="iraq"/>
+		<option id="israel"/>
+		<option id="japan"/>
+		<option id="jordan"/>
+		<option id="kazakhstan"/>
+		<option id="korea-north"/>
+		<option id="korea-south"/>
+		<option id="kuwait"/>
+		<option id="kyrgyzstan"/>
+		<option id="laos"/>
+		<option id="lebanon"/>
+		<option id="malaysia"/>
+		<option id="maldives"/>
+		<option id="mongolia"/>
+		<option id="nepal"/>
+		<option id="oman"/>
+		<option id="pakistan"/>
+		<option id="philippines"/>
+		<option id="qatar"/>
+		<option id="russian-federation"/>
+		<option id="saudi-arabia"/>
+		<option id="singapore"/>
+		<option id="sri-lanka"/>
+		<option id="syria"/>
+		<option id="tajikistan"/>
+		<option id="thailand"/>
+		<option id="turkey"/>
+		<option id="turkmenistan"/>
+		<option id="united-arab-emirates"/>
+		<option id="uzbekistan"/>
+		<option id="vietnam"/>
+		<option id="yemen"/>
+	</option>
+	<option id="europe" child-type="country">
+		<option id="albania"/>
+		<option id="andorra"/>
+		<option id="armenia"/>
+		<option id="austria"/>
+		<option id="azerbaijan"/>
+		<option id="belarus"/>
+		<option id="belgium"/>
+		<option id="bosnia-and-herzegovina"/>
+		<option id="bulgaria"/>
+		<option id="croatia"/>
+		<option id="cyprus"/>
+		<option id="czech-republic"/>
+		<option id="denmark"/>
+		<option id="estonia"/>
+		<option id="finland"/>
+		<option id="france"/>
+		<option id="georgia"/>
+		<option id="germany"/>
+		<option id="greece"/>
+		<option id="hungary"/>
+		<option id="iceland"/>
+		<option id="ireland"/>
+		<option id="italy"/>
+		<option id="latvia"/>
+		<option id="liechtenstein"/>
+		<option id="lithuania"/>
+		<option id="luxembourg"/>
+		<option id="macedonia"/>
+		<option id="malta"/>
+		<option id="moldova"/>
+		<option id="monaco"/>
+		<option id="montenegro"/>
+		<option id="netherlands"/>
+		<option id="norway"/>
+		<option id="poland"/>
+		<option id="portugal"/>
+		<option id="romania"/>
+		<option id="san-marino"/>
+		<option id="serbia"/>
+		<option id="slovakia"/>
+		<option id="slovenia"/>
+		<option id="spain"/>
+		<option id="sweden"/>
+		<option id="switzerland"/>
+		<option id="ukraine"/>
+		<option id="united-kingdom"/>
+		<option id="vatican-city"/>
+	</option>
+	<option id="north-america" child-type="country">
+		<option id="antigua-and-barbuda"/>
+		<option id="bahamas"/>
+		<option id="barbados"/>
+		<option id="belize"/>
+		<option id="canada"/>
+		<option id="costa-rica"/>
+		<option id="cuba"/>
+		<option id="dominica"/>
+		<option id="dominican-republic"/>
+		<option id="el-salvador"/>
+		<option id="grenada"/>
+		<option id="guatemala"/>
+		<option id="haiti"/>
+		<option id="honduras"/>
+		<option id="jamaica"/>
+		<option id="mexico"/>
+		<option id="nicaragua"/>
+		<option id="panama"/>
+		<option id="saint-kitts-and-nevis"/>
+		<option id="saint-lucia"/>
+		<option id="saint-vincent-and-the-grenadines"/>
+		<option id="trinidad-and-tobago"/>
+		<option id="united-states"/>
+	</option>
+	<option id="oceania" child-type="country">
+		<option id="australia"/>
+		<option id="fiji"/>
+		<option id="kiribati"/>
+		<option id="marshall-islands"/>
+		<option id="micronesia"/>
+		<option id="nauru"/>
+		<option id="new-zealand"/>
+		<option id="palau"/>
+		<option id="papua-new-guinea"/>
+		<option id="samoa"/>
+		<option id="solomon-islands"/>
+		<option id="tonga"/>
+		<option id="tuvalu"/>
+		<option id="vanuatu"/>
+	</option>
+	<option id="south-america" child-type="country">
+		<option id="argentina"/>
+		<option id="bolivia"/>
+		<option id="brazil"/>
+		<option id="chile"/>
+		<option id="colombia"/>
+		<option id="ecuador"/>
+		<option id="guyana"/>
+		<option id="paraguay"/>
+		<option id="peru"/>
+		<option id="suriname"/>
+		<option id="uruguay"/>
+		<option id="venezuela"/>
+	</option>
+</definition>

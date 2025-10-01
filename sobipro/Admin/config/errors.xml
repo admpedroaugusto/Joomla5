@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @created 18 December 2012 by Radek Suski
+ @modified 21 February 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header/>
+	<toolbar title="ERR.SITE_TITLE" class="config errors">
+		<buttons type="actions" condition="errors.length">
+			<button label="TB.PURGE" task="error.purge" icon="trash" colour="delete"/>
+			<button label="TB.DOWNLOAD_LOG" task="error.download" icon="save"/>
+		</buttons>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<div condition="errors.length" class="table-responsive">
+					<table class="dk-error-list">
+						<head>
+							<cell label="ERR.ERROR_INFO" type="text" class="dk-cell text-center"/>
+							<cell/>
+							<cell label="ERR.ERROR_DETAILS" type="text" class="dk-cell text-center"/>
+						</head>
+						<loop subject="errors">
+							<cell type="text" value="errNum" class="dk-cell text-center w-10"/>
+							<cell>
+								<cell type="text" value="errMsg"/>
+								<cell type="text" label="ERR.ERROR_DATE" value="date" dateFormat="cfg:time_format" class="dk-cell"/>
+								<cell type="text" label="ERR.IN_FILE" value="errFile" class="dk-cell"/>
+								<cell type="text" label="ERR.REQUESTED_URI" value="errReq" class="dk-cell"/>
+							</cell>
+							<cell class="dk-cell text-center w-10">
+								<cell type="link" value="eid" aria-label="ACCESSIBILITY.ERRORNUMBER">
+									<url type="intern" class="badge dk-errnum">
+										<param name="task" value="error.details"/>
+										<param name="eid" value="eid" parse="true"/>
+									</url>
+								</cell>
+							</cell>
+						</loop>
+						<foot>
+							<navigation/>
+						</foot>
+					</table>
+				</div>
+				<div invert-condition="errors.length">
+					<hint label="ERR.NO_ERRORS" icon="bug" description="ERR.EXPL" help="error" config="config.global!#gbn-cfg-cache-head!#spcfg-debug-level"/>
+				</div>
+				<pagination set="errSite" class="justify-content-center" inputbox="right" type="icon">
+					<param name="count" value="errors-count" parse="true"/>
+					<param name="limit" value="errors-limit" parse="true"/>
+					<param name="current" value="errors-site" parse="true"/>
+					<param name="url">
+						<param name="option" value="com_sobipro"/>
+						<param name="task" value="error"/>
+					</param>
+				</pagination>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

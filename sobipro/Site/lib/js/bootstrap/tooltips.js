@@ -1,0 +1,21 @@
+/**
+ * @package: SobiPro Library
+
+ * @author
+ * Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ * Email: sobi[at]sigsiu.net
+ * Url: https://www.Sigsiu.NET
+
+ * @copyright Copyright (C) 2006 - 2022 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ * @license GNU/LGPL Version 3
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 3
+ * as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ * See https://www.gnu.org/licenses/lgpl.html and https://www.sigsiu.net/licenses.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+ *
+ * Compatibility file for old SobiPro templates!
+ * @deprecated since 2.0; will be removed in 3.0
+ */
+
+ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('!4($){"1y 1z";j f=4(a,b){3.15(\'n\',a,b)};f.1A={1B:f,15:4(a,b,c){j d,N;3.g=a;3.$7=$(b);3.5=3.16(c);3.u=O;8(3.5.v==\'17\'){3.$7.P(\'17.\'+3.g,3.5.w,$.Q(3.18,3))}1C 8(3.5.v!=\'19\'){d=3.5.v==\'R\'?\'1D\':\'1E\';N=3.5.v==\'R\'?\'1F\':\'1G\';3.$7.P(d+\'.\'+3.g,3.5.w,$.Q(3.1a,3));3.$7.P(N+\'.\'+3.g,3.5.w,$.Q(3.1b,3))}3.5.w?(3.E=$.S({},3.5,{v:\'19\',w:\'\'})):3.1c()},16:4(a){a=$.S({},$.F[3.g].1d,a,3.$7.h());8(a.k&&x a.k==\'1H\'){a.k={s:a.k,q:a.k}}r a},1a:4(e){j a=$(e.T)[3.g](3.E).h(3.g);8(!a.5.k||!a.5.k.s)r a.s();U(3.A);a.G=\'t\';3.A=V(4(){8(a.G==\'t\')a.s()},a.5.k.s)},1b:4(e){j a=$(e.T)[3.g](3.E).h(3.g);8(3.A)U(3.A);8(!a.5.k||!a.5.k.q)r a.q();a.G=\'1e\';3.A=V(4(){8(a.G==\'1e\')a.q()},a.5.k.q)},s:4(){j a,H,6,B,C,p,y;8(3.1f()&&3.u){a=3.9();3.1g();8(3.5.1h){a.W(\'X\')}p=x 3.5.p==\'4\'?3.5.p.1i(3,a[0],3.$7[0]):3.5.p;H=/t/.1I(p);a.I().1J({i:0,l:0,1K:\'1L\'}).1M(3.$7);6=3.1j(H);B=a[0].1k;C=a[0].1l;1N(H?p.1O(\' \')[1]:p){J\'1m\':y={i:6.i+6.K,l:6.l+6.L/2-B/2};M;J\'i\':y={i:6.i-C,l:6.l+6.L/2-B/2};M;J\'l\':y={i:6.i+6.K/2-C/2,l:6.l-B};M;J\'1n\':y={i:6.i+6.K/2-C/2,l:6.l+6.L};M}a.1o(y).W(p).W(\'t\')}},1g:4(){j a=3.9(),m=3.Y();a.1P(\'.n-1p\')[3.5.Z?\'Z\':\'1Q\'](m);a.1q(\'X t i 1m l 1n\')},q:4(){j b=3,$9=3.9();$9.1q(\'t\');4 1r(){j a=V(4(){$9.1s($.10.11.1t).I()},1R);$9.1S($.10.11.1t,4(){U(a);$9.I()})}$.10.11&&3.$9.1u(\'X\')?1r():$9.I();r 3},1c:4(){j a=3.$7;8(a.D(\'m\')||x(a.D(\'h-12-m\'))!=\'1v\'){a.D(\'h-12-m\',a.D(\'m\')||\'\').1T(\'m\')}},1f:4(){r 3.Y()},1j:4(a){r $.S({},(a?{i:0,l:0}:3.$7.1o()),{L:3.$7[0].1k,K:3.$7[0].1l})},Y:4(){j a,$e=3.$7,o=3.5;a=$e.D(\'h-12-m\')||(x o.m==\'4\'?o.m.1i($e[0]):o.m);r a},9:4(){r 3.$9=3.$9||$(3.5.1w)},1U:4(){8(!3.$7[0].1V){3.q();3.$7=1x;3.5=1x}},1W:4(){3.u=O},1X:4(){3.u=13},1Y:4(){3.u=!3.u},18:4(e){j a=$(e.T)[3.g](3.E).h(3.g);a[a.9().1u(\'t\')?\'q\':\'s\']()},1Z:4(){3.q().$7.1s(\'.\'+3.g).20(3.g)}};$.F.n=4(b){r 3.21(4(){j a=$(3),h=a.h(\'n\'),5=x b==\'22\'&&b;8(!h)a.h(\'n\',(h=23 f(3,5)));8(x b==\'1v\')h[b]()})};$.F.n.24=f;$.F.n.1d={1h:O,p:\'i\',w:13,1w:\'<z 14="n"><z 14="n-25"></z><z 14="n-1p"></z></z>\',v:\'R\',m:\'\',k:0,Z:13}}(26.27);',62,132,'|||this|function|options|pos|element|if|tip|||||||type|data|top|var|delay|left|title|tooltip||placement|hide|return|show|in|enabled|trigger|selector|typeof|tp|div|timeout|actualWidth|actualHeight|attr|_options|fn|hoverState|inside|detach|case|height|width|break|eventOut|true|on|proxy|hover|extend|currentTarget|clearTimeout|setTimeout|addClass|fade|getTitle|html|support|transition|original|false|class|init|getOptions|click|toggle|manual|enter|leave|fixTitle|defaults|out|hasContent|setContent|animation|call|getPosition|offsetWidth|offsetHeight|bottom|right|offset|inner|removeClass|removeWithAnimation|off|end|hasClass|string|template|null|use|strict|prototype|constructor|else|mouseenter|focus|mouseleave|blur|number|test|css|display|block|insertAfter|switch|split|find|text|500|one|removeAttr|validate|parentNode|enable|disable|toggleEnabled|destroy|removeData|each|object|new|Constructor|arrow|window|jQuery'.split('|'),0,{}))

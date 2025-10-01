@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 January 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.sam"/>
+	</header>
+
+	<toolbar title="EX.INSTALLED" class="extensions installed">
+		<button label="TB.REMOVE" task="extensions.delete" icon="trash" confirm="TB.JS_DELETE_EXT" colour="delete"/>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<div condition="trim">
+					<file filename="about.information.info-installed" type="html" translatable="true" start-path="administrator"/>
+				</div>
+				<field type="fileUpload" name="SobiProExtension" label="EX.INSTALL" accept="application/zip" task="extensions.install" grid="true" labelwidth="2"/>
+				<table>
+					<head>
+						<cell/>
+						<cell label="EX.HEADER_NAME" type="text" class="dk-cell text-start"/>
+						<cell label="EXTENSIONS.HEADER_VERSION" type="text" class="dk-cell text-center"/>
+						<cell label="EX.HEADER_TYPE" type="text" class="dk-cell text-center"/>
+						<cell label="EXTENSIONS.HEADER_ENABLED" type="text" class="dk-cell text-center"/>
+						<cell label="EXTENSIONS.HEADER_PID" type="text" class="dk-cell text-center"/>
+						<cell label="EXTENSIONS.HEADER_AUTHOR" type="text" class="dk-cell text-center"/>
+					</head>
+					<loop subject="applications">
+						<cell type="checkbox" name="eid" value="eid" class="dk-cell text-center" locked-icon="ban" locked="locked" locked-text="EX.CORE_PLUGIN" input-type="radio"
+						      multiple="false"/>
+						<cell type="text" value="name" class="dk-cell text-start"/>
+						<cell type="text" value="version" class="dk-cell text-center"/>
+						<cell type="text" value="type" class="dk-cell text-center"/>
+						<cell type="ticker" value="enabled" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle', '-1':'stop-circle'}" fa="far" colors="{'0':'dk-text-red','1':'dk-text-green'}"
+						      status-text="{'-1':'EX.NOT_APPLICABLE'}">
+							<url type="intern" class="dk-enabled">
+								<param name="task" value="extensions.toggle"/>
+								<param name="eid" value="eid" parse="true"/>
+							</url>
+						</cell>
+						<cell type="text" value="pid" class="dk-cell text-center"/>
+						<cell type="link" value="author" condition="authorURL" class="dk-cell text-center">
+							<url type="extern" host="authorURL"/>
+						</cell>
+						<cell type="text" value="author" class="dk-cell text-center" invert-condition="authorURL"/>
+					</loop>
+				</table>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="pid" value="pid"/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

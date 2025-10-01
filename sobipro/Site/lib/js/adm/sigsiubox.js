@@ -1,0 +1,22 @@
+/**
+ * @package SobiPro Library
+ *
+ * @author Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ * @email sobi[at]sigsiu.net
+ * @url https://www.Sigsiu.NET
+ *
+ * SigsiuBox: A simple javascript (ES6) message box for Bootstrap 5.
+ *
+ * @copyright Copyright (C) 2006 - 2021 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ * @license GNU/LGPL Version 3
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 3
+ * as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ * See https://www.gnu.org/licenses/lgpl.html and https://www.sigsiu.net/licenses.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+ *
+ * @created 25 May 2021 by Sigrid Suski
+ * @modified 15 October 2021 by Sigrid Suski
+ */
+const SigsiuBox={settings:{type:"none",bg:"bg-light",color:"",header:!1,close:!0,btnclosecolor:""},option:{autohide:!0,animation:!1,delay:2e3},button:{color:"alpha"},box:{containerEnd:"</div>",toastEnd:"</div>",body:'<div class="toast-body">',bodyEnd:"</div>"},buttonsHtml:"",componentsHtml:"",actions:[],closeSymbol:"",confirmBox:!1,confirmResult:null,sp:document.getElementById("SobiPro"),dom:document.createElement("div"),toast:null,processParameters:(o,i,t)=>{if(i&&(SigsiuBox.settings={color:void 0===i.color?SigsiuBox.settings.color:i.color,header:void 0===i.header?SigsiuBox.settings.header:i.header,close:void 0===i.close?SigsiuBox.settings.close:i.close,bg:void 0===i.type?SigsiuBox.settings.bg:"none"===i.type?"":"bg-"+i.type,btnclosecolor:void 0!==i.type&&"none"!==i.type&&void 0===i.header?"btn-close-white":SigsiuBox.settings.btnclosecolor},SigsiuBox.option={autohide:void 0===i.autohide||i.autohide,animation:void 0!==i.animation&&i.animation,delay:void 0===i.delay?3e3:i.delay}),SigsiuBox.box.closeSymbol="<button type='button' class='btn-close "+SigsiuBox.settings.btnclosecolor+" me-2 m-auto' data-bs-dismiss='toast' aria-label='"+SobiPro.Txt("ACCESSIBILITY.CLOSE")+"'></button>",SigsiuBox.box.container="<div class='toast-container position-absolute p-3 top-50 start-50 translate-middle' id='container-"+o+"' style='z-index: 7000;' data-original-class='toast-container position-absolute p-3'>",SigsiuBox.box.toast="<div class='toast align-items-center "+SigsiuBox.settings.color+" "+SigsiuBox.settings.bg+" border-0' id='"+o+"' role='alert' aria-live='assertive' aria-atomic='true'>",SigsiuBox.closeSymbol=!0===SigsiuBox.settings.close?SigsiuBox.box.closeSymbol:"",t){let o=t.map((o=>(o.color=void 0===t.color?SigsiuBox.button.color:t.color,void 0===o.action||"close"===o.action?(SigsiuBox.closeSymbol="","<button type='button' class='btn btn-alpha btn-sm ms-1' data-bs-dismiss='toast' id='sigsiubox-confirm-"+o.id+"'>"+o.caption+"</button>"):(o.html="<button type='button' class='sigsiubox-confirm btn btn-"+o.color+" btn-sm ms-1' id='sigsiubox-btn-"+o.id+"'>"+o.caption+"</button>",SigsiuBox.actions[SigsiuBox.actions.length]=o,o.html))));SigsiuBox.buttonsHtml='<div class="mt-2 pt-2 border-top">'+o.join("")+"</div>"}SigsiuBox.box.flex=!1!==SigsiuBox.settings.header||t?"":"<div class='d-flex'>",SigsiuBox.box.flexend=!1!==SigsiuBox.settings.header||t?"":"</div>"},message:(o,i,t=null,s=null,e=null)=>{SigsiuBox.processParameters(o,t,s);let n=SigsiuBox.box.container+SigsiuBox.box.toast;if(SigsiuBox.settings.header&&(n+="<div class='toast-header'>"+SigsiuBox.settings.header+SigsiuBox.closeSymbol+"</div>"),n+=SigsiuBox.box.flex,n+=SigsiuBox.box.body+i,e&&(n+=SigsiuBox.componentsHtml),s&&(n+=SigsiuBox.buttonsHtml),n+=SigsiuBox.box.bodyEnd,SigsiuBox.closeSymbol&&!SigsiuBox.settings.header&&(n+=SigsiuBox.closeSymbol),n+=SigsiuBox.box.flexend+SigsiuBox.box.toastEnd+SigsiuBox.box.containerEnd,SigsiuBox.dom.innerHTML=n,SigsiuBox.sp.appendChild(SigsiuBox.dom),s){[].slice.call(document.querySelectorAll(".sigsiubox-btn")).map(((o,i)=>{o.addEventListener("click",(function(o){return SigsiuBox.actions[i].action(o)}))}))}let l=document.getElementById(o);if(l.addEventListener("hidden.bs.toast",(function(){this.dispose,[].slice.call(document.querySelectorAll(".sigsiubox-btn")).map((o=>{o.removeEventListener("click")})),SigsiuBox.dom.remove()})),SigsiuBox.toast=new bootstrap.Toast(l,SigsiuBox.option),SigsiuBox.toast.show(),!SigsiuBox.confirmBox)return!0}};

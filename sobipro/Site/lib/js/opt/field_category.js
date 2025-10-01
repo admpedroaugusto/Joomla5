@@ -1,0 +1,1 @@
+function SPCategoryChooser(e){SobiCore.Ready(function(){SobiPro.jQuery("#"+e.id).change(function(i){let o=SobiPro.jQuery(this).find(":selected");if(o.length>e.limit){alert(SobiPro.Txt("FCC_LIMIT_REACHED").replace("%d",e.limit));for(let i=e.limit;i<o.length;i++)SobiPro.jQuery(o[i]).removeAttr("selected")}})})}

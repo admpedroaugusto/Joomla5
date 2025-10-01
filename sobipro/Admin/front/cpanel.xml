@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+	@package: SobiPro multi-directory component with content construction support
+
+	@author
+	Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+	Email: sobi[at]sigsiu.net
+	Url: https://www.Sigsiu.NET
+
+	@copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+	@license GNU/GPL Version 3
+	This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+	as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+	See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+	@created 12 December 2012 by Radek Suski
+	@modified 24 October 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.front"/>
+	</header>
+
+	<toolbar title="SEC.SITE_TITLE" class="front cpanel">
+		<button type="action" icon="hand-sparkles" label="CPANEL_ISSUES_CLEAR" task="front.clearmessages" condition="system-state.messages.length and acl.config"/>
+		<button type="action" icon="cogs" label="TB.PANEL.CONFIG" task="front.config" condition="acl.config"/>
+		<buttons type="action" icon="sitemap" label="TB.SECTION" condition="acl.config">
+			<button type="new" task="section.add" label="TB.ADD_NEW" colour="new"/>
+			<button type="delete" task="section.delete" confirm="TB.JS_DELETE_SECTION_WARN" colour="delete"/>
+			<dropdown-header label="TB.PUBLISHING"/>
+			<button type="publish" task="section.publish"/>
+			<button type="hide" task="section.hide"/>
+		</buttons>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<message id="spctrl-message"/>
+		<div class="row">
+
+			<div class="col-lg-12">
+				<!-- SobiPro status -->
+				<div class="accordion mb-3 dk-status" condition="acl.config or acl.apps or acl.admin" id="accordionExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<text value="CPANEL_SYSTEM_STATUS"/>
+							</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<call function="SPAdmPanelView::phpSettings"/>
+				
+								<div condition="system-state.messages.length" class="dk-issues alert alert-outline-warning">
+									<div>
+										<a href="#ReportedIssues" class="alert-link" data-bs-toggle="collapse">
+											<text value="CPANEL_REPORTED_ISSUES">
+												<param value="system-state.messages.length" parse="true"/>
+											</text>
+										</a>
+									</div>
+									<div class="collapse show" id="ReportedIssues" condition="system-state.messages.length" tabindex="-1">
+										<div class="table-responsive">
+											<table class="sp-report-table table-warning table-sm">
+												<thead>
+													<tr>
+														<th scope="col" class="dk-cell text-center"><text value="CPANEL_ISSUES_TYPE"/></th>
+														<th scope="col"><text value="CPANEL_ISSUES_SECTION"/></th>
+														<th scope="col"><text value="CPANEL_ISSUES_MESSAGE"/></th>
+													</tr>
+												</thead>
+												<tbody>
+													<loop subject="system-state.messages">
+														<tr>
+															<td class="dk-cell text-center">
+																<span class="badge bg-var:[type]"><text value="type-text"/></span>
+															</td>
+															<td><text value="section.link"/></td>
+															<td><text value="message"/></td>
+														</tr>
+													</loop>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+				
+								<call function="SPAdmPanelView::phpWarnings"/>
+				
+								<message parse="system-state.accelerator" condition="system-state.accelerator"
+											link="config#gbn-cfg-cache-head!#spcfg-cache-l3-enabled"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true" style="outline"/>
+								<message parse="system-state.xml-optimiser" condition="system-state.xml-optimiser"
+											link="config#gbn-cfg-cache-head!#spcfg-cache-xml-enabled"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true" style="outline"/>
+								<message parse="system-state.javascript-cache" condition="system-state.javascript-cache"
+											link="config#gbn-cfg-cache-head!#spcfg-cache-include-js-files"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true"
+											style="outline"/>
+								<message parse="system-state.css-cache" condition="system-state.css-cache"
+											link="config#gbn-cfg-cache-head!#spcfg-cache-include-css-files"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true" style="outline"/>
+								<message parse="system-state.js-compress" condition="system-state.js-compress"
+											link="config#gbn-cfg-cache-head!#spcfg-cache-compress-js"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true" style="outline"/>
+								<message parse="system-state.display-errors" condition="system-state.display-errors"
+											link="config#gbn-cfg-cache-head!#spcfg-debug-display-errors"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true"
+											style="outline"/>
+								<message parse="system-state.debug-level" condition="system-state.debug-level"
+											link="config#gbn-cfg-cache-head!#spcfg-debug-level"
+											link-condition="acl.config"
+											dismiss-button="false" icon="true" style="outline"/>
+								<message parse="system-state.debug-xml" condition="system-state.debug-xml"
+											dismiss-button="false" icon="true" style="outline"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SobiPro quickicons -->
+				<div class="card mb-3" condition="acl.config or acl.apps or acl.admin">
+					<div class="card-body">
+						<div class="dk-quick-icons" aria-label="ACCESSIBILITY.QUICK_LINKS" tabindex="-1">
+							<ul class="nav flex-wrap">
+								<li class="dk-quickicon-single" condition="acl.config">
+									<url type="intern" label="CPANEL.GCONF" icon="cogs fa-3x" container="quickicon">
+										<param name="task" value="config"/>
+									</url>
+								</li>
+								<li class="dk-quickicon-single" condition="acl.admin">
+									<url type="intern" label="CPANEL.ACL" icon="user fa-3x" container="quickicon">
+										<param name="task" value="acl"/>
+									</url>
+								</li>
+								<li class="dk-quickicon-single" condition="acl.apps">
+									<url type="intern" label="CPANEL.SAM" icon="puzzle-piece fa-3x" container="quickicon">
+										<param name="task" value="extensions.installed"/>
+									</url>
+								</li>
+								<li class="dk-quickicon-single" condition="acl.config">
+									<url type="intern" label="CPANEL.TMPL" icon="image fa-3x" container="quickicon">
+										<param name="task" value="template.info"/>
+									</url>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- SobiPro sections list -->
+				<div class="card mb-3" condition="sections">
+					<div class="card-header">
+						<header label="SECTIONS" icon="sitemap">
+							<div class="input-group-sm ms-auto">
+								<field type="select" name="order" selected="order" aria-label="ACCESSIBILITY.LIST_SELECT_ORDER_CATEGORIES" id="SectionFilterHead"
+										data-spctrl="submit">
+									<values>
+										<values label="ORDER_BY"/>
+										<option value="name.asc" label="ORDER_BY_NAME_ASC"/>
+										<option value="name.desc" label="ORDER_BY_NAME_DESC"/>
+										<option value="id.asc" label="ORDER_BY_ID_ASC"/>
+										<option value="id.desc" label="ORDER_BY_ID_DESC"/>
+										<option value="state.asc" label="ORDER_BY_STATE_ASC"/>
+										<option value="state.desc" label="ORDER_BY_STATE_DESC"/>
+									</values>
+								</field>
+							</div>
+						</header>
+					</div>
+					<div class="card-body">
+						<table class="table-hover table-sm">
+							<head>
+								<cell type="checkbox" rel="c_sid" class="dk-cell text-center" aria-label="ACCESSIBILITY.SECTION_CHECK_ALL"/>
+								<cell type="text" label="SECTIONS.HEADER_ID" class="dk-cell text-center"/>
+								<cell type="text" label="SECTIONS.HEADER_NAME"/>
+								<cell type="text" label="SECTION.STATE_HEAD" class="dk-cell text-center"/>
+							</head>
+							<loop subject="sections">
+								<cell type="checkbox" name="c_sid" value="id" class="dk-cell text-center" aria-label="ACCESSIBILITY.SECTION_CHECK"/>
+								<cell type="text" value="id" class="dk-cell text-center"/>
+								<cell class="dk-cell">
+									<cell type="link" value="name">
+										<url type="intern">
+											<param name="sid" value="id" parse="true"/>
+										</url>
+									</cell>
+								</cell>
+								<cell type="ticker" value="state" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle'}" fa="far"
+										colors="{'0':'dk-text-red','1':'dk-text-green'}"
+										aria-labels="{'0':'ACCESSIBILITY.TICKER_SECTION_ENABLE','1':'ACCESSIBILITY.TICKER_SECTION_DISABLE'}"
+										valid-since="validSince" valid-until="validUntil">
+									<url type="intern" class="dk-enabled" link-condition="/acl.section.param:[condition].configure">
+										<param name="task" value="section.toggle.enabled"/>
+										<param name="sid" value="id" parse="true"/>
+										<param name="condition" value="id" parse="true"/>
+									</url>
+								</cell>
+							</loop>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12">
+				<!-- popular/new/unapproved entries/categories-->
+				<div class="dk-panel-preview accordion mb-3" id="sp-panel-preview">
+					<!-- popular entries -->
+					<div class="accordion-item" condition="show-entries and entries.popular.length">
+						<h3 class="accordion-header" id="sp-pe-header">
+							<a class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-target="#sp-pe" aria-expanded="false"
+								aria-controls="sp-pe">
+								<text value="CPANEL_POPULAR_ENTRIES"/>
+							</a>
+						</h3>
+						<div id="sp-pe" class="accordion-collapse collapse" condition="entries.popular.length" aria-labelledby="sp-pe-header"
+								data-bs-parent="#sp-panel-preview">
+							<div class="accordion-body table-responsive">
+								<table class="table-sm table-hover">
+									<head>
+										<cell label="ENTRY.HEADER_NAME" type="text"/>
+										<cell label="ENTRY.HEADER_COUNTER" type="text" class="dk-cell text-center"/>
+										<cell label="ENTRY.HEADER_SECTION" type="text"/>
+									</head>
+									<loop subject="entries.popular">
+										<cell>
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="entry.edit" parse="false"/>
+													<param name="sid" value="id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+										<cell type="text" value="counter" class="dk-cell text-center"/>
+										<cell>
+											<cell type="link" value="properties.section.name">
+												<url type="intern">
+													<param name="sid" value="properties.section.id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+									</loop>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- new entries -->
+					<div class="accordion-item" condition="show-entries and entries.latest.length">
+						<h3 class="accordion-header" id="sp-ne-header">
+							<a class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-target="#sp-ne" aria-expanded="false"
+								aria-controls="sp-ne">
+								<text value="CPANEL_NEW_ENTRIES"/>
+							</a>
+						</h3>
+						<div id="sp-ne" class="accordion-collapse collapse" condition="entries.latest.length" aria-labelledby="sp-ne-header"
+								data-bs-parent="#sp-panel-preview">
+							<div class="accordion-body table-responsive">
+								<table class="table-sm table-hover">
+									<head>
+										<cell label="ENTRY.HEADER_NAME" type="text"/>
+										<cell label="ENTRY.HEADER_CREATED_AT" type="text" class="dk-cell text-center"/>
+										<cell label="ENTRY.HEADER_SECTION" type="text"/>
+									</head>
+									<loop subject="entries.latest">
+										<cell>
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="entry.edit" parse="false"/>
+													<param name="sid" value="id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+										<cell type="text" value="createdTime" dateFormat="cfg:publishing_format" class="dk-cell text-center"/>
+										<cell>
+											<cell type="link" value="properties.section.name">
+												<url type="intern">
+													<param name="sid" value="properties.section.id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+									</loop>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- unapproved entries -->
+					<div class="accordion-item" condition="show-entries and entries.unapproved.length">
+						<h3 class="accordion-header" id="sp-ue-header">
+							<a class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-target="#sp-ue" aria-expanded="false"
+								aria-controls="sp-ue">
+								<text value="CPANEL_AWAITING_APPROVAL"/>
+							</a>
+						</h3>
+						<div id="sp-ue" class="accordion-collapse collapse" condition="entries.unapproved.length" aria-labelledby="sp-ue-header"
+								data-bs-parent="#sp-panel-preview">
+							<div class="accordion-body table-responsive">
+								<table class="table-sm table-hover">
+									<head>
+										<cell label="ENTRY.HEADER_NAME" type="text"/>
+										<cell label="ENTRY.HEADER_CREATED_AT" type="text" class="dk-cell text-center"/>
+										<cell label="ENTRY.HEADER_SECTION" type="text"/>
+									</head>
+									<loop subject="entries.unapproved">
+										<cell>
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="entry.edit" parse="false"/>
+													<param name="sid" value="id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+										<cell type="text" value="createdTime" class="dk-cell text-center"/>
+										<cell>
+											<cell type="link" value="properties.section.name">
+												<url type="intern">
+													<param name="sid" value="properties.section.id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+									</loop>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- popular categories -->
+					<div class="accordion-item" condition="show-categories and categories.popular.length">
+						<h3 class="accordion-header" id="sp-pc-header">
+							<a class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-target="#sp-pc" aria-expanded="false"
+								aria-controls="sp-pc">
+								<text value="CPANEL_POPULAR_CATEGORIES"/>
+							</a>
+						</h3>
+						<div id="sp-pc" class="accordion-collapse collapse" condition="categories.popular.length" aria-labelledby="sp-pc-header"
+								data-bs-parent="#sp-panel-preview">
+							<div class="accordion-body table-responsive">
+								<table class="table-sm table-hover">
+									<head>
+										<cell label="ENTRY.HEADER_NAME" type="text"/>
+										<cell label="ENTRY.HEADER_COUNTER" type="text" class="dk-cell text-center"/>
+										<cell label="ENTRY.HEADER_SECTION" type="text"/>
+									</head>
+									<loop subject="categories.popular">
+										<cell>
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="category.edit" parse="false"/>
+													<param name="sid" value="id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+										<cell type="text" value="counter" class="dk-cell text-center"/>
+										<cell>
+											<cell type="link" value="properties.section.name">
+												<url type="intern">
+													<param name="sid" value="properties.section.id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+									</loop>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- new categories -->
+					<div class="accordion-item" condition="show-categories and categories.latest.length">
+						<h3 class="accordion-header" id="sp-nc-header">
+							<a class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-target="#sp-nc" aria-expanded="false"
+								aria-controls="sp-nc">
+								<text value="CPANEL_NEW_CATEGORIES"/>
+							</a>
+						</h3>
+						<div id="sp-nc" class="accordion-collapse collapse" condition="categories.latest.length" aria-labelledby="sp-nc-header"
+								data-bs-parent="#sp-panel-preview">
+							<div class="accordion-body table-responsive">
+								<table class="table-sm table-hover">
+									<head>
+										<cell label="ENTRY.HEADER_NAME" type="text"/>
+										<cell label="ENTRY.HEADER_CREATED_AT" type="text" class="dk-cell text-center"/>
+										<cell label="ENTRY.HEADER_SECTION" type="text"/>
+									</head>
+									<loop subject="categories.latest">
+										<cell>
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="category.edit" parse="false"/>
+													<param name="sid" value="id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+										<cell type="text" value="createdTime" dateFormat="cfg:publishing_format" class="dk-cell text-center"/>
+										<cell>
+											<cell type="link" value="properties.section.name">
+												<url type="intern">
+													<param name="sid" value="properties.section.id" parse="true"/>
+												</url>
+											</cell>
+										</cell>
+									</loop>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- History/Logging -->
+				<div invert-condition="trim" class="dk-panel-history accordion mb-3" id="sp-panel-history">
+					<div class="accordion-item" condition="show-history and history.length">
+						<h3 class="accordion-header" id="sp-history-header">
+							<a class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-target="#sp-history" aria-expanded="true"
+								aria-controls="sp-history">
+								<text value="HISTORY.ACTIONS"/>
+							</a>
+						</h3>
+						<div id="sp-history" class="accordion-collapse collapse show" condition="history.length" aria-labelledby="sp-history-header"
+								data-bs-parent="#sp-panel-history">
+							<div class="accordion-body table-responsive">
+								<table class="table-sm table-hover">
+									<head>
+										<cell type="text" label="HISTORY.ACTION" invert-condition="acl.config"/>
+										<cell type="btn" label="HISTORY.ACTION" btnicon="angle-double-right" btnclass="ms-1 btn-sm btn-primary" task="logs" condition="acl.config"/>
+										<cell type="text" label="HISTORY.SECTION" class="dk-cell text-center"/>
+										<cell type="text" label="HISTORY.DATE" class="dk-cell text-center"/>
+									</head>
+									<loop subject="history.items">
+										<cell type="text" value="action" class="dk-cell w-60"/>
+										<cell type="text" value="section" class="dk-cell text-center"/>
+										<cell type="text" value="date" dateFormat="cfg:publishing_format" class="dk-cell text-center"/>
+									</loop>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- about/updates/news/credits/license -->
+				<div class="dk-panel accordion mb-3" id="sp-panel" condition="acl.config or acl.apps or acl.admin">
+					<!-- about -->
+					<div class="accordion-item">
+						<h3 class="accordion-header" id="sp-about-header">
+							<a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sp-about" aria-expanded="true"
+								aria-controls="sp-about">
+								<text value="ABOUT.ABOUT_PANE"/>
+							</a>
+						</h3>
+						<div id="sp-about" class="accordion-collapse collapse show" aria-labelledby="sp-about-header" data-bs-parent="#sp-panel">
+							<div class="accordion-body dk-about">
+								<div condition="trim" class="dk-text bg-delta text-white text-center p-1 mb-3">
+									<text value="ABOUT.SP_DEMO"/>
+								</div>
+								<div class="d-flex flex-column flex-sm-row dk-text mt-2">
+									<div class="d-flex flex-column">
+										<div class="d-flex flex-column flex-sm-row">
+											<div class="me-sm-2 text-center">
+												<a href="https://www.Sigsiu.NET" title="Sigsiu.NET Software Development">
+													<img src="../media/sobipro/bildmarke.png" class="d-none d-sm-inline" alt="Sigsiu.NET Software Development"/>
+													<img src="../media/sobipro/sobipro.png" class="d-sm-none mb-1 img-fluid" alt="Sigsiu.NET Software Development"/>
+												</a>
+											</div>
+											<div class="d-flex flex-column mt-2">
+												<p>
+													<text value="ABOUT.SP_DESC"/>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<text value="ABOUT.DEVELOPED_AND_DESIGNED">
+												<param>
+													<![CDATA[<a href="https://www.sigsiu.net/team/2039-sigrid-suski" title="Sigrid Suski">Sigrid Suski</a>]]></param>
+												<param>
+													<![CDATA[<a href="https://www.sigsiu.net/team/2041-radek-suski" title="Radek Suski">Radek Suski</a>]]></param>
+											</text>
+											<h4 class="mt-3">
+												<text value="ABOUT.SP_CLUB"/>
+											</h4>
+											<div condition="trim" class="dk-text mb-2">
+												<text value="ABOUT.SP_CLUBDESCDEMO">
+													<param>
+														<![CDATA[https://www.sigsiu.net/subscribe"]]>
+													</param>
+												</text>
+											</div>
+											<div class="dk-text">
+												<div class="mb-2">
+													<text value="ABOUT.SP_CLUBDESC"/>
+												</div>
+												<ul>
+													<li condition="trim">
+														<span class="far fa-check-square me-1 text-success"/>
+														<text value="ABOUT.SP_FULL">
+															<param><![CDATA[https://www.sigsiu.net/center/sobipro-component]]></param>
+														</text>
+													</li>
+													<li>
+														<span class="far fa-check-square me-1 text-success"/>
+														<text value="ABOUT.SP_SUPPORT">
+															<param><![CDATA[https://www.sigsiu.net/support]]></param>
+														</text>
+													</li>
+													<li>
+														<span class="far fa-check-square me-1 text-success"/>
+														<text value="ABOUT.SP_DOCUMENTATION">
+															<param><![CDATA[https://www.sigsiu.net/center]]></param>
+														</text>
+													</li>
+													<li>
+														<span class="far fa-check-square me-1 text-success"/>
+														<text value="ABOUT.SP_APPLICATIONS">
+															<param><![CDATA[https://www.sigsiu.net/applications]]></param>
+														</text>
+													</li>
+												</ul>
+												<div invert-condition="trim" class="dk-text">
+													<text value="ABOUT.SP_RENEW">
+														<param><![CDATA[https://www.sigsiu.net/subscribe]]></param>
+													</text>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="ms-sm-2 d-sm-flex flex-column align-items-end text-center">
+										<div class="mb-2 d-none d-sm-inline">
+											<a href="https://www.Sigsiu.NET" title="Sigsiu.NET Software Development">
+												<img src="../media/sobipro/wortmarke.png" alt="Sigsiu.NET Software Development"/>
+											</a>
+										</div>
+										<div class="mt-auto">
+											<a href="https://www.sigsiu.net/subscribe"
+												title="Get professional support, advanced documentation, and additional applications from the makers of SobiPro with a subscription!">
+												<img src="../media/sobipro/sigsiu.png"
+														alt="Get professional support, advanced documentation, and additional applications from the makers of SobiPro with a subscription!"
+														class="mt-auto"/>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- updates -->
+					<div class="accordion-item" condition="acl.apps">
+						<h3 class="accordion-header" id="sp-updates">
+							<a class="accordion-button collapsed" id="spctrl-updates" type="button" data-bs-toggle="collapse" data-bs-target="#spctrl-updates-pane"
+								aria-expanded="false" aria-controls="spctrl-updates-pane">
+								<text value="ABOUT.UPDATES_PANE"/>
+							</a>
+						</h3>
+						<div id="spctrl-updates-pane" class="accordion-collapse collapse" aria-labelledby="sp-updates" data-bs-parent="#sp-panel">
+							<div class="accordion-body">
+								<div>
+									<text value="ABOUT.UD.CURRENTLY_USING"/>
+									<text value=" SobiPro&#8482; "/>
+									<text value="ABOUT.UD.YOU_ARE_USING">
+										<param value="sobiproversion" parse="true"/>
+									</text>
+								</div>
+								<div>
+									<text value="Sobi&#8482; Framework "/>
+									<text value="ABOUT.UD.YOU_ARE_USING_FW">
+										<param value="frameworkversion" parse="true"/>
+									</text>
+								</div>
+								<div class="dirgiskedar">
+									<text value="Dirgis Kedar&#8482; "/>
+									<text value="ABOUT.UD.YOU_ARE_USING_DIRGISKEDAR">
+										<param value="dirgiskedarversion" parse="true"/>
+									</text>
+								</div>
+								<div id="spctrl-versions" class="dk-versions"/>
+							</div>
+						</div>
+					</div>
+					<!-- news -->
+					<div class="accordion-item" condition="news.length">
+						<h3 class="accordion-header" id="sp-news">
+							<a class="accordion-button collapsed" id="spctrl-news" type="button" data-bs-toggle="collapse" data-bs-target="#sp-news-pane"
+								aria-expanded="false" aria-controls="sp-news-pane">
+								<text value="ABOUT.NEWS_PANE">
+									<param value="news.title" parse="true"/>
+								</text>
+							</a>
+						</h3>
+						<div id="sp-news-pane" class="accordion-collapse collapse" aria-labelledby="sp-news" data-bs-parent="#sp-panel">
+							<div class="accordion-body dk-news">
+								<loop subject="news.feeds" table="false">
+									<cell class="dk-news-container">
+										<cell type="image" value="title" class="dk-news-image">
+											<url type="extern" host="image"/>
+										</cell>
+										<cell type="link" value="title" class="dk-news-title">
+											<url type="extern" host="url"/>
+										</cell>
+										<cell type="text" value="content" class="dk-news-content"/>
+									</cell>
+								</loop>
+							</div>
+						</div>
+					</div>
+					<!-- credits -->
+					<div class="accordion-item">
+						<h3 class="accordion-header" id="sp-credits">
+							<a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sp-credits-pane" aria-expanded="false"
+								aria-controls="sp-credits-pane">
+								<text value="ABOUT.CREDITS_PANE"/>
+							</a>
+						</h3>
+						<div id="sp-credits-pane" class="accordion-collapse collapse" aria-labelledby="sp-credits" data-bs-parent="#sp-panel">
+							<div class="accordion-body dk-credits">
+								<file filename="about.credits" type="html" translatable="true" start-path="administrator"/>
+							</div>
+						</div>
+					</div>
+					<!-- license -->
+					<div class="accordion-item">
+						<h3 class="accordion-header" id="sp-license">
+							<a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sp-license-pane" aria-expanded="false"
+								aria-controls="sp-license-pane">
+								<text value="ABOUT.LICENSE_PANE"/>
+							</a>
+						</h3>
+						<div id="sp-license-pane" class="accordion-collapse collapse" aria-labelledby="sp-license" data-bs-parent="#sp-panel">
+							<div class="accordion-body dk-license">
+								<file filename="about.license" type="html" translatable="true" start-path="administrator"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

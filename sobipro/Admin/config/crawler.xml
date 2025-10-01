@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 December 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.crawler"/>
+	</header>
+
+	<toolbar title="CRAWLER.SITE_TITLE" subtitle="var:[section]" trim="true" class="config crawler">
+		<button label="TB.START_CRAWL" task="crawler.init" icon="spider">
+			<button label="TB.RESTART_CRAWL" task="crawler.restart" icon="hand-sparkles"/>
+		</button>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<div invert-condition="trim">
+					<message id="spctrl-message"/>
+					<message label="CRAWL.INFO" type="outline-info" dismiss-button="false"/>
+					<message parse="cron" dismiss-button="false" icon="true"/>
+
+					<div id="spctrl-crawler-response" class="hidden">
+						<div class="alert alert-outline-info" id="spctrl-progress-message"/>
+						<div class="table-responsive">
+							<table>
+								<head>
+									<cell type="text" label="CRAWL_URL"/>
+									<cell type="text" label="CRAWL_CODE" class="dk-cell text-center"/>
+									<cell type="text" label="CRAWL_LINKS" class="dk-cell text-center"/>
+									<cell type="text" label="CRAWL_TIME" class="dk-cell text-center"/>
+								</head>
+								<tbody id="response-container">
+									<cell class="url"/>
+									<cell class="code dk-cell text-center"/>
+									<cell class="links dk-cell text-center"/>
+									<cell class="time dk-cell text-center"/>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="sp-feature" condition="trim">
+					<file filename="about.information.info" type="html" translatable="true" start-path="administrator"/>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

@@ -1,0 +1,66 @@
+// @package SobiPro Template SobiCars for SobiPro Component
+
+// @author
+// Name: Sigrid Suski, Sigsiu.NET GmbH
+// Url: https://www.Sigsiu.NET
+
+// @copyright Copyright (C) 2006–2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+// @license Released under Sigsiu.NET Template Licence V1.
+
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// Helper file for colours
+
+// gray-color-variables
+@white: #fff;
+@gray-100: #f8f9fa;
+@gray-200: #e9ecef;
+@gray-300: #dee2e6;
+@gray-400: #ced4da;
+@gray-500: #adb5bd;
+@gray-600: #6c757d;
+@gray-700: #495057;
+@gray-800: #343a40;
+@gray-900: #212529;
+@black: #000;
+
+// same for all themes
+@error-color: #bf0100;
+@success-color: #28a745;
+@outline-color: #5e9ed6;
+@select-color: #dde9fc;
+
+@object-colour-14: #eeeeee;
+@object-colour-13: #dddddd;
+@object-colour-12: #cccccc;
+@object-colour-11: #bbbbbb;
+@object-colour-10: #aaaaaa;
+@object-colour-9: #999999;
+@object-colour-8: #888888;
+@object-colour-6: #666666;
+@object-colour-4: #444444;
+
+@text-color-opposite: contrast(@text-color, #3e3e3e, #ffffff);
+@text-lighten: 15%;
+
+@alpha-text-color: contrast(@alpha-color, @text-color, @text-color-opposite);
+@beta-text-color: contrast(@beta-color, @text-color, @text-color-opposite);
+@gamma-text-color: contrast(@gamma-color, @text-color, @text-color-opposite);
+@delta-text-color: contrast(@delta-color, @text-color, @text-color-opposite);
+
+@alpha-light: screen(@alpha-color, @object-colour-14);
+@alpha-medium: screen(@alpha-color, @object-colour-12);
+@alpha-dark: screen(@alpha-color, @object-colour-10);
+
+@beta-light: screen(@beta-color, @object-colour-14);
+@beta-medium: screen(@beta-color, @object-colour-12);
+@beta-dark: screen(@beta-color, @object-colour-10);
+
+@gamma-light: screen(@gamma-color, @object-colour-14);
+@gamma-medium: screen(@gamma-color, @object-colour-12);
+@gamma-dark: screen(@gamma-color, @object-colour-10);
+
+@delta-light: screen(@delta-color, @object-colour-14);
+@delta-medium: screen(@delta-color, @object-colour-12);
+@delta-dark: screen(@delta-color, @object-colour-10);
+

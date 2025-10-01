@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://xml.sigsiu.net/SobiPro/template.xsd">
+	<name>Default Template V7</name>
+	<id>default7</id>
+	<authorName>Sigrid Suski</authorName>
+	<authorEmail>no-reply@sigsiu.net</authorEmail>
+	<authorUrl>https://www.Sigsiu.NET</authorUrl>
+	<copyright>Copyright (C) 2006–2024 Sigsiu.NET GmbH</copyright>
+	<license>GNU General Public License</license>
+	<creationDate>2024-11-29</creationDate>
+	<version>7.2.5</version>
+	<description><![CDATA[<h4>Default Template for SobiPro 2.x (default7)</h4>
+		<p>This template supports Bootstrap 3, Bootstrap 4 and Bootstrap 5. It supports Font Awesome 3 to Font Awesome 6 elements and styles.</p>
+		<p>Set the used framework and fonts in the section configuration.</p>]]>
+	</description>
+	<files>
+		<file path="category/view.xsl">
+			Default category view template with top-menu, navigation, entries and categories.
+		</file>
+		<file path="common/alphaindex.xsl">
+			Template for the alpha index (letters) only.
+		</file>
+		<file path="common/alphamenu.xsl">
+			Template for the alpha menu. Fields chooser and calls the alpha index (letters) template.
+		</file>
+		<file path="common/categories.xsl">
+			Template for the category list (categoriesLoop). Calls the template for a single category.
+		</file>
+		<file path="common/category.xsl">
+			Template for a single category in the category list.
+		</file>
+		<file path="common/editfields.xsl">
+			Template to output one field in entry form. Called from default loop in edit.xsl.
+		</file>
+		<file path="common/entries.xsl">
+			Template to display all entries (entriesLoop) within a category or the search function. Build the structure of all entries and calls the "vCard"
+			template while displaying single entry.
+		</file>
+		<file path="common/font.xsl">
+			Template to load Google fonts. Will be called from the topmenu template.
+		</file>
+		<file path="common/manage.xsl">
+			Displays the managing functions like edit entry, approve aso, within an entry.
+		</file>
+		<file path="common/messages.xsl">
+			Displays the message bar.
+		</file>
+		<file path="common/navigation.xsl">
+			Template for the site navigation.
+		</file>
+		<file path="common/searchfields.xsl">
+			Template to output one field in the search. Called from default loop.
+		</file>
+		<file path="common/showfields.xsl">
+			Template to output one field in vCard and details view. Called from default loop.
+		</file>
+		<file path="common/sortsearch.xsl">
+			Template to output the entry ordering box in the search results view.
+		</file>
+		<file path="common/sortview.xsl">
+			Template to output the entry ordering box in the category views.
+		</file>
+		<file path="common/topmenu.xsl">
+			Template for the top menu.
+		</file>
+		<file path="common/vcard.xsl">
+			Template to display single entry within a category, any listing view or the search function.
+		</file>
+		<file path="css/custom.css">
+			Custom CSS file. Your own CSS changes go in here.
+		</file>
+		<file path="css/custom.less">
+			LESS file for the custom CSS file. Your own CSS changes go in here.
+		</file>
+		<file path="css/theme.css">
+			The theme CSS file. Automatically generated!
+		</file>
+		<file path="css/theme.less">
+			LESS file for the theme CSS file.
+		</file>
+		<file path="css/themes/_sobipro.linc">
+			SobiPro default colour theme.
+		</file>
+		<file path="css/themes/_cornflower.linc">
+			Cornflower colour theme (blue/yellow).
+		</file>
+		<file path="css/themes/_autumn.linc">
+			Autumn colour theme (brown/red).
+		</file>
+		<file path="css/themes/_terra.linc">
+			Terra colour theme (brown/yellow).
+		</file>
+		<file path="css/themes/_waterfall.linc">
+			Waterfall colour theme (cyan/blue/magenta).
+		</file>
+		<file path="css/themes/_meadow.linc">
+			Meadow colour theme (green/yellow).
+		</file>
+		<file path="css/themes/_poppyseed.linc">
+			Poppyseed colour theme (grey/red).
+		</file>
+		<file path="css/themes/_pastels.linc">
+			Pastels colour theme (multicolour 1).
+		</file>
+		<file path="css/themes/_power.linc">
+			Power colour theme (multicolour 2).
+		</file>
+		<file path="css/themes/_cornfield.linc">
+			Cornfield colour theme (orange/red).
+		</file>
+		<file path="css/themes/_malva.linc">
+			Malva colour theme (purple/blue).
+		</file>
+		<file path="css/themes/_roses.linc">
+			Roses colour theme (red/green).
+		</file>
+		<file path="css/themes/_allblue.linc">
+			Shades of blue.
+		</file>
+		<file path="css/themes/_allgreen.linc">
+			Shades of green.
+		</file>
+		<file path="css/themes/_allgrey.linc">
+			Shades of grey.
+		</file>
+		<file path="css/themes/_allred.linc">
+			Shades of red.
+		</file>
+		<file path="css/themes/_custom.linc">
+			Custom colour theme (defined in the template settings)
+		</file>
+		<file path="css/helper/_applications.linc">
+			LESS helper file for applications.
+		</file>
+		<file path="css/helper/_bootstrap.linc">
+			LESS helper file for bootstrap in general.
+		</file>
+		<file path="css/helper/_bs2.linc">
+			LESS helper file for Bootstrap 2.
+		</file>
+		<file path="css/helper/_bs3.linc">
+			LESS helper file for Bootstrap 3.
+		</file>
+		<file path="css/helper/_bs4.linc">
+			LESS helper file for Bootstrap 4.
+		</file>
+		<file path="css/helper/_bs5.linc">
+			LESS helper file for Bootstrap 5.
+		</file>
+		<file path="css/helper/_debug.linc">
+			LESS helper file for debugging/tests.
+		</file>
+		<file path="css/helper/_elevated.linc">
+			LESS helper file for elevated layout.
+		</file>
+		<file path="css/helper/_mixins.linc">
+			LESS mixins.
+		</file>
+		<file path="css/helper/_normalize.linc">
+			LESS helper file for normalizing CSS.
+		</file>
+		<file path="entry/details.ini">
+			Configuration file to load JS files in details view.
+		</file>
+		<file path="entry/details.xsl">
+			Template for the entry details view page.
+		</file>
+		<file path="entry/edit.ini">
+			Configuration file to load JS files in entry form.
+		</file>
+		<file path="entry/edit.json">
+			Template configuration file for the entry form. Automatically generated!
+		</file>
+		<file path="entry/edit.xsl">
+			Template for the add/edit entry page.
+		</file>
+		<file path="feeds/rss.ini">
+			Configuration file for RSS feeds.
+		</file>
+		<file path="feeds/rss.json">
+			Configuration file for RSS feeds. Automatically generated!
+		</file>
+		<file path="feeds/rss.xsl">
+			Template for Atom/RSS feeds.
+		</file>
+		<file path="images/">
+			Images and icons used in the template
+		</file>
+		<file path="js/autosuggest.js">
+			JavaScript functions for the auto-suggest feature used in search and entry form.
+		</file>
+		<file path="js/details.js">
+			JavaScript functions for the details view.
+		</file>
+		<file path="js/form.js">
+			JavaScript functions for the entry form.
+		</file>
+		<file path="js/general.js">
+			General JavaScript functions.
+		</file>
+		<file path="js/navigation.js">
+			JavaScript functions for AJAX navigation.
+		</file>
+		<file path="js/search.js">
+			JavaScript functions for the search form.
+		</file>
+		<file path="js/sort.js">
+			JavaScript functions for sorting entries in view and search.
+		</file>
+		<file path="listing/alpha.xsl">
+			Alpha listings template.
+		</file>
+		<file path="listing/date.xsl">
+			Date listings template.
+		</file>
+		<file path="listing/user.xsl">
+			User listings template.
+		</file>
+		<file path="payment/list.xsl">
+			List of payments on the payment page.
+		</file>
+		<file path="payment/payment.xsl">
+			Payment page after an entry has been added.
+		</file>
+		<file path="payment/submit.xsl">
+			Template for the preview of the payment.
+		</file>
+		<file path="search/view.xsl">
+			Template for the search form.
+		</file>
+		<file path="search/search.ini">
+			Configuration file to load JS files in search form.
+		</file>
+		<file path="section/ajax.ini">
+			Configuration file for AJAX navigation.
+		</file>
+		<file path="section/ajax.xsl">
+			Template for AJAX navigation.
+		</file>
+		<file path="section/view.xsl">
+			Template for the section main view.
+		</file>
+		<file path="CHANGELOG.md">
+			Changelog file.
+		</file>
+		<file path="template.php">
+			PHP file with additional functions to use within templates.
+		</file>
+		<file path="translation.xml">
+			Translation file for texts in templates.
+		</file>
+		<file path="config.ini">
+			Main template configuration file.
+		</file>
+		<file path="config.json">
+			Template settings configuration file. Automatically generated!
+		</file>
+		<file path="config.xml">
+			Template settings file.
+		</file>
+	</files>
+</template>

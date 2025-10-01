@@ -1,0 +1,112 @@
+{
+  "less": {
+    "theme": {
+      "design": "standard",
+      "colour-set": "sobipro",
+      "back-color": "#FFFFFF",
+      "text-color": "#292929",
+      "corner-radius": ".625rem",
+      "alpha-edge": "50%",
+      "fontsize": "1rem",
+      "efb-top": "auto",
+      "efb-right": "320px",
+      "efb-bottom": "20px",
+      "efb-left": "auto",
+      "noimage-ratio": "1",
+      "big-image": "18.75rem",
+      "carousel-image": "inherit",
+      "small-image": "100%",
+      "flex-width": "350px",
+      "version": "7.2.5",
+      "normalize": "1",
+      "debug": "0"
+    },
+    "review": {
+      "stars": "darkblue-grey"
+    }
+  },
+  "general": {
+    "topmenu": "standard",
+    "bs": "5",
+    "font": "fa5",
+    "basefont": "none",
+    "specialfont": "none",
+    "redirectlogin": "",
+    "noimage": "1",
+    "noimage-type": "picture",
+    "noimage-img": "noimage43.png",
+    "noimage-floatdv": "right",
+    "noimage-floatvc": "none",
+    "textlength": "no",
+    "hidecategories": "show",
+    "caticon_width": "3",
+    "pagination": "pagination2",
+    "pagination-addon": "pagination-round pagination-delta",
+    "pagination-pages": "5",
+    "pagination-symbols": "1",
+    "fieldsposition": "above",
+    "entries_limit": "20",
+    "entries_in_line": "flex",
+    "entries_ordering": "updatedTime.desc",
+    "categories_in_line": "2",
+    "categories_ordering": "name.asc",
+    "calendar_navigation": "both",
+    "module_cil": "1",
+    "module_eil": "4",
+    "version": "7.2.5",
+    "development": "0",
+    "debug": "0",
+    "dvtabular": "0",
+    "vctabular": "0",
+    "nocatname": "0",
+    "catnamebelow": "0",
+    "countentries": "0",
+    "showicon": "1",
+    "addtocat": "1",
+    "orderlist": "1",
+    "entries_recursive": "1",
+    "deactivaterss": "0",
+    "originalstars": "1"
+  },
+  "theme": {
+    "custom": {
+      "alpha-color": "#292929",
+      "beta-color": "#3C5563",
+      "gamma-color": "#0289A2",
+      "delta-color": "#771919",
+      "link-color": "#3C5563"
+    }
+  },
+  "section-view": {
+    "entries_limit": "20",
+    "entries_in_line": "flex",
+    "entries_ordering": "updatedTime.desc",
+    "categories_in_line": "2",
+    "categories_ordering": "name.asc",
+    "entries_recursive": "1"
+  },
+  "category-view": {
+    "entries_limit": "20",
+    "entries_in_line": "flex",
+    "entries_ordering": "updatedTime.desc",
+    "categories_in_line": "2",
+    "categories_ordering": "name.asc",
+    "entries_recursive": "1"
+  },
+  "section-tag": {
+    "entries_limit": "15",
+    "entries_in_line": "flex",
+    "entries_ordering": "position.asc",
+    "categories_in_line": "flex",
+    "categories_ordering": "name.asc"
+  },
+  "collection": {
+    "entries_limit": "1",
+    "entries_in_line": "5",
+    "entries_ordering": "counter.desc",
+    "comparison": "0"
+  },
+  "entry-details": {
+    "entries_in_line": "1"
+  }
+}

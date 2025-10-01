@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 January 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header/>
+
+	<toolbar title="MN.ACL" class="acl list">
+		<button icon="cog" label="TB.JOOMLA_ACL" type="url" url="index.php?option=com_config&amp;amp;view=component&amp;amp;component=com_sobipro"/>
+		<buttons type="rule">
+			<button type="new" task="acl.add" colour="new"/>
+			<button type="delete" task="acl.delete" confirm="ACL.JS_MSG_DELETE_ACL_RULE" colour="delete"/>
+			<dropdown-header label="TB.PUBLISHING"/>
+			<button type="enable" task="acl.enable"/>
+			<button type="disable" task="acl.disable"/>
+		</buttons>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<div class="table-responsive" condition="rules.length">
+					<table class="table-hover table-sm">
+						<head>
+							<cell type="text" label="ACL.STATE_HEAD" class="dk-cell text-center w-5"/>
+							<cell type="checkbox" rel="rid" class="dk-cell text-center w-5" aria-label="ACCESSIBILITY.RULE_CHECK_ALL"/>
+							<cell type="text" label="ACL.HEADER_NAME" class="dk-cell text-start"/>
+						</head>
+						<loop subject="rules">
+							<cell type="ticker" value="state" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle'}" fa="far"
+							      colors="{'0':'dk-text-red','1':'dk-text-green'}"
+							      aria-labels="{'0':'ACCESSIBILITY.TICKER_RULE_ENABLE','1':'ACCESSIBILITY.TICKER_RULE_DISABLE'}" valid-since="validSince"
+							      valid-until="validUntil">
+								<url type="intern" class="dk-enabled">
+									<param name="task" value="acl.toggle.enabled"/>
+									<param name="rid" value="rid" parse="true"/>
+								</url>
+							</cell>
+							<cell type="checkbox" name="rid" value="rid" aria-label="ACCESSIBILITY.RULE_CHECK" class="dk-cell text-center"/>
+							<cell class="dk-cell text-start">
+								<cell type="link" value="name">
+									<url type="intern">
+										<param name="task" value="acl.edit"/>
+										<param name="rid" value="rid" parse="true"/>
+									</url>
+								</cell>
+								<cell type="text" value="note" class="dk-subtext"/>
+							</cell>
+						</loop>
+					</table>
+				</div>
+				<div invert-condition="rules.length">
+					<hint label="ACL_NO_RULES" icon="user" description="ACL.EXPL" help="acl"
+					      btn1="{'task':'acl.add','caption':'ACL.FORM_SITE_TITLE_ADD'}"/>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

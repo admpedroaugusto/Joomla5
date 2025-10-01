@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 December 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+	</header>
+
+	<toolbar title="APP.PPP_NAME" subtitle="var:[section]" class="extensions paypal">
+		<button type="apply" task="paypal.save" trim="true" colour="save"/>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+
+				<fieldset label="APP.PPP_NAME">
+					<field type="textarea" name="ppexpl" label="APP.PPP_EXPL" editor="true" width="9" rows="4" style=""/>
+					<field type="text" name="ppsubject" label="APP.PPP_SUBJECT" required="true" width="8"/>
+					<field type="text" name="ppurl" label="APP.PPP_URL" required="true" width="7"/>
+					<field type="text" name="ppemail" label="APP.PPP_EMAIL" required="true" width="6"/>
+					<field type="text" name="pprurl" label="APP.PPP_RURL" required="true" width="8"/>
+					<field type="text" name="ppcancel" label="APP.PPP_CANCELURL" required="true" width="8"/>
+					<field type="text" name="ppcc" label="APP.PPP_CC" required="true" width="3"/>
+					<field type="toggle" name="pploc" label="APP.PPP_LOC" prefix="yes_no"/>
+					<div class="mt-3 row">
+						<div class="col-lg-12 text-muted">
+							<p class="mb-0">
+								<span class="fas fa-star dk-sup" aria-hidden="true"/>
+								<text value="ENTRY_REQUIRED_MESSAGE"/>
+							</p>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="method" default="xhr"/>
+			<field name="format" default="raw"/>
+			<field name="pid" value="pid"/>
+		</hidden>
+	</config>
+</definition>

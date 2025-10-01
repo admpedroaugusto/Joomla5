@@ -1,0 +1,725 @@
+// @package Default Template V7 for SobiPro multi-directory component with content construction support
+
+// @author
+// Authors: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+// Url: https://www.Sigsiu.NET
+
+// @copyright Copyright (C) 2006 - 2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+// @license GNU/GPL Version 3
+// This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+// See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// @modified 26 April 2024 by Sigrid Suski
+
+// Mixins
+
+.focus-shadow() {
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, .18), 0 .5rem 1rem rgba(0, 0, 0, .36);
+}
+
+.setBackground(@color, @border: true, @text: contrast(@color, @text-color, @text-color-opposite)) {
+	background-color: @color;
+	color: @text;
+
+	& when (@border = true) {
+		border-color: shade(@color, 15%);
+	}
+}
+
+.setBorder(@color, @which: all) {
+	& when (@which = all) {
+		border-color: shade(@color, 15%)
+	}
+
+	& when (@which = top) {
+		border-top-color: shade(@color, 15%)
+	}
+
+	& when (@which = bottom) {
+		border-bottom-color: shade(@color, 15%)
+	}
+	& when (@which = left) {
+		border-left-color: shade(@color, 15%)
+	}
+
+	& when (@which = right) {
+		border-right-color: shade(@color, 15%)
+	}
+}
+
+// Text Colour.
+.textColor(@type, @color, @luma: luma(@color)) {
+	.text-@{type} {
+		& when (@luma >= @threshold) {
+			color: darken(@color, (@luma - @threshold)) !important;
+		}
+
+		& when (@luma < @threshold) {
+			color: @color !important;
+		}
+	}
+	.text-@{type}-light {
+		color: screen(@color, @object-colour-14) !important;
+	}
+	.text-@{type}-medium {
+		color: screen(@color, @object-colour-12) !important;
+	}
+	.text-@{type}-dark {
+		color: screen(@color, @object-colour-10) !important;
+	}
+}
+
+// Border colour.
+.borderColor(@type, @color) {
+	.border-@{type} {
+		border-color: @color !important;
+	}
+	.border-@{type}-light {
+		border-color: screen(@color, @object-colour-14) !important;
+	}
+	.border-@{type}-medium {
+		border-color: screen(@color, @object-colour-12) !important;
+	}
+	.border-@{type}-dark {
+		border-color: screen(@color, @object-colour-10) !important;
+	}
+}
+
+// Background colour. Text colour is light on dark colours and dark on light colours.
+.bgColor(@type, @color) {
+	.bg-@{type} {
+		@text: contrast(@color, @text-color, @text-color-opposite);
+		background-color: @color !important;
+		color: @text;
+
+		i, span, a {
+			color: @text;
+		}
+
+		.card-header {
+			border-bottom-color: tint(@color, 30%);
+		}
+	}
+	.bg-@{type}-light {
+		@back: screen(@color, @object-colour-14);
+		@text: contrast(@back, @text-color, @text-color-opposite);
+		background-color: @back !important;
+		color: @text;
+
+		i, span, a {
+			color: @text;
+		}
+
+		.card-header {
+			border-bottom-color: screen(@color, @object-colour-12);
+		}
+	}
+	.bg-@{type}-medium {
+		@back: screen(@color, @object-colour-12) ;
+		@text: contrast(@back, @text-color, @text-color-opposite);
+		background-color: @back !important;
+		color: @text;
+
+		i, span, a {
+			color: @text;
+		}
+
+		.card-header {
+			border-bottom-color: screen(@color, @object-colour-10);
+		}
+	}
+	.bg-@{type}-dark {
+		@back: screen(@color, @object-colour-10) ;
+		@text: contrast(@back, @text-color, @text-color-opposite);
+		background-color: @back !important;
+		color: @text;
+
+		i, span, a {
+			color: @text;
+		}
+
+		.card-header {
+			border-bottom-color: screen(@color, @object-colour-8);
+		}
+	}
+
+	@luma: luma(@color);
+	.bg-outline-@{type} {
+		& when (@luma >= @threshold) {
+			@text: multiply(@color, @object-colour-8);
+			border-color: @text;
+			color: @text;
+
+			i, span {
+				color: @text;
+			}
+		}
+
+		& when (@luma < @threshold) {
+			@text: @color;
+			border-color: @text;
+			color: @text;
+
+			i, span {
+				color: @text;
+			}
+		}
+	}
+	a.bg-@{type},
+	a.bg-@{type}-light,
+	a.bg-@{type}-medium,
+	a.bg-@{type}-dark {
+		:hover {
+			& when (@luma >= @threshold-hover) {
+				background-color: multiply(@color, @object-colour-14) !important;
+			}
+
+			& when (@luma < @threshold-hover) {
+				background-color: multiply(@color, @object-colour-11) !important;
+			}
+		}
+	}
+	a.bg-outline-@{type} {
+		:hover {
+			background-color: @color !important;
+			border-color: @color;
+			color: contrast(@color, @text-color, @text-color-opposite);
+		}
+	}
+	.table-hover .bg-@{type} {
+		&:hover,
+		:hover {
+			& when (@luma >= @threshold-hover) {
+				color: contrast(multiply(@color, @object-colour-14), @text-color, @text-color-opposite);
+			}
+
+			& when (@luma < @threshold-hover) {
+				color: contrast(multiply(@color, @object-colour-11), @text-color, @text-color-opposite);
+			}
+		}
+	}
+}
+
+// Colour for tables
+.tableColor (@name, @color) {
+	& when (@bs > 2) {
+		.table-@{name},
+		.table-@{name} > td,
+		.table-@{name} > th {
+			background-color: rgba(red(@color), green(@color), blue(@color), .05);
+		}
+
+		.table-@{name} > thead th {
+			background-color: rgba(red(@color), green(@color), blue(@color), .1);
+		}
+
+		.table-hover .table-@{name}:hover,
+		.table-hover .table-@{name}:hover > td,
+		.table-hover .table-@{name}:hover > th {
+			background-color: rgba(red(@color), green(@color), blue(@color), .1);
+		}
+
+		.table-@{name}.table-striped {
+			tr:nth-of-type(2n+1) {
+				background-color: rgba(red(@color), green(@color), blue(@color), .05);
+			}
+
+			tr:nth-of-type(2n) {
+				background-color: @white;
+			}
+		}
+
+		.table-@{name}.table-vstriped tr > td:nth-child(2n+1) {
+			background-color: rgba(red(@color), green(@color), blue(@color), .05);
+		}
+
+		.table-@{name}.table-vstriped tr > td:nth-child(2n) {
+			background-color: @white;
+		}
+
+		.table .thead-@{name} th {
+			color: @text-color;
+			background-color: rgba(red(@color), green(@color), blue(@color), .1);
+			border-color: screen(@color, @object-colour-9);
+		}
+	}
+	& when (@bs = 2) {
+		.table-@{name},
+		.table-@{name} > td,
+		.table-@{name} > th {
+			background-color: screen(@color, @object-colour-12);
+		}
+
+		.table-@{name} tbody + tbody,
+		.table-@{name} td,
+		.table-@{name} th,
+		.table-@{name} thead th {
+			border-color: screen(@color, @object-colour-9);
+		}
+
+		.table-hover .table-@{name}:hover,
+		.table-hover .table-@{name}:hover > td,
+		.table-hover .table-@{name}:hover > th {
+			background-color: screen(@color, @object-colour-10);
+
+		}
+
+		.table-@{name}.table-vstriped tr > td:nth-child(2n+1) {
+			background-color: screen(@color, @object-colour-12);
+		}
+
+		.table .thead-@{name} th {
+			color: @text-color;
+			background-color: screen(@color, @object-colour-12);
+			border-color: screen(@color, @object-colour-9);
+		}
+	}
+
+	.table-@{name} tbody + tbody,
+	.table-@{name} td,
+	.table-@{name} th,
+	.table-@{name} thead th {
+		border-color: screen(@color, @object-colour-9);
+	}
+}
+
+// Colour for tabs, pills
+.tabColor(@type, @color, @text: contrast(@color, @text-color, @text-color-opposite), @luma: luma(@color) ) {
+	.nav-tabs.sp-navtabs.nav-@{type} > li.active a, // set colour of all tabs (bs2,3)
+	.nav-tabs.sp-navtabs.nav-@{type} > li > a.active, // set colour of all tabs (bs4,5)
+	.tab-@{type} .tab-pane { // set colour of all content panes
+		@back: screen(@color, @object-colour-14);
+		background-color: @back;
+		border-color: darken(@back, 15%, relative);
+		color: contrast(@back, @text-color, @text-color-opposite);
+	}
+	.nav-tabs.sp-navtabs .nav-item.nav-@{type}.active a, // set colour of one tab (bs2,3)
+	.nav-tabs.sp-navtabs .nav-item.nav-@{type} a.active, // set colour of one tab (bs4,5)
+	.pane-@{type} { // set colour of a specific content pane
+		@back: screen(@color, @object-colour-14);
+		background-color: @back !important;
+		border-color: darken(@back, 15%, relative) !important;
+		color: contrast(@back, @text-color, @text-color-opposite);
+	}
+	.nav-tabs.sp-navtabs.nav-@{type} { // when colour of all tabs is set, set the line too
+		border-bottom: 1px solid darken(screen(@color, @object-colour-14), 15%, relative);
+	}
+	.nav-pills.sp-navtabs.nav-@{type} > li.active a, // set colour of all tabs (bs2,3)
+	.nav-pills.sp-navtabs.nav-@{type} > li > a.active { // set colour of all tabs (bs4,5)
+		background-color: @color;
+		border-color: darken(@color, 15%, relative);
+		color: @text;
+	}
+	.nav-pills.sp-navtabs .nav-item.nav-@{type}.active a, // set colour of one tab (bs2,3)
+	.nav-pills.sp-navtabs .nav-item.nav-@{type} a.active { // set colour of one tab (bs4,5)
+		background-color: @color !important;
+		border-color: darken(@color, 15%, relative) !important;
+		color: @text;
+	}
+	.nav-pills.sp-navtabs.staples.nav-@{type} li > a.active,
+	.nav-pills.sp-navtabs.nav-@{type}:not(.staples) li > a:not(.active) {
+		background-color: screen(@color, @object-colour-13);
+
+		& when (@luma >= @threshold) {
+			@text: multiply(@color, @object-colour-8);
+			color: @text;
+			border-bottom-color: @text;
+		}
+
+		& when (@luma < @threshold) {
+			@text: multiply(@color, @object-colour-13);
+			color: @text;
+			border-bottom-color: @text;
+		}
+	}
+	.nav-pills.sp-navtabs.staples li.nav-@{type} > a.active,
+	.nav-pills.sp-navtabs.staples li.nav-@{type} > a {
+		background-color: screen(@color, @object-colour-13) !important;
+
+		& when (@luma >= @threshold) {
+			@text: multiply(@color, @object-colour-8);
+			color: @text !important;
+			border-bottom-color: @text !important;
+		}
+
+		& when (@luma < @threshold) {
+			@text: multiply(@color, @object-colour-13);
+			color: @text !important;
+			border-bottom-color: @text !important;
+		}
+	}
+}
+
+// Colour for paginations.
+.paginationColor(@type, @color, @text: contrast(@color, @text-color, @text-color-opposite), @luma: luma(@color)) {
+	.pagination-@{type} .page-item {
+		.page-link {
+			color: @text;
+			.setBackground(@color);
+			//background-color: @color;
+			//border-color: @color;
+		}
+
+		a.page-link:hover,
+		a.page-link:focus,
+		&.active > .page-link {
+			& when (@luma >= @threshold-hover) {
+				.setBackground(multiply(@color, @object-colour-13));
+				//background-color: multiply(@color, @object-colour-13);
+				//border-color: multiply(@color, @object-colour-13);
+			}
+
+			& when (@luma < @threshold-hover) {
+				.setBackground(multiply(@color, @object-colour-10));
+				//background-color: multiply(@color, @object-colour-10);
+				//border-color: multiply(@color, @object-colour-10);
+			}
+
+			color: @text;
+		}
+
+		&.disabled > .page-link {
+			.setBackground(screen(@color, @object-colour-13));
+		}
+	}
+}
+
+// Colour for Dropdowns. Text colour is light on dark colours and dark on light colours.
+.dropDownColor(@type, @color, @text: contrast(@color, @text-color, @text-color-opposite)) {
+	.dropdown-menu.dropdown-@{type} {
+		.dropdown-item {
+			&:hover,
+			&:focus,
+			&:active,
+			&.active {
+				background-color: @color;
+				color: @text;
+			}
+		}
+	}
+}
+
+// Colour for lists. Text colour is light on dark colours and dark on light colours.
+.listGroupColor(@type, @color, @text: contrast(@color, @text-color, @text-color-opposite), @luma: luma(@color)) {
+	.list-group-item-@{type} {
+		color: @text;
+		background-color: @color;
+
+		&.list-group-item-action:hover,
+		&.list-group-item-action:focus,
+		&.list-group-item-action:active,
+		&.list-group-item-action.active {
+			& when (@luma >= @threshold-hover) {
+				background-color: multiply(@color, @object-colour-14);
+				border-color: multiply(@color, @object-colour-14);
+			}
+
+			& when (@luma < @threshold-hover) {
+				background-color: multiply(@color, @object-colour-11);
+				border-color: multiply(@color, @object-colour-11);
+			}
+		}
+	}
+}
+
+// Button colour. Text colour is light on dark colours and dark on light colours.
+.buttonColor(@type, @color, @text: contrast(@color, @text-color, @text-color-opposite), @luma: luma(@color)) {
+	.btn-@{type} {
+		background-color: @color;
+		border-color: @color;
+		color: @text;
+
+		.caret {
+			border-top-color: @text;
+		}
+
+		&:hover,
+		&:focus {
+			& when (@luma >= @threshold-hover) {
+				background-color: multiply(@color, @object-colour-14);
+				border-color: multiply(@color, @object-colour-14);
+			}
+
+			& when (@luma < @threshold-hover) {
+				background-color: multiply(@color, @object-colour-11);
+				border-color: multiply(@color, @object-colour-11);
+			}
+		}
+	}
+	.btn-check:active + .btn-@{type},
+	.btn-check:checked + .btn-@{type},
+	.btn-@{type}.active, .btn-@{type}:active,
+	.show > .btn-@{type}.dropdown-toggle {
+		& when (@luma >= @threshold-hover) {
+			background-color: multiply(@color, @object-colour-13);
+			border-color: multiply(@color, @object-colour-13);
+		}
+
+		& when (@luma < @threshold-hover) {
+			background-color: multiply(@color, @object-colour-10);
+			border-color: multiply(@color, @object-colour-10);
+		}
+	}
+	& when (@bs = 2) {
+		.btn-group.open .btn-@{type}.btn.dropdown-toggle {
+			background-color: @color;
+			border-color: @color;
+			color: @text;
+		}
+	}
+}
+
+// Outline button colour. If colour is light, text and border colour will be darken.
+.buttonOutlineColor(@type, @color, @luma: luma(@color)) {
+	.btn-outline-@{type} {
+		border: .0625rem solid;
+
+		& when (@luma >= @threshold) {
+			border-color: darken(@color, (@luma - @threshold));
+			color: darken(@color, (@luma - @threshold));
+		}
+
+		& when (@luma < @threshold) {
+			border-color: @color;
+			color: @color;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: @color;
+			border-color: @color;
+			color: contrast(@color, @text-color, @text-color-opposite);
+		}
+	}
+	.btn-check:active + .btn-outline-@{type},
+	.btn-check:checked + .btn-outline-@{type},
+	.btn-outline-@{type}.active,
+	.btn-outline-@{type}.dropdown-toggle.show,
+	.btn-outline-@{type}:active {
+		background-color: @color;
+		border-color: @color;
+		color: contrast(@color, @text-color, @text-color-opposite);
+	}
+}
+
+// Alert colour.
+.alertColor(@type, @color) {
+	&.alert-@{type} {
+		@text: contrast(@color, @text-color, @text-color-opposite);
+
+		color: @text;
+		background-color: @color;
+
+		.alert-link,
+		.close,
+		h4 {
+			color: @text;
+		}
+
+		& when (@bs = 5) {
+			.btn-close {
+				filter: invert(1) grayscale(100%) brightness(200%);
+			}
+		}
+
+		hr {
+			border-top-color: rgba(red(@text), green(@text), blue(@text), .6);
+		}
+	}
+}
+
+// Outline alert colour. Background colour is a light version of color. Text colour is a darker version of color.
+.alertOutlineColor(@type, @color, @luma: luma(@color) ) {
+	&.alert-outline-@{type} {
+		border: .0625rem solid;
+		background-color: screen(@color, @object-colour-14);
+
+		& when (@luma >= @threshold) {
+			@text: multiply(@color, @object-colour-8);
+
+			border-color: @text;
+			color: @text;
+
+			.alert-link,
+			.close,
+			h4 {
+				color: @text;
+			}
+
+			hr {
+				border-top-color: rgba(red(@text), green(@text), blue(@text), .6);
+			}
+		}
+
+		& when (@luma < @threshold) {
+			@text: multiply(@color, @object-colour-14);
+
+			border-color: @text;
+			color: @text;
+
+			.alert-link,
+			.close,
+			h4 {
+				color: @text;
+			}
+
+			hr {
+				border-top-color: rgba(red(@text), green(@text), blue(@text), .6);
+			}
+		}
+	}
+}
+
+// Badge colour and outline badge colour.
+.badgeColor(@type, @color, @luma: luma(@color) ) {
+	@text: contrast(@color, @text-color, @text-color-opposite);
+
+	.badge-@{type} {
+		color: @text;
+		background-color: @color;
+
+		i, span, a {
+			color: @text;
+			text-shadow: none;
+		}
+	}
+
+	.badge-outline-@{type} {
+		border: .0625rem solid;
+
+		& when (@luma >= @threshold) {
+			border-color: darken(@color, (@luma - @threshold));
+			color: darken(@color, (@luma - @threshold));
+
+			i, span {
+				color: darken(@color, (@luma - @threshold));
+			}
+		}
+
+		& when (@luma < @threshold) {
+			border-color: @color;
+			color: @color;
+
+			i, span, a {
+				color: @color;
+			}
+		}
+
+		i, span, a {
+			text-shadow: none;
+		}
+	}
+
+	a.badge-@{type} {
+		&:hover {
+			& when (@luma >= @threshold-hover) {
+				background-color: multiply(@color, @object-colour-14);
+			}
+
+			& when (@luma < @threshold-hover) {
+				background-color: multiply(@color, @object-colour-11);
+			}
+		}
+	}
+
+	a.badge-outline-@{type} {
+		&:hover {
+			background-color: @color;
+			border-color: @color;
+			color: contrast(@color, @text-color, @text-color-opposite);
+		}
+	}
+}
+
+.labelColor(@type, @color, @font-color) {
+	.label {
+		&.label-@{type} {
+			color: @font-color;
+			background-color: @color;
+
+			i, span, a {
+				color: @font-color;
+				text-shadow: none;
+			}
+		}
+	}
+}
+
+.showColor(@type, @color, @text: contrast(@color, @text-color, @text-color-opposite), @luma: luma(@color)) {
+	// Relative luminance: luma(@color);
+	// Contrast ratios can range from 1 to 21 (commonly written 1:1 to 21:1).
+	// (L1 + 0.05) / (L2 + 0.05), whereby: L1 is the relative luminance of the lighter of the colors, and. L2 is the relative luminance of the darker of the colors.
+
+	@lumatext: luma(@text);
+	@ratio: unit((((max(@luma, @lumatext) / 100) + 0.05) / ((min(@luma, @lumatext) / 100) + 0.05)));
+	@saturation: saturation(@color);
+	@lightness: lightness(@color);
+	@hue: hue(@color);
+	@saturation: saturation(@color);
+	@lightness: lightness(@color);
+	@hsvhue: hsvhue(@color);
+	@hsvsaturation: hsvsaturation(@color);
+	@hsvvalue: hsvvalue(@color);
+
+	.debug-@{type} {
+		border-style: solid;
+		border-width: .0625rem;
+		border-radius: @corner-radius-small;
+		-webkit-border-radius: @corner-radius-small;
+		-moz-border-radius: @corner-radius-small;
+		padding: .125rem .32rem;
+		margin-top: .5rem;
+
+		background-color: @color;
+		color: @text;
+
+		span, p {
+			padding-left: .125rem;
+			padding-right: .125rem;
+			margin-bottom: 0;
+
+			&.color::after {
+				content: "colour background: @{color} colour text: @{text}";
+			}
+
+			&.lumi::after {
+				content: "luma background: @{luma} luma text: @{lumatext}";
+			}
+
+			&.ratio::after {
+				content: "ratio: @{ratio}";
+			}
+
+			&.hsl::after {
+				content: "HSL: hue: @{hue} saturation: @{saturation} lightness: @{lightness}";
+			}
+
+			&.hsv::after {
+				content: "HSV: hue: @{hsvhue} saturation: @{hsvsaturation} value: @{hsvvalue}";
+			}
+		}
+
+		h1 {
+			margin-top: .125rem;
+
+			&::after {
+				color: @text;
+				content: "theme: '@{colour-set}' and color: '@{type}'";
+			}
+		}
+	}
+}
+
+.debugOutput() {
+	& when (@debug = 1) {
+		.showColor(text, @back-color);
+		.showColor(alpha, @alpha-color);
+		.showColor(beta, @beta-color);
+		.showColor(gamma, @gamma-color);
+		.showColor(delta, @delta-color);
+	}
+}

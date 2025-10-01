@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ @created 19 July 2021 by Sigrid Suski
+ @modified 19 October 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header/>
+
+	<toolbar title="LOG.SITE_TITLE" class="config logs">
+		<button label="TB.DELETEALL" task="logs.deleteall" icon="trash" condition="logs.length and acl.admin" colour="delete" confirm="TB.JS_DELLOGS_WARNING"/>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<header label="HISTORY_LIST_HEAD" icon="list-alt" invert-condition="showhint">
+					<div class="input-group-sm d-flex gap-1">
+						<field type="text" name="sp_log_filter" value="filter" aria-label="ACCESSIBILITY.LIST_FILTER" placeholder="FILTER_BY_LOGS"
+						       data-spctrl="submit"/>
+						<field type="select" name="lorder" selected="ordering" aria-label="ACCESSIBILITY.LIST_SELECT_ORDER_LOGS" class="form-select" data-spctrl="submit">
+							<values>
+								<values label="ORDER_BY"/>
+								<option value="type.asc" label="ORDER_BY_OBJECT_ASC"/>
+								<option value="type.desc" label="ORDER_BY_OBJECT_DESC"/>
+								<option value="sid.asc" label="ORDER_BY_ID_ASC"/>
+								<option value="sid.desc" label="ORDER_BY_ID_DESC"/>
+								<option value="changeAction.asc" label="ORDER_BY_ACTION_ASC"/>
+								<option value="changeAction.desc" label="ORDER_BY_ACTION_DESC"/>
+								<option value="changedAt.asc" label="ORDER_BY_DATE_ASC"/>
+								<option value="changedAt.desc" label="ORDER_BY_DATE_DESC"/>
+								<option value="userName.asc" label="ORDER_BY_USERNAME_ASC"/>
+								<option value="userName.desc" label="ORDER_BY_USERNAME_DESC"/>
+								<option value="site.asc" label="ORDER_BY_SITE_ASC"/>
+								<option value="site.desc" label="ORDER_BY_SITE_DESC"/>
+							</values>
+						</field>
+						<field type="select" name="llimit" selected="logs-limit" aria-label="ACCESSIBILITY.LIST_NUMBER_LOGS" data-spctrl="submit">
+							<values>
+								<values label="LISTING_LIMIT"/>
+								<option value="15"/>
+								<option value="25"/>
+								<option value="50"/>
+								<option value="100"/>
+							</values>
+						</field>
+						<field type="button" name="save-ordering" icon="save" aria-label="ACCESSIBILITY.LIST_SAVE_LOGS" class="btn btn-sm btn-info spctrl-default-ordering"
+						       data-target="logs"/>
+					</div>
+				</header>
+
+				<message type="outline-info" condition="filter" class="message" label="FILTER_SET"/>
+				<div condition="logs.length" class="table-responsive">
+					<table class="dk-error-list">
+						<head>
+							<cell type="text" label="HEAD_HISTORY_OBJECT" class="dk-cell"/>
+							<cell type="text" label="HEAD_HISTORY_NAME" class="dk-cell w-35"/>
+							<cell type="text" label="HEAD_HISTORY_SECTION" class="dk-cell"/>
+							<cell type="text" label="HEAD_HISTORY_TYPE" class="dk-cell"/>
+							<cell type="text" label="HEAD_HISTORY_DATE" class="dk-cell text-center"/>
+							<cell type="text" label="HEAD_HISTORY_CHANGED_BY" class="dk-cell"/>
+							<cell type="text" label="HEAD_HISTORY_SITE" class="dk-cell text-center"/>
+							<cell type="text" label="HEAD_HISTORY_SOURCE" class="dk-cell text-center"/>
+						</head>
+						<loop subject="logs">
+							<cell type="text" value="type" class="dk-cell"/>
+							<cell type="text" value="object" class="dk-cell"/>
+							<cell type="text" value="section" class="dk-cell"/>
+							<cell type="text" class="dk-cell">
+								<cell>
+									<popover>
+										<attribute name="content" value="sentence" parse="true"/>
+										<!--										<attribute name="href" value="description-url" parse="true"/>-->
+										<attribute name="title" value="changeAction" parse="true"/>
+										<attribute name="class" value="wide" parse="false"/>
+										<attribute name="trigger" value="hover" parse="false"/>
+										<attribute name="placement" value="left" parse="false"/>
+									</popover>
+								</cell>
+							</cell>
+							<cell type="text" class="dk-cell text-center" value="changedAt" dateFormat="cfg:publishing_format"/>
+							<cell type="link" value="userName" condition="uid" sef="false" live="true" aria-before="ACCESSIBILITY.USER_CHANGED">
+								<url type="intern">
+									<param name="option" value="com_users"/>
+									<param name="task" value="user.edit"/>
+									<param name="id" value="uid" parse="true"/>
+								</url>
+							</cell>
+							<cell type="text" value="" invert-condition="uid"/>
+							<cell type="text" value="site" class="dk-cell text-center"/>
+							<cell type="text" value="source" class="dk-cell text-center"/>
+						</loop>
+						<foot>
+							<navigation/>
+						</foot>
+					</table>
+				</div>
+				<div condition="showhint">
+					<hint label="HISTORY.NO_LOGS" icon="list-alt" description="LOG.EXPL" help="logs" config="config.global!#gbn-cfg-cache-head"/>
+				</div>
+				<pagination set="logsSite" class="justify-content-center" inputbox="right" type="icon">
+					<param name="count" value="logs-count" parse="true"/>
+					<param name="limit" value="logs-limit" parse="true"/>
+					<param name="current" value="logs-site" parse="true"/>
+					<param name="url">
+						<param name="option" value="com_sobipro"/>
+						<param name="task" value="logs"/>
+					</param>
+				</pagination>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

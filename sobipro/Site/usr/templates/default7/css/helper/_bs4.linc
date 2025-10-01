@@ -1,0 +1,511 @@
+// @package: Default Template V7 for SobiPro multi-directory component with content construction support
+
+// @author
+// Authors: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+// Url: https://www.Sigsiu.NET
+
+// @copyright Copyright (C) 2006 - 2022 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+// @license GNU/GPL Version 3
+// This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+// See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// @modified 25 August 2022 by Sigrid Suski
+
+// Helper file for Bootstrap 4 styles
+
+.SobiPro {
+	&.popover {
+		border-radius: @corner-radius-small;
+
+		.popover-header {
+			border-top-left-radius: @corner-radius-small;
+			border-top-right-radius: @corner-radius-small;
+		}
+	}
+}
+
+.SobiPro.default7 {
+
+	// Radius setting
+	// -----------------------------------------
+	.card {
+		border-radius: @corner-radius;
+	}
+
+	// not round at right side
+	.input-group > .custom-file:not(:last-child) .custom-file-label,
+	.input-group > .custom-file:not(:last-child) .custom-file-label::after,
+	.input-group > .custom-select:not(:last-child) {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	// round at left side
+	.input-group > .custom-file .custom-file-label {
+		border-top-left-radius: @corner-radius;
+		border-bottom-left-radius: @corner-radius;
+	}
+
+	.input-group-text {
+		border-radius: @corner-radius;
+	}
+
+	// not round at left side
+	.input-group > .custom-select:not(:first-child),
+	.input-group > .form-control:not(:first-child),
+	.input-group > .input-group-append > .btn,
+	.input-group > .input-group-append > .input-group-text,
+	.input-group > .input-group-prepend:not(:first-child) > .btn,
+	.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
+	.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+	.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
+	ul.pager.pagenav .input-group > .input-group-append > a.hasTooltip,
+	ul.pager.pagenav .input-group > .input-group-prepend:not(:first-child) > a.hasTooltip,
+	ul.pager.pagenav .input-group > .input-group-prepend:first-child > a.hasTooltip:not(:first-child),
+	.btn-group > .btn:not(:first-of-type) {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	// Menu toggle button
+	// ----------------------------------------
+	.navbar-toggler {
+		margin: .5rem;
+	}
+
+	.navbar-toggler-icon {
+		width: 1.2em;
+		height: 1.2em;
+	}
+
+	// Entry form
+	// ----------------------------------------
+	.sp-entry-edit {
+		.form-text.right {
+			margin-top: 0;
+			@media (max-width: 575.98px) {
+				margin-top: 0.25rem;
+			}
+		}
+
+		.custom-file-label {
+			border-radius: @corner-radius;
+		}
+
+		.custom-control-input.required ~ .custom-control-label::before {
+			border: .0625rem solid @delta-color;
+		}
+
+		.sp-paybox {
+			.custom-control-input:checked ~ .custom-control-label::before {
+				color: @gamma-text-color;
+				border-color: @gamma-color;
+				background-color: @gamma-color;
+			}
+		}
+
+		// Validation
+		.custom-select.is-valid,
+		.form-control.is-valid {
+			border-color: @success-color;
+		}
+
+		.custom-control-input.is-invalid ~ .custom-control-label,
+		.custom-select.is-invalid,
+		.form-control.is-invalid {
+			border-color: @error-color;
+		}
+
+		.invalid-feedback,
+		.custom-control-input.is-invalid ~ .custom-control-label,
+		.form-check-input.is-invalid ~ .form-check-label {
+			color: @error-color;
+		}
+
+		.spClassRadio.required,
+		.spClassCheckbox.required {
+			border: none;
+		}
+
+		.badge.suffix {
+			margin-top: .625rem;
+		}
+
+		label.form-check-label {
+			text-align: left;
+			font-weight: normal;
+		}
+
+		.sp-field-url,
+		.sp-field-button {
+			.input-group-prepend select {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			.input-group-append select {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		.spctrl-field-image-upload.required label {
+			border: .0625rem solid @delta-color;
+		}
+
+		.sp-field-image {
+			label {
+				display: inline-block;
+				margin-bottom: .315rem;
+				padding-bottom: 0.2em;
+			}
+		}
+	}
+
+	// Payment popup/list
+	// ----------------------------------------
+	.sp-payment {
+		td {
+			line-height: .625rem;
+		}
+	}
+
+	// Sigsiu Tree
+	// ----------------------------------------
+	.sp-field-category {
+		.spctrl-sigsiutree-container {
+			width: unset;
+		}
+	}
+
+	// Search and Entry form
+	// ----------------------------------------
+	.sp-entry-edit,
+	.sp-search-form {
+		.sp-field-checkbox input.form-check-input {
+			margin-top: .13rem;
+		}
+
+		.custom-control-input:checked ~ .custom-control-label::before {
+			color: @delta-text-color;
+			border-color: @delta-color;
+			background-color: @delta-color;
+		}
+
+		.input-group-append:last-child {
+			.input-group-text {
+				border-top-right-radius: @corner-radius;
+				border-bottom-right-radius: @corner-radius;
+			}
+		}
+
+		.input-group-prepend:first-child {
+			.input-group-text {
+				border-top-left-radius: @corner-radius;
+				border-bottom-left-radius: @corner-radius;
+			}
+		}
+
+		.sp-range-to.sp-search-select {
+			margin-left: -1px;
+		}
+
+		.input-group-text {
+			font-size: @font-size;
+		}
+
+		input.form-control {
+			height: calc(1.5em + .75rem + 2px);
+		}
+	}
+
+	// Pagination
+	// -----------------------------------------------
+	.pagination {
+		.spctrl-pagination-input.page-link {
+			padding: 0;
+
+			&.open {
+				padding: .315rem 0;
+			}
+
+			cursor: pointer;
+
+			span.sp-navdots {
+				padding: .5rem .75rem;
+				display: inline-block;
+			}
+
+			input[type="number"] {
+				height: 1.625rem;
+				margin: 0;
+				padding: 0 .375rem 0 0;
+				color: @text-color;
+				width: 5.8rem;
+				font-size: calc(@font-size - .1rem);
+			}
+		}
+
+		&.pagination-round {
+			.page-item {
+				.spctrl-pagination-input.page-link {
+					border: 0;
+					background-color: transparent;
+					color: @text-color;
+
+					&.open {
+						width: unset;
+					}
+
+					span.sp-navdots {
+						padding: unset;
+					}
+				}
+			}
+		}
+
+		&.pagination-sm {
+			.spctrl-pagination-input.page-link {
+				padding: 0;
+
+				&.open {
+					padding: .13rem 0;
+				}
+
+				span.sp-navdots {
+					padding: .25rem .5rem;
+				}
+
+				input[type="number"] {
+					height: 1.375rem;
+					margin: .0875rem 0;
+					font-size: calc(@font-size - .2rem);
+				}
+			}
+
+			&.pagination-round {
+				.spctrl-pagination-input.page-link {
+					padding: 0.1rem 0;
+
+					input[type="number"] {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		&.pagination-lg {
+			.spctrl-pagination-input.page-link {
+				span.sp-navdots {
+					padding: .25rem .75rem;
+				}
+
+				input[type="number"] {
+					height: 1.625rem;
+					margin: .0875rem 0;
+					font-size: calc(@font-size - .2rem);
+				}
+			}
+
+			&.pagination-round {
+				.spctrl-pagination-input.page-link {
+					input[type="number"] {
+						height: 2.2rem;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Popover Settings
+	// ----------------------------------------
+	.popover {
+		font-size: calc(@font-size - .0625rem);
+		border-radius: @corner-radius-small;
+
+		h3 {
+			font-size: calc(@font-size + .0625rem);
+		}
+
+		.popover-header {
+			text-shadow: none;
+			border-top-left-radius: @corner-radius-small;
+			border-top-right-radius: @corner-radius-small;
+		}
+
+		.popover-body {
+			color: @text-color;
+
+			img {
+				padding: .25rem;
+				background-color: @white;
+				border: .0625rem solid rgba(0, 0, 0, 0.2);
+				box-shadow: 0 .0625rem .1875rem rgba(0, 0, 0, 0.1);
+				margin: 0 .315rem .315rem 0;
+				border-radius: @corner-radius-small;
+			}
+
+		}
+	}
+
+	// Tooltip Settings
+	// -----------------------------------------------
+	.tooltip {
+		.tooltip-inner {
+			background-color: @alpha-color;
+			color: @alpha-text-color;
+		}
+
+		&.bs-tooltip-top .arrow {
+			border-top-color: @alpha-color;
+		}
+
+		&.bs-tooltip-bottom .arrow {
+			border-bottom-color: @alpha-color;
+		}
+
+		&.bs-tooltip-left .arrow {
+			border-left-color: @alpha-color;
+		}
+
+		&.bs-tooltip-right .arrow {
+			border-right-color: @alpha-color;
+		}
+	}
+
+	// Dropdowns
+	// -----------------------------------------------
+	.dropdown-item {
+		color: @text-color;
+
+		&.active,
+		&:active,
+			//&:hover,
+		&:focus {
+			color: @beta-text-color;
+			background-color: @beta-color;
+		}
+	}
+
+	// Tabs / Pills / Staples
+	// ----------------------------------------
+	.nav-tabs.sp-navtabs,
+	.nav-pills.sp-navtabs {
+		.nav-link {
+			color: @link-color;
+			text-decoration: none;
+
+			&.active {
+				color: @text-color;
+			}
+		}
+	}
+
+	// Alphalist, Orderingslist
+	// ----------------------------------------
+	.pagination ul.sp-alpha {
+		.page-link,
+		li {
+			line-height: 1.5;
+			margin-right: inherit;
+
+			a, span {
+				display: inline-block;
+			}
+		}
+	}
+
+	.sp-alpha-list {
+		.dropdown-item {
+			color: @text-color;
+
+			&.active,
+			&:active,
+				//&:hover,
+			&:focus {
+				color: @delta-text-color;
+				background-color: @delta-color;
+				background-image: none;
+			}
+		}
+	}
+
+	// autoComplete script
+	// ----------------------------------------
+	.sp-autocomplete-suggest.dropdown-menu {
+		top: unset;
+		left: unset;
+
+		.dropdown-item,
+		.list-group-item {
+			&.active {
+				z-index: 2;
+				color: @alpha-text-color;
+				background-color: @alpha-color;
+				border-color: @alpha-color;
+				cursor: pointer;
+
+				mark.sp-highlight {
+					color: @alpha-text-color;
+				}
+			}
+
+			&:hover {
+				mark.sp-highlight {
+					color: @alpha-text-color;
+				}
+			}
+
+			mark.sp-highlight {
+				padding: 0 1px 0 1px;
+				font-weight: bolder;
+				background-color: unset;
+				color: @text-color;
+			}
+		}
+	}
+
+	// Hidden style
+	// ----------------------------------------
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	// Remove possible influences from the Joomla template (to use Bootstrap 4 on Joomla 3)
+	// Remove the following lines if you experience problems or use Joomla 4
+	// ----------------------------------------
+	#topmenu.collapse {
+		height: unset;
+	}
+
+	.dropdown-toggle {
+		box-shadow: none;
+	}
+
+	div.modal {
+		margin-left: unset;
+		background-color: unset;
+		border: unset;
+		box-shadow: none;
+
+		&.fade {
+			top: 0;
+		}
+
+		.modal-footer {
+			border-radius: @corner-radius;
+			background-color: unset;
+			box-shadow: none;
+		}
+	}
+
+	.table th, .table td {
+		line-height: unset;
+	}
+}

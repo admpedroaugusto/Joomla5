@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" overwrite="true">
+	<name>SobiPro</name>
+	<creationDate>11 June 2025</creationDate>
+	<author>Sigsiu.NET GmbH</author>
+	<authorEmail>no-reply@sigsiu.net</authorEmail>
+	<authorUrl>www.Sigsiu.NET</authorUrl>
+	<copyright>Copyright (C) 2006–2025 Sigsiu.NET GmbH</copyright>
+	<license>GNU General Public License v3</license>
+	<version>2.6.4.0</version>
+	<codename>Basset Hound</codename>
+	<description>SobiPro directory component for Joomla!</description>
+	<version_number>2.6.4.0.9161</version_number>
+	<SobiPro>
+		<requirements>
+			<core version="2.0"/>
+		</requirements>
+	</SobiPro>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">spinstaller.sql</file>
+		</sql>
+	</install>
+	<update>
+		<sql>
+			<file charset="utf8" driver="mysql">spinstaller.sql</file>
+		</sql>
+	</update>
+	<scriptfile>spinstall.php</scriptfile>
+	<files folder="Site">
+		<folder>etc</folder>
+		<folder>lib</folder>
+		<folder>Library</folder>
+		<folder>opt</folder>
+		<folder>tmp</folder>
+		<folder>usr</folder>
+		<folder>var</folder>
+		<folder>views</folder>
+		<filename>sobiconst.php</filename>
+		<filename>CHANGELOG.md</filename>
+		<filename>README.md</filename>
+		<filename>sobipro.php</filename>
+		<filename>router.php</filename>
+		<filename>metadata.xml</filename>
+		<filename>gplv3.txt</filename>
+		<filename>gplv3addterms.txt</filename>
+		<filename>.htaccess</filename>
+		<filename>Sobi-Framework.zip</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">Site/usr/locale/site/en-GB.com_sobipro.ini</language>
+		<language tag="en-GB">Site/usr/locale/site/en-GB.com_sobipro.js.ini</language>
+		<language tag="en-GB">Site/usr/locale/site/en-GB.com_sobipro.err.ini</language>
+		<language tag="en-GB">Site/usr/locale/site/en-GB.com_sobipro.accessibility.ini</language>
+		<language tag="en-GB">Site/usr/locale/site/en-GB.SpApp.select-list.countries.ini</language>
+	</languages>
+
+	<media folder="Media" destination="sobipro">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>adm</folder>
+		<folder>browser</folder>
+		<folder>tree</folder>
+		<folder>icons</folder>
+		<filename>bildmarke.png</filename>
+		<filename>wortmarke.png</filename>
+		<filename>sigsiu.png</filename>
+		<filename>sobipro.png</filename>
+	</media>
+
+	<administration>
+		<menu>SOBIPRO_MENU</menu>
+		<files folder="Admin">
+			<folder>about</folder>
+			<folder>acl</folder>
+			<folder>category</folder>
+			<folder>config</folder>
+			<folder>entry</folder>
+			<folder>extensions</folder>
+			<folder>field</folder>
+			<folder>front</folder>
+			<folder>section</folder>
+			<folder>template</folder>
+			<folder>menu</folder>
+			<filename>sobipro.php</filename>
+			<filename>sobiconst.php</filename>
+			<filename>spinstaller.sql</filename>
+			<filename>samples.sql</filename>
+			<filename>default.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+		</files>
+		<languages>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.com_sobipro.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.com_sobipro.js.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.com_sobipro.sys.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.com_sobipro.about.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.com_sobipro.messages.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.com_sobipro.check.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.SpTpl.default.ini</language>
+			<language tag="en-GB">Site/usr/locale/adm/en-GB.SpTpl.default3.ini</language>
+		</languages>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="2" name="SobiPro Core">
+			<![CDATA[https://xml.sigsiu.net/SobiPro/SobiPro2.xml]]>
+		</server>
+		<server type="extension" priority="3" name="SobiPro Trial Core">
+			<![CDATA[https://xml.sigsiu.net/SobiPro/SobiPro2Trial.xml]]>
+		</server>
+	</updateservers>
+</extension>

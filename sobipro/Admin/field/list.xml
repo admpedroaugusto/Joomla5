@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  @modified 11 December 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+		<script>
+			document.addEventListener( 'DOMContentLoaded', function () {
+				try {
+					/* show only the first of these two fields */
+					document.querySelectorAll( '.btn-toolbar .spctrl-newfield' )[ 1 ].parentNode.style.display = 'none'
+				} catch (e) {
+				}
+			} );
+		</script>
+	</header>
+
+	<toolbar title="FM.SITE_TITLE" subtitle="var:[section]" class="field">
+		<buttons type="new" icon="plus" label="TB.FIELDNEW" class="spctrl-newfield" buttons="fieldTypes" colour="new"/>
+		<buttons type="new" icon="plus" label="TB.FIELDNEW" class="spctrl-newfield" buttons="categoryFieldTypes" colour="new"/>
+		<buttons type="copyfieldsto" icon="copy" buttons="sections-copy" label="TB.COPYFIELD_TO"/>
+		<buttons type="field" icon="tasks" label="FIELD">
+			<button type="copyfields" icon="clone" task="field.copy" label="TB.COPYFIELD" colour="new"/>
+			<button type="delete" task="field.delete" confirm="TB.JS_DELETE_FIELD_WARN" colour="delete"/>
+			<dropdown-header label="TB.ENABLED"/>
+			<button type="enable" task="field.publish"/>
+			<button type="disable" task="field.hide"/>
+		</buttons>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<header label="FM.FIELDS_FOR" icon="tasks">
+					<div class="input-group-sm d-flex gap-1">
+						<field type="select" name="forder" selected="ordering" aria-label="ACCESSIBILITY.LIST_SELECT_ORDER_FIELDS" class="form-select" data-spctrl="submit">
+							<values>
+								<values label="ORDER_BY"/>
+								<option value="fid.asc" label="ORDER_BY_ID_ASC"/>
+								<option value="fid.desc" label="ORDER_BY_ID_DESC"/>
+								<option value="name.asc" label="ORDER_BY_NAME_ASC"/>
+								<option value="name.desc" label="ORDER_BY_NAME_DESC"/>
+								<option value="state.asc" label="FMN.ORDER_BY_STATE_ASC"/>
+								<option value="state.desc" label="FMN.ORDER_BY_STATE_DESC"/>
+								<option value="fieldType.asc" label="FMN.ORDER_BY_FIELDTYPE_ASC"/>
+								<option value="fieldType.desc" label="FMN.ORDER_BY_FIELDTYPE_DESC"/>
+								<option value="showIn.asc" label="FMN.ORDER_BY_SHOWIN_ASC"/>
+								<option value="required.desc" label="FMN.ORDER_BY_REQUIRED_DESC"/>
+								<option value="required.asc" label="FMN.ORDER_BY_REQUIRED_ASC"/>
+								<option value="editable.desc" label="FMN.ORDER_BY_EDITABLE_DESC"/>
+								<option value="editable.asc" label="FMN.ORDER_BY_EDITABLE_ASC"/>
+								<option value="isFree.desc" label="FMN.ORDER_BY_ISFREE_ASC"/>
+								<option value="isFree.asc" label="FMN.ORDER_BY_ISFREE_DESC"/>
+								<option value="order.asc" label="ORDER_BY_POSITION_ASC"/>
+								<option value="order.desc" label="ORDER_BY_POSITION_DESC"/>
+							</values>
+						</field>
+						<field type="button" name="save-ordering" icon="save" aria-label="ACCESSIBILITY.LIST_SAVE_FIELD" class="btn btn-info btn-sm spctrl-default-ordering"
+						       data-target="fields"/>
+					</div>
+				</header>
+
+				<div class="dk-progress">
+					<div id="spctrl-progress-copy" class="w-100 alert alert-outline-info alert-sm hidden">
+						<span class="fas fa-sync-alt fa-spin me-2"/>
+						<text value="FM.FIELD_DUPLICATING"/>
+					</div>
+					<div id="spctrl-progress-copyto" class="w-100 alert alert-outline-info alert-sm hidden">
+						<span class="fas fa-sync-alt fa-spin me-2"/>
+						<text value="FM.FIELD_COPYING"/>
+					</div>
+				</div>
+
+				<div>
+					<tabs>
+						<tab label="FMN.ENTRY_FIELDS">
+							<div class="table-responsive">
+								<table>
+									<head>
+										<cell type="text" label="HEADER_ID" class="dk-cell text-center"/>
+										<cell type="checkbox" rel="p_fid" class="dk-cell text-center" aria-label="ACCESSIBILITY.FIELD_CHECK_ALL"/>
+										<cell type="text" label="HEADER_FIELD_NAME"/>
+										<cell type="text" label="HEADER_FIELD_STATE" class="dk-cell text-center"/>
+										<cell type="text" label="HEADER_FIELD_TYPE" class="dk-cell text-center"/>
+										<cell type="text" label="HEADER_FIELD_SHOW_IN" class="dk-cell text-center"/>
+										<cell type="text" label="HEADER_FIELD_IS_REQUIRED" class="dk-cell text-center"/>
+										<cell type="text" label="HEADER_FIELD_IS_EDITABLE" class="dk-cell text-center"/>
+										<cell type="text" label="HEADER_FIELD_IS_FREE" class="dk-cell text-center"/>
+										<cell condition="ordering.contains(order)" type="ordering" label="HEADER_FIELD_POSITION" class="dk-cell dk-position w-10" rel="field"/>
+									</head>
+									<loop subject="fields">
+										<cell type="text" value="id" class="dk-cell text-center"/>
+										<cell type="checkbox" name="p_fid" value="id" aria-label="ACCESSIBILITY.FIELD_CHECK" class="dk-cell text-center"/>
+										<cell invert-condition="_off">
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="field.edit"/>
+													<param name="fid" value="fid" parse="true"/>
+													<param name="sid" value="request.sid" parse="true" subject="skip"/>
+												</url>
+											</cell>
+											<cell type="text" value="nid" class="dk-subtext"/>
+										</cell>
+										<cell condition="_off">
+											<cell type="text" value="name" class="invalid"/>
+											<cell type="text" value="nid" class="dk-subtext invalid"/>
+										</cell>
+										<cell type="ticker" value="enabled" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle'}" fa="far"
+										      colors="{'0':'dk-text-red','1':'dk-text-green'}"
+										      aria-labels="{'0':'ACCESSIBILITY.TICKER_FIELD_ENABLE','1':'ACCESSIBILITY.TICKER_FIELD_DISABLE'}">
+											<url type="intern" class="dk-enabled">
+												<param name="task" value="field.toggle.enabled"/>
+												<param name="fid" value="fid" parse="true"/>
+												<param name="sid" value="request.sid" parse="true" subject="skip"/>
+											</url>
+										</cell>
+										<cell type="text" value="fieldType" class="dk-cell text-center" invert-condition="_off"/>
+										<cell type="text" value="fieldType" class="dk-cell text-center invalid" condition="_off"/>
+										<cell type="text" value="showIn" class="dk-cell text-center"/>
+										<cell type="ticker" value="required" class="dk-cell text-center" icons="{'0':'square','1':'check-square'}"
+										      colors="{'0':'dk-text-gray','1':'dk-text-blue'}"
+										      aria-labels="{'0':'ACCESSIBILITY.TICKER_FIELD_REQUIRED','1':'ACCESSIBILITY.TICKER_FIELD_NOTREQUIRED'}" fa="far">
+											<url type="intern" class="dk-required">
+												<param name="task" value="field.toggle.required"/>
+												<param name="fid" value="fid" parse="true"/>
+												<param name="sid" value="request.sid" parse="true" subject="skip"/>
+											</url>
+										</cell>
+										<cell type="statusticker" value="editable" class="dk-cell text-center" icons="{'0':'lock','1':'edit'}"
+										      colors="{'0':'dk-text-gray','1':'dk-text-blue'}"
+										      aria-labels="{'0':'ACCESSIBILITY.TICKER_FIELD_EDITABLE','1':'ACCESSIBILITY.TICKER_FIELD_NOTEDITABLE'}">
+										</cell>
+										<cell type="statusticker" value="isFree" class="dk-cell text-center" icons="{'0':'dollar-sign','1':'heart'}"
+										      colors="{'0':'dk-text-gray','1':'dk-text-green'}"
+										      aria-labels="{'0':'ACCESSIBILITY.TICKER_FIELD_FREE','1':'ACCESSIBILITY.TICKER_FIELD_NOTFREE'}">
+										</cell>
+										<cell condition="/ordering.contains(order)" class="dk-cell dk-position w-10">
+											<cell type="ordering" value="position" name="fid[var:[id]]">
+												<cell type="link" icon="chevron-up" aria-label="ACCESSIBILITY.POSITION_UP">
+													<url type="intern" class="btn btn-secondary btn-sm" role="button">
+														<param name="task" value="field.up"/>
+														<param name="fid" value="fid" parse="true"/>
+														<param name="sid" value="request.sid" parse="true" subject="skip"/>
+													</url>
+												</cell>
+												<cell type="link" icon="chevron-down" aria-label="ACCESSIBILITY.POSITION_DOWN">
+													<url type="intern" class="btn btn-secondary btn-sm" role="button">
+														<param name="task" value="field.down"/>
+														<param name="fid" value="fid" parse="true"/>
+														<param name="sid" value="request.sid" parse="true" subject="skip"/>
+													</url>
+												</cell>
+											</cell>
+										</cell>
+									</loop>
+									<foot>
+										<navigation/>
+									</foot>
+								</table>
+							</div>
+						</tab>
+						<tab label="FMN.CATEGORIES_FIELDS">
+							<div class="table-responsive">
+								<table>
+									<head>
+										<cell type="text" label="HEADER_ID" class="dk-cell text-center w-5"/>
+										<cell type="checkbox" rel="p_fid" class="dk-cell text-center w-5"/>
+										<cell type="text" label="HEADER_FIELD_NAME"/>
+										<cell type="text" label="HEADER_FIELD_STATE" class="dk-cell text-center"/>
+										<cell type="text" label="HEADER_FIELD_TYPE" class="dk-cell text-center"/>
+										<cell condition="ordering.contains(order)" type="ordering" label="HEADER_FIELD_POSITION" class="dk-cell dk-position w-10" rel="field"/>
+									</head>
+									<loop subject="category-fields">
+										<cell type="text" value="id" class="dk-cell text-center"/>
+										<cell type="checkbox" name="p_fid" value="id" class="dk-cell text-center"/>
+										<cell invert-condition="_off">
+											<cell type="link" value="name">
+												<url type="intern">
+													<param name="task" value="field.edit"/>
+													<param name="fid" value="fid" parse="true"/>
+													<param name="sid" value="request.sid" parse="true" subject="skip"/>
+												</url>
+											</cell>
+											<cell type="text" value="nid" class="dk-subtext"/>
+										</cell>
+										<cell condition="_off">
+											<cell type="text" value="name" class="invalid"/>
+											<cell type="text" value="nid" class="dk-subtext invalid"/>
+										</cell>
+										<cell type="ticker" value="enabled" class="dk-cell text-center" icons="{'0':'times-circle','1':'check-circle'}" fa="far"
+										      colors="{'0':'dk-text-red','1':'dk-text-green'}"
+										      aria-labels="{'0':'ACCESSIBILITY.TICKER_FIELD_ENABLE','1':'ACCESSIBILITY.TICKER_FIELD_DISABLE'}">
+											<url type="intern" class="dk-enabled">
+												<param name="task" value="field.toggle.enabled"/>
+												<param name="fid" value="fid" parse="true"/>
+												<param name="sid" value="request.sid" parse="true" subject="skip"/>
+											</url>
+										</cell>
+										<cell type="text" value="fieldType" class="dk-cell text-center" invert-condition="_off"/>
+										<cell type="text" value="fieldType" class="dk-cell text-center invalid" condition="_off"/>
+										<cell condition="/ordering.contains(order)" class="dk-cell dk-position w-10">
+											<cell type="ordering" value="position" name="cfid[var:[id]]">
+												<cell type="link" icon="chevron-up" aria-label="ACCESSIBILITY.POSITION_UP">
+													<url type="intern" class="btn btn-secondary btn-sm" role="button">
+														<param name="task" value="field.up"/>
+														<param name="cfid" value="fid" parse="true"/>
+														<param name="sid" value="request.sid" parse="true" subject="skip"/>
+													</url>
+												</cell>
+												<cell type="link" icon="chevron-down" aria-label="ACCESSIBILITY.POSITION_DOWN">
+													<url type="intern" class="btn btn-secondary btn-sm" role="button">
+														<param name="task" value="field.down"/>
+														<param name="cfid" value="fid" parse="true"/>
+														<param name="sid" value="request.sid" parse="true" subject="skip"/>
+													</url>
+												</cell>
+											</cell>
+										</cell>
+									</loop>
+									<foot>
+										<navigation/>
+									</foot>
+								</table>
+							</div>
+						</tab>
+					</tabs>
+				</div>
+				<pagination set="fSite" class="justify-content-center" inputbox="right" type="icon">
+					<param name="count" value="fields-count" parse="true"/>
+					<param name="limit" value="fields-limit" parse="true"/>
+					<param name="current" value="fields-site" parse="true"/>
+					<param name="url">
+						<param name="option" value="com_sobipro"/>
+						<param name="sid" value="request.sid" parse="true"/>
+					</param>
+				</pagination>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

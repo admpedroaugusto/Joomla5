@@ -1,0 +1,827 @@
+// @package Default Template V7 for SobiPro multi-directory component with content construction support
+
+// @author
+// Authors: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+// Url: https://www.Sigsiu.NET
+
+// @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+// @license GNU/GPL Version 3
+// This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+// See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// @modified 10 November 2023 by Sigrid Suski
+
+// Helper file for Bootstrap 3 styles
+
+@form-height: 37px;
+@form-height-small: 20px;
+@group-height: 36.85px;
+
+.SobiPro {
+	&.popover {
+		border-radius: @corner-radius-small;
+
+		.popover-title {
+			border-top-left-radius: @corner-radius-small;
+			border-top-right-radius: @corner-radius-small;
+		}
+	}
+
+	&.bootstrap-datetimepicker-widget {
+		right: auto !important;
+		position: absolute !important;
+	}
+}
+
+.SobiPro.default7 {
+
+	// HTML Settings
+	// ------------------------
+	label, input, button, select, textarea {
+		line-height: 1.42857143;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	[data-role="content"] {
+		.dropdown-menu a {
+			text-decoration: none;
+		}
+	}
+
+	select[multiple], select[size] {
+		height: auto;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		margin-top: 0;
+		margin-bottom: .5rem;
+	}
+
+	// Bootstrap Settings
+	// ------------------------
+	/* @todo needs to be replaced with standard styles*/
+
+	//adapt to bigger font-size
+	.form-control:not(textarea):not(select) {
+		height: @form-height;
+
+		&.input-sm {
+			height: @form-height-small;
+		}
+	}
+
+	.input-group .form-control {
+		height: @group-height;
+	}
+
+	.well {
+		box-shadow: none;
+		border-style: solid;
+		border-width: .0625rem;
+	}
+
+	.page-header {
+		margin: 0 0 .625rem 0;
+		padding-bottom: 0;
+		border-bottom-color: lighten(@alpha-color, 50%);
+
+		h2 {
+			margin-top: 0;
+		}
+	}
+
+	// Menu toggle button
+	// ----------------------------------------
+	.navbar-toggle {
+		padding: 6px 10px;
+		background-color: darken(@alpha-color, 5%);
+
+		&:hover {
+			background-color: @alpha-color;
+		}
+
+		&:focus {
+			background-color: @alpha-color;
+			.focus-shadow;
+		}
+	}
+
+	// Radius setting
+	// -----------------------------------------
+	.panel,
+	.panel-heading,
+	.well,
+	.thumbnail,
+	.form-control,
+	.input-group-addon {
+		border-radius: @corner-radius;
+	}
+
+	// round on left side
+	.input-group input {
+		border-top-left-radius: @corner-radius;
+		border-bottom-left-radius: @corner-radius;
+	}
+
+	// not round on left side
+	.input-group > .form-control:not(:first-child),
+	.input-group-addon:not(:first-child),
+	.input-group-btn:not(.hidden).last-child > .btn {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	// not round on right side
+	//select.form-control,
+	//.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+	.input-group > .form-control:not(:last-child) {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.sp-field-button .input-group input.form-control,
+	.sp-field-url .input-group input.form-control {
+		border-radius: 0 @corner-radius @corner-radius 0;
+	}
+
+	// Accessibility
+	// ------------------------
+	.sr-only {
+		position: absolute !important;
+		width: 1px !important;
+		height: 1px !important;
+		padding: 0 !important;
+		margin: -1px !important;
+		overflow: hidden !important;
+		clip: rect(0, 0, 0, 0) !important;
+		border: 0 !important;
+	}
+
+	// Alerts
+	// ------------------------
+	.alert .close {
+		float: right;
+		font-size: 1.25rem;
+		font-weight: bold;
+		line-height: 1.125rem;
+		color: @black;
+		text-shadow: 0 .0625rem 0 @white;
+		opacity: 0.2;
+		filter: alpha(opacity=20);
+	}
+
+	// Thumbnails
+	// ------------------------
+	.thumbnail {
+		margin-bottom: .06rem;
+	}
+
+	// Panels
+	// ------------------------
+	.panel-heading {
+		font-size: calc(.125rem);
+
+		h1 {
+			font-size: calc(@font-size + .5rem);
+		}
+
+		h2 {
+			font-size: calc(@font-size + .375rem);
+		}
+
+		h3 {
+			font-size: calc(@font-size + .25rem);
+		}
+	}
+
+	// Top Menu (Toolbar)
+	// ------------------------
+	.navbar-collapse .navbar-form {
+		box-shadow: none;
+		margin: 8px 0;
+		border-top: none;
+		border-bottom: none;
+	}
+
+	// Sigsiu Tree
+	// ----------------------------------------
+	.sp-field-category {
+		.spctrl-sigsiutree-container {
+			padding-left: 0
+		}
+	}
+
+	// Search and Entry form
+	// ----------------------------------------
+	.sp-search-form,
+	.sp-entry-edit {
+		.radio, .checkbox {
+			padding-left: 0;
+		}
+
+		.checkbox-inline,
+		.radio-inline {
+			text-align: left;
+			font-weight: normal;
+			margin-right: 10px;
+		}
+
+		.checkbox.inline,
+		.radio.inline {
+			float: left;
+		}
+
+		.checkbox, .checkbox-inline,
+		.radio, .radio-inline {
+			padding-top: 4px;
+
+			input[type="checkbox"],
+			input[type="radio"] {
+				margin-top: 5px;
+			}
+
+			label {
+				font-weight: normal !important;
+			}
+		}
+
+		.control-label {
+			font-weight: 500;
+		}
+	}
+
+	// Entry form
+	// ----------------------------------------
+	.sp-entry-edit {
+		input.required,
+		select.required,
+		textarea.required,
+		.spctrl-field-image-upload.required .selected {
+			border: .0625rem solid @delta-color;
+		}
+
+		.sp-field-radio input,
+		.sp-field-checkbox input {
+			margin-top: .3125rem;
+		}
+
+		.sp-field-button,
+		.sp-field-url {
+			.input-group-btn select {
+				border-right: 0;
+				width: 6.25rem;
+				border-radius: @corner-radius 0 0 @corner-radius;
+			}
+		}
+
+		.sp-field-image {
+			input.selected {
+				border-radius: @corner-radius 0 0 @corner-radius;
+			}
+		}
+
+		// Validation
+		.form-control.is-valid {
+			border-color: @success-color;
+			color: @success-color;
+			padding-right: calc(1.5em + .75rem);
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-position: right calc(.375em + .1875rem) center;
+			background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+		}
+
+		label.is-valid,
+		input[type="checkbox"].is-valid,
+		input[type="radio"].is-valid {
+			border-color: @success-color;
+			color: @success-color;
+		}
+
+		.form-control.is-invalid {
+			border-color: @error-color;
+			color: @error-color;
+			padding-right: calc(1.5em + .75rem);
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-position: right calc(.375em + .1875rem) center;
+			background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+		}
+
+		.form-control.is-invalid:focus {
+			border-color: @error-color;
+			box-shadow: 0 0 0 .25rem rgba(220, 53, 69, .25);
+		}
+
+		select.form-control.is-valid,
+		select.form-control.is-invalid {
+			background-position: right calc(.375em + .1375rem) center;
+		}
+
+		textarea.form-control.is-valid,
+		textarea.form-control.is-invalid {
+			padding-right: calc(1.5em + .75rem);
+			background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem);
+		}
+
+		label.is-invalid,
+		input[type="checkbox"].is-invalid,
+		input[type="radio"].is-invalid {
+			border-color: @error-color;
+			color: @error-color;
+		}
+
+		.invalid-feedback {
+			width: 100%;
+			margin-top: .25rem;
+			font-size: 80%;
+			color: @error-color;
+		}
+
+		.form-control[multiple],
+		.form-control[size]:not([size="1"]) {
+			background-image: none !important;
+		}
+
+		.sp-paybox {
+			.control-label {
+				font-weight: 400;
+				width: 100%;
+
+				input {
+					margin-top: -2px;
+				}
+			}
+		}
+
+		.twocolumns .sp-paybox {
+			label {
+				text-align: left;
+				padding-left: 0;
+			}
+		}
+	}
+
+	.form-horizontal .control-label {
+		text-align: left;
+	}
+
+	@media (min-width: 1200px) {
+		.form-horizontal .control-label {
+			text-align: right;
+		}
+	}
+	@media (max-width: 767.98px) {
+		.form-horizontal .control-label {
+			float: none;
+			width: unset;
+		}
+	}
+	// Payment popup/list
+	// ----------------------------------------
+	.sp-payment {
+		td {
+			line-height: .85rem;
+		}
+	}
+
+	// Search form
+	// ----------------------------------------
+	.sp-search-form {
+		.sp-search-top {
+			button,
+			input {
+				float: left;
+			}
+
+			@media (max-width: 767.98px) {
+				button,
+				input {
+					float: none;
+				}
+			}
+		}
+
+		@media (max-width: 575.98px) {
+			.sp-search-phrases .btn-group {
+				width: 100%;
+			}
+		}
+
+		.sp-nosuffix:first-of-type {
+			margin-right: .315rem;
+		}
+	}
+
+	.sp-autocomplete-suggest.dropdown-menu {
+		top: unset;
+		right: unset;
+		left: unset;
+
+		li {
+			padding: 8px 10px;
+
+			&.active {
+				z-index: 2;
+				color: @alpha-text-color;
+				background-color: @alpha-color;
+				border-color: @alpha-color;
+				cursor: pointer;
+
+				mark.sp-highlight {
+					color: @alpha-text-color;
+				}
+			}
+
+			&:hover {
+				mark.sp-highlight {
+					color: @alpha-text-color;
+				}
+			}
+
+			mark.sp-highlight {
+				padding: 0 1px 0 1px;
+				font-weight: bolder;
+				background-color: unset;
+				color: @text-color;
+			}
+		}
+	}
+
+	.navbar-form.sp-quicksearch-form {
+		margin-top: 6px;
+
+		button {
+			margin-top: 4px;
+		}
+	}
+
+	//.spClassCalendarRepeat select {
+	//	margin-top: .625rem
+	//}
+
+	.onecolumn {
+		.control-label {
+			text-align: left;
+			margin-bottom: 5px;
+		}
+	}
+
+
+	// Tooltip Settings
+	// -----------------------------------------------
+	.tooltip {
+		.tooltip-inner {
+			background-color: @alpha-color;
+			color: @alpha-text-color;
+		}
+
+		&.top .tooltip-arrow {
+			border-top-color: @alpha-color;
+		}
+
+		&.bottom .tooltip-arrow {
+			border-bottom-color: @alpha-color;
+		}
+
+		&.left .tooltip-arrow {
+			border-left-color: @alpha-color;
+		}
+
+		&.right .tooltip-arrow {
+			border-right-color: @alpha-color;
+		}
+	}
+
+	// Pagination
+	// -----------------------------------------------
+	.pagination {
+		.spctrl-pagination-input.page-link {
+			padding: 0;
+
+			&.open {
+				padding: 4.3px 0;
+			}
+
+			cursor: pointer;
+
+			span.sp-navdots {
+				padding: 6px 12px;
+				display: inline-block;
+			}
+
+			input[type="number"] {
+				height: 26px;
+				margin: 0;
+				padding: 0 6px 0 0;
+				color: @text-color;
+				width: 90px;
+				font-size: calc(@font-size - .1rem);
+			}
+		}
+
+		&.pagination-round {
+			.page-item {
+				.spctrl-pagination-input.page-link {
+					border: 0;
+					background-color: transparent;
+					color: @text-color;
+
+					&.open {
+						width: unset;
+					}
+
+					span.sp-navdots {
+						padding: unset;
+					}
+				}
+			}
+		}
+
+		&.pagination-sm {
+			.spctrl-pagination-input.page-link {
+				padding: 0;
+
+				&.open {
+					padding: 0;
+				}
+
+				span.sp-navdots {
+					padding: 5px 8px;
+				}
+
+				input[type="number"] {
+					height: 22px;
+					margin: 3px 0;
+					font-size: calc(@font-size - .2rem);
+				}
+			}
+
+			&.pagination-round {
+				.spctrl-pagination-input.page-link {
+					padding: 1.6px 0;
+
+					input[type="number"] {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		&.pagination-lg {
+			.spctrl-pagination-input.page-link {
+				span.sp-navdots {
+					padding: 4px 12px;
+				}
+
+				input[type="number"] {
+					height: 26px;
+					margin: 1.4px 0;
+					font-size: calc(@font-size - .2rem);
+				}
+			}
+
+			&.pagination-round {
+				.spctrl-pagination-input.page-link {
+					input[type="number"] {
+						height: 35px;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Popover Settings
+	// ----------------------------------------
+	.popover {
+		font-size: calc(@font-size - .0625rem);
+		font-weight: normal;
+		line-height: 1.25rem;
+		border-radius: @corner-radius-small;
+
+		h3 {
+			font-size: calc(@font-size + .0625rem);
+		}
+
+		.popover-title {
+			text-shadow: none;
+			font-weight: bold;
+			border-top-left-radius: @corner-radius-small;
+			border-top-right-radius: @corner-radius-small;
+		}
+
+		.popover-content {
+			color: @text-color;
+		}
+
+		img {
+			padding: .25rem;
+			background-color: @white;
+			border: .0625rem solid rgba(0, 0, 0, 0.2);
+			box-shadow: 0 .0625rem .1875rem rgba(0, 0, 0, 0.1);
+			margin: 0 .315rem .315rem 0;
+			border-radius: @corner-radius-small;
+		}
+	}
+
+	// Button styles
+	// ----------------------------------------
+	.btn,
+	.btn-submit {
+		text-shadow: none;
+	}
+
+	//otherwise buttons are a bit too high to align with input boxes
+	.btn {
+		background-image: none;
+	}
+
+	// Modal windows
+	// -----------------------------------------
+	.modal {
+		margin-left: 0;
+		top: 5%;
+		left: 0;
+		width: 100%;
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+
+		form {
+			margin-right: .625rem;
+			margin-left: 1.4rem;
+		}
+
+		// Extra small devices (portrait phones, less than 576px)
+		@media (max-width: 575.98px) {
+			.form-group,
+			.control-group {
+				margin-bottom: .375rem;
+			}
+		}
+	}
+
+	.modal-body {
+		max-height: 35rem;
+		overflow-y: auto;
+
+		// Extra small devices (portrait phones, less than 576px)
+		@media (max-width: 575.98px) {
+			max-height: 18.75rem;
+		}
+	}
+
+	.modal-header {
+		display: -ms-flexbox !important;
+		display: flex ! important;
+
+		.modal-title {
+			width: 100% !important;
+		}
+
+		button {
+			flex-shrink: 1 !important;
+		}
+	}
+
+	.fade.show {
+		opacity: 1;
+	}
+
+	// Dropdown
+	// -----------------------------------------------
+	.dropdown-menu > li > a.active {
+		color: white;
+	}
+
+	.dropdown-menu > .active > a,
+	.dropdown-menu > .active > a:hover,
+	.dropdown-menu > .active > a:focus,
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus,
+	.dropdown-submenu:hover > a,
+	.dropdown-submenu:focus > a {
+		color: @beta-text-color;
+		background-color: @beta-color;
+		background-image: none;
+	}
+
+	.dropdown-toggle::after {
+		content: unset !important;
+	}
+
+	// Alphalist, Orderingslist
+	// ----------------------------------------
+	.pagination ul.sp-alpha {
+		display: inline-block;
+
+		li {
+			margin-right: 0;
+		}
+
+		li a {
+			letter-spacing: -.08125rem;
+		}
+	}
+
+	.sp-alpha-list {
+		li a {
+			color: @text-color;
+
+			&.active,
+			&:active,
+				//&:hover,
+			&:focus {
+				color: @delta-text-color;
+				background-color: @delta-color;
+				background-image: none;
+			}
+		}
+	}
+
+	// Category images and icons
+	// ----------------------------------------
+	.sp-category-icon {
+		&.thumbnail {
+			margin: 0;
+			border: none;
+
+			.image-container {
+				height: 10rem;
+
+				.caption {
+					font-weight: bolder;
+					color: @text-color;
+				}
+
+				.thumbimage {
+					width: 18.75rem;
+					margin: auto;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					right: 0;
+				}
+			}
+
+			// Small devices (landscape phones, less than 768px)
+			@media (max-width: 767.98px) {
+				margin-bottom: 0;
+				.image-container {
+					height: unset;
+
+					.thumbimage {
+						position: unset;
+					}
+				}
+			}
+		}
+	}
+
+	// Extra small devices (portrait phones, less than 576px)
+	@media (max-width: 575.98px) {
+		.spPrint .spClassViewImage img,
+		.sp-detail-entry .spClassViewImage img,
+		div.spClassViewImage img,
+		.sp-entries-container .spClassViewImage img {
+			width: calc(100% - .5rem);
+		}
+	}
+
+	// Hidden style
+	// ----------------------------------------
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	// Remove possible influences from the Joomla template
+	// Remove the following lines if you experience problems or use Joomla 4
+	// ----------------------------------------
+	.navbar-nav,
+	.navbar > .container-fluid {
+		display: block;
+	}
+
+	.navbar-form .form-group {
+		margin-bottom: 0 !important;
+	}
+
+	.btn .caret {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	.dropdown-menu .divider {
+		border-bottom: unset;
+	}
+}

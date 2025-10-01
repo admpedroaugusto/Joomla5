@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 January 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.filters"/>
+	</header>
+	<toolbar title="FLR.SITE_TITLE" class="field filters">
+		<buttons icon="globe" class="btn" buttons="languages-list" label="TB.LANGUAGES"/>
+		<button type="new" icon="plus" class="spctrl-filter-edit" colour="new"/>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<div class="table-responsive">
+					<table class="table-hover table-sm" data-lang="var:[language]">
+						<head>
+							<cell type="text" label="FLR.FILTER_ID" class="dk-cell text-start"/>
+							<cell type="text" label="FLR.EDIT_FILTER" class="dk-cell text-center"/>
+							<cell type="text" label="FLR.FILTER_NAME" class="dk-cell text-start"/>
+							<cell type="text" label="FLR.FILTER_MSG" class="dk-cell text-start"/>
+							<cell type="text" label="FLR.FILTER_REGEX" class="dk-cell text-start"/>
+						</head>
+						<loop subject="filters">
+							<cell type="text" value="id" class="dk-cell text-start filterId"/>
+							<cell type="text" class="dk-cell text-center">
+								<button type="new" class="spctrl-filter-edit btn-outline-info btn-sm" icon="edit" rel="var:[id]" aria-label="ACCESSIBILITY.FILTER_EDIT"/>
+							</cell>
+							<cell type="text" value="name" class="dk-cell text-start"/>
+							<cell type="text" value="message" class="dk-cell text-start"/>
+							<cell type="text" value="regex" class="dk-cell text-start"/>
+						</loop>
+					</table>
+				</div>
+				<field type="modalWindow"
+				       role="edit-modal"
+				       id="spctrl-modal"
+				       dismissModalOnSave="false"
+				       class="modal-lg modal-fullscreen-sm-down modal-dialog-scrollable"
+				       header="FLR.EDIT_FILTER"
+				/>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" const="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="sp-language" default=""/>
+		</hidden>
+	</config>
+</definition>

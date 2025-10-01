@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package Default Template V8 for SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006–2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according to section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 29 November 2024 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+		<file type="script" filename="Tps.jscolor"/>
+		<file type="language" filename="SpTpl.default"/>
+
+		<script>
+			SobiCore.Ready( function() {
+				function spSwitchPlaceholderType() {
+					let selected = SobiCore.El( 'placeholder-type' ).val();
+					selected === 'css' ? SobiCore.El( 'placeholder-css' ).removeClass( 'hidden' ) : SobiCore.El( 'placeholder-css' ).addClass( 'hidden' );
+					selected === 'picture' ? SobiCore.El( 'placeholder-img' ).removeClass( 'hidden' ) : SobiCore.El( 'placeholder-img' ).addClass( 'hidden' );
+				}
+
+				function spShowColWidthEdit() {
+					let selected = SobiCore.El( 'col-width-edit' ).val();
+					selected === 'twocolumns' ? SobiCore.El( 'label-width-edit' ).removeClass( 'hidden' ) : SobiCore.El( 'label-width-edit' ).addClass( 'hidden' );
+				}
+
+				function spShowColWidthSearch() {
+					let selected = SobiCore.El( 'col-width-search' ).val();
+					selected === 'twocolumns' ? SobiCore.El( 'label-width-search' ).removeClass( 'hidden' ) : SobiCore.El( 'label-width-search' ).addClass( 'hidden' );
+				}
+
+				function spShowEfbPositions() {
+					let selected = SobiCore.El( 'efb-position' ).attr( 'data-spctrl-active' );
+					selected === "1" ? SobiCore.El( 'label-efb-position' ).removeClass( 'hidden' ) : SobiCore.El( 'label-efb-position' ).addClass( 'hidden' );
+				}
+
+				function spHideCategories() {
+					let selected = SobiCore.El( 'hidecategories' ).val();
+					selected === 'none' ? SobiCore.El( 'cat-listing-settings' ).addClass( 'hidden' ) : SobiCore.El( 'cat-listing-settings' ).removeClass( 'hidden' );
+				}
+
+				function spShowCarouselSettings() {
+					let selected = SobiCore.El( 'showcarousel' ).attr( 'data-spctrl-active' );
+					selected === "1" ? SobiCore.El( 'label-showcarousel' ).removeClass( 'hidden' ) : SobiCore.El( 'label-showcarousel' ).addClass( 'hidden' );
+				}
+
+				function spShowTabsSettings() {
+					let selected = SobiCore.El( 'showtabs' ).attr( 'data-spctrl-active' );
+					selected === "1" ? SobiCore.El( 'label-showtabs' ).removeClass( 'hidden' ) : SobiCore.El( 'label-showtabs' ).addClass( 'hidden' );
+				}
+
+				function spShowEditTabsSettings() {
+					let selected = SobiCore.El( 'showedittabs' ).attr( 'data-spctrl-active' );
+					selected === "1" ? SobiCore.El( 'label-showedittabs' ).removeClass( 'hidden' ) : SobiCore.El( 'label-showedittabs' ).addClass( 'hidden' );
+				}
+
+				function spShowPrintSettings() {
+					let selected = SobiCore.El( 'showprint' ).attr( 'data-spctrl-active' );
+					selected === "1" ? SobiCore.El( 'label-showprint' ).removeClass( 'hidden' ) : SobiCore.El( 'label-showprint' ).addClass( 'hidden' );
+				}
+
+				function spShowReCaptchaSettings() {
+					let selected = SobiCore.El( 'recaptcha' ).attr( 'data-spctrl-active' );
+					selected === "1" ? SobiCore.El( 'label-recaptcha' ).removeClass( 'hidden' ) : SobiCore.El( 'label-recaptcha' ).addClass( 'hidden' );
+				}
+
+				spSwitchPlaceholderType();
+				spShowColWidthEdit();
+				spShowColWidthSearch();
+				spShowEfbPositions();
+				spHideCategories();
+				spShowCarouselSettings();
+				spShowTabsSettings();
+				spShowEditTabsSettings();
+				spShowPrintSettings();
+				spShowReCaptchaSettings();
+
+				SobiCore.El( 'placeholder-type' ).change( () => {
+					spSwitchPlaceholderType();
+				} );
+				SobiCore.El( 'col-width-edit' ).change( () => {
+					spShowColWidthEdit();
+				} );
+				SobiCore.El( 'col-width-search' ).change( () => {
+					spShowColWidthSearch();
+				} );
+				SobiCore.El( 'efb-position' ).click( () => {
+					spShowEfbPositions();
+				} );
+				SobiCore.El( 'hidecategories' ).change( () => {
+					spHideCategories();
+				} );
+				SobiCore.El( 'showcarousel' ).click( () => {
+					spShowCarouselSettings();
+				} );
+				SobiCore.El( 'showtabs' ).click( () => {
+					spShowTabsSettings();
+				} );
+				SobiCore.El( 'showedittabs' ).click( () => {
+					spShowEditTabsSettings();
+				} );
+				SobiCore.El( 'showprint' ).click( () => {
+					spShowPrintSettings();
+				} );
+				SobiCore.El( 'recaptcha' ).click( () => {
+					spShowReCaptchaSettings();
+				} );
+			} );
+		</script>
+	</header>
+
+	<toolbar title="TP.CONFIG_SITE_TITLE" class="templatesettings">
+		<button type="apply" task="template.saveConfig" colour="save"/>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+
+				<tabs>
+					<tab label="TP.SETTINGS_GENERAL">
+						<fieldset label="TP.CONFIG.CSS">
+							<!-- name="settings[folder.configfile][less=compile][lessfile][variable]" -->
+							<field type="select" label="TP.CONFIG.DESIGN" name="settings[config][less][theme][design]" selected="settings.config.less.theme.design" width="4">
+								<values>
+									<option value="standard" label="TP.CONFIG.DESIGN_STANDARD"/>
+									<option value="elevated" label="TP.CONFIG.DESIGN_ELEVATED"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.CSS_COLOUR" name="settings[config][less][theme][colour-set]" selected="settings.config.less.theme.colour-set"
+							       width="4">
+								<values>
+									<option value="sobipro" label="default SobiPro theme"/>
+									<option value="cornflower" label="blue/yellow"/>
+									<option value="autumn" label="brown/red"/>
+									<option value="terra" label="brown/yellow"/>
+									<option value="waterfall" label="cyan/blue/magenta"/>
+									<option value="meadow" label="green/yellow"/>
+									<option value="poppyseed" label="grey/red"/>
+									<option value="pastels" label="multi colour 1"/>
+									<option value="power" label="multi colour 2"/>
+									<option value="cornfield" label="orange/red"/>
+									<option value="malva" label="purple/blue"/>
+									<option value="roses" label="red/green"/>
+									<option value="allblue" label="shades of blue"/>
+									<option value="allgreen" label="shades of green"/>
+									<option value="allgrey" label="shades of grey"/>
+									<option value="allred" label="shades of red"/>
+									<option value="custom" label="use custom colours"/>
+								</values>
+							</field>
+							<div class="hidden">
+								<field type="text" label="" name="settings[config][less][custom][colour-set]" value="settings.config.less.theme.colour-set" width="2"/>
+							</div>
+							<field type="text" label="TP.CONFIG.CUSTOM_BACK" name="settings[config][less][theme][back-color]" value="settings.config.less.theme.back-color"
+							       data-jscolor="{hash:true}" width="3">
+							</field>
+							<field type="text" label="TP.CONFIG.CUSTOM_FONT" name="settings[config][less][theme][text-color]" value="settings.config.less.theme.text-color"
+							       data-jscolor="{hash:true}" width="3">
+							</field>
+							<div class="hidden">
+								<field type="text" label="" name="settings[config][less][custom][back-color]" value="settings.config.less.theme.back-color" width="2"/>
+								<field type="text" label="" name="settings[config][less][custom][text-color]" value="settings.config.less.theme.text-color" width="2"/>
+							</div>
+							<field type="select" label="TP.CONFIG.CSS_EDGE" name="settings[config][less][theme][corner-radius]" selected="settings.config.less.theme.corner-radius"
+							       width="4">
+								<values>
+									<option value="0" label="TP.CONFIG.EDGE_ANGULAR"/>
+									<option value=".0625rem" label="TP.CONFIG.1PX_ROUNDED"/>
+									<option value=".125rem" label="TP.CONFIG.2PX_ROUNDED"/>
+									<option value=".1875rem" label="TP.CONFIG.3PX_ROUNDED"/>
+									<option value=".25rem" label="TP.CONFIG.4PX_ROUNDED"/>
+									<option value=".3125rem" label="TP.CONFIG.5PX_ROUNDED"/>
+									<option value=".375rem" label="TP.CONFIG.6PX_ROUNDED"/>
+									<option value=".5rem" label="TP.CONFIG.8PX_ROUNDED"/>
+									<option value=".625rem" label="TP.CONFIG.10PX_ROUNDED"/>
+									<option value=".75rem" label="TP.CONFIG.12PX_ROUNDED"/>
+								</values>
+							</field>
+							<div class="hidden">
+								<field type="text" label="" name="settings[config][less][custom][corner-radius]" value="settings.config.less.theme.corner-radius" width="2"/>
+							</div>
+							<field type="select" label="TP.CONFIG.ALPHA_EDGE" name="settings[config][less][theme][alpha-edge]" selected="settings.config.less.theme.alpha-edge"
+							       width="4">
+								<values>
+									<option value="0" label="TP.CONFIG.ALPHA_EDGE_ANGULAR"/>
+									<option value=".25rem" label="TP.CONFIG.ALPHA_EDGE_ROUNDED"/>
+									<option value="50%" label="TP.CONFIG.ALPHA_EDGE_CIRCULAR"/>
+								</values>
+							</field>
+
+							<field type="select" label="TP.CONFIG.TOPMENU" name="settings[config][general][topmenu]" selected="settings.config.general.topmenu"
+							       width="5">
+								<values>
+									<option value="standard" label="TP.CONFIG.TOPMENU_STANDARD"/>
+									<option value="standard-only" label="TP.CONFIG.TOPMENU_STANDARD_ONLY"/>
+									<option value="standard-without" label="TP.CONFIG.TOPMENU_STANDARD_WITHOUT"/>
+									<option value="linkbar" label="TP.CONFIG.TOPMENU_BAR"/>
+									<option value="buttonbar" label="TP.CONFIG.TOPMENU_BUTTON"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[config][less][theme][normalize]" value="settings.config.less.theme.normalize" label="TP.CONFIG.NORMALIZE"
+							       prefix="yes_no"/>
+							<div class="hidden">
+								<field type="text" label="TP.CONFIG.FRAMEWORK" name="settings[config][general][bs]" value="settings.config.general.bs" width="2"/>
+								<field type="text" label="TP.CONFIG.FONT" name="settings[config][general][font]" value="settings.config.general.font" width="2"/>
+							</div>
+						</fieldset>
+						<fieldset label="TP.CONFIG.CUSTOM">
+							<field type="text" label="TP.CONFIG.CUSTOM_ALPHA" name="settings[config][theme][custom][alpha-color]" value="settings.config.theme.custom.alpha-color"
+							       data-jscolor="{hash:true}" width="3">
+							</field>
+							<field type="text" label="TP.CONFIG.CUSTOM_BETA" name="settings[config][theme][custom][beta-color]"
+							       value="settings.config.theme.custom.beta-color" data-jscolor="{hash:true}" width="3">
+							</field>
+							<field type="text" label="TP.CONFIG.CUSTOM_GAMMA" name="settings[config][theme][custom][gamma-color]" value="settings.config.theme.custom.gamma-color"
+							       data-jscolor="{hash:true}" width="3">
+							</field>
+							<field type="text" label="TP.CONFIG.CUSTOM_DELTA" name="settings[config][theme][custom][delta-color]"
+							       value="settings.config.theme.custom.delta-color" data-jscolor="{hash:true}" width="3">
+							</field>
+							<field type="text" label="TP.CONFIG.CUSTOM_LINK" name="settings[config][theme][custom][link-color]"
+							       value="settings.config.theme.custom.link-color" data-jscolor="{hash:true}" width="3">
+							</field>
+						</fieldset>
+						<fieldset label="TP.CONFIG.FONTS">
+							<field type="select" label="TP.CONFIG.FONT" name="settings[config][general][basefont]" selected="settings.config.general.basefont" width="5">
+								<values>
+									<option value="none" label="TP.CONFIG.FEONTSELECTION"/>
+									<option value="Alegreya Sans SC" label="Alegreya Sans SC (Google Font)"/>
+									<option value="Denk One" label="Denk One (Google Font)"/>
+									<option value="Dosis" label="Dosis (Google Font)"/>
+									<option value="Droid Sans" label="Droid Sans (Google Font)"/>
+									<option value="Exo" label="Exo (Google Font)"/>
+									<option value="Josefin Sans" label="Josefin Sans (Google Font)"/>
+									<option value="Lato" label="Lato (Google Font)"/>
+									<option value="Pacifico" label="Pacifico (Google Font)"/>
+									<option value="Raleway" label="Raleway (Google Font)"/>
+									<option value="Ubuntu" label="Ubuntu (Google Font)"/>
+								</values>
+							</field>
+
+							<field type="select" label="TP.CONFIG.FONTSIZE" name="settings[config][less][theme][fontsize]" selected="settings.config.less.theme.fontsize" width="2">
+								<values>
+									<option value=".8125rem" label="13px"/>
+									<option value=".875rem" label="14px"/>
+									<option value=".9375rem" label="15px"/>
+									<option value="1rem" label="16px"/>
+									<option value="1.0625rem" label="17px"/>
+									<option value="1.125rem" label="18px"/>
+									<option value="1.1875rem" label="19px"/>
+									<option value="1.25rem" label="20px"/>
+								</values>
+							</field>
+
+							<field type="select" label="TP.CONFIG.SPECIALFONT" name="settings[config][general][specialfont]" selected="settings.config.general.specialfont"
+							       width="5">
+								<values>
+									<option value="none" label="TP.CONFIG.FEONTSELECTION"/>
+									<option value="Alegreya Sans SC" label="Alegreya Sans SC (Google Font)"/>
+									<option value="Denk One" label="Denk One (Google Font)"/>
+									<option value="Dosis" label="Dosis (Google Font)"/>
+									<option value="Droid Sans" label="Droid Sans (Google Font)"/>
+									<option value="Exo" label="Exo (Google Font)"/>
+									<option value="Josefin Sans" label="Josefin Sans (Google Font)"/>
+									<option value="Lato" label="Lato (Google Font)"/>
+									<option value="Pacifico" label="Pacifico (Google Font)"/>
+									<option value="Raleway" label="Raleway (Google Font)"/>
+									<option value="Ubuntu" label="Ubuntu (Google Font)"/>
+								</values>
+							</field>
+						</fieldset>
+
+						<fieldset label="TP.SETTINGS_PRINT">
+							<field type="toggle" name="settings[config][general][showprint]" value="settings.config.general.showprint" label="TP.CONFIG.SHOWPRT"
+							       prefix="show" help-text="TP.CONFIG.PRINTUSED.HELP" data-spctrl="showprint"/>
+							<div data-spctrl="label-showprint">
+								<field type="toggle" name="settings[config][general][printimage]" value="settings.config.general.printimage" label="TP.CONFIG.PRINTIMG"
+								       prefix="yes_no"/>
+								<field type="select" label="TP.CONFIG.IMAGES" name="settings[config][less][theme][print-image-size]"
+								       selected="settings.config.less.theme.print-image-size"
+								       width="4">
+									<values>
+										<option value="inherit" label="inherit"/>
+										<option value="6.25rem" label="100px"/>
+										<option value="7.5rem" label="120px"/>
+										<option value="140px" label="140px"/>
+										<option value="160px" label="160px"/>
+										<option value="11.25rem" label="180px"/>
+										<option value="12.5rem" label="200px"/>
+										<option value="15.625rem" label="250px"/>
+										<option value="18.75rem" label="300px"/>
+										<option value="25rem" label="400px"/>
+									</values>
+								</field>
+								<field type="select" label="TP.CONFIG.GALLERY" name="settings[config][less][theme][print-gallery-size]"
+								       selected="settings.config.less.theme.print-gallery-size"
+								       width="4" help-text="TP.CONFIG.GALLERYUSED.HELP">
+									<values>
+										<option value="inherit" label="inherit"/>
+										<option value="6.25rem" label="100px"/>
+										<option value="7.5rem" label="120px"/>
+										<option value="140px" label="140px"/>
+										<option value="160px" label="160px"/>
+										<option value="11.25rem" label="180px"/>
+										<option value="12.5rem" label="200px"/>
+										<option value="15.625rem" label="250px"/>
+										<option value="18.75rem" label="300px"/>
+										<option value="25rem" label="400px"/>
+									</values>
+								</field>
+							</div>
+						</fieldset>
+
+						<fieldset label="TP.CONFIG.DEVTEMPLATE">
+							<field type="toggle" name="settings[config][general][development]" value="settings.config.general.development" label="TP.CONFIG.DEVELOPMENT"
+							       prefix="show"/>
+							<field type="toggle" name="settings[config][general][debug]" value="settings.config.general.debug" label="TP.CONFIG.CONFIGURATION" prefix="show"/>
+							<field type="toggle" name="settings[config][less][theme][debug]" value="settings.config.less.theme.debug" label="TP.CONFIG.COLOURTEST" prefix="show"/>
+						</fieldset>
+					</tab>
+
+					<tab label="TP.SETTINGS_ENTRY">
+						<fieldset>
+							<!-- name="settings[folder.configfile][task][setting]" value="settings.folder-configfile.task.setting" -->
+							<field type="select" label="TP.CONFIG.ENTRY_CSS_CLASS" name="settings[entry.edit][entry-edit][columns-edit]"
+							       selected="settings.entry-edit.entry-edit.columns-edit" data-spctrl="col-width-edit" width="4">
+								<values>
+									<option value="onecolumn" label="TP.CONFIG.ENTRY_CSS_CLASS_INLINE"/>
+									<option value="twocolumns" label="TP.CONFIG.ENTRY_CSS_CLASS_HORIZONTAL"/>
+								</values>
+							</field>
+							<div data-spctrl="label-width-edit">
+								<field type="select" label="TP.CONFIG.CLASS_LABEL_WIDTH" name="settings[entry.edit][entry-edit][label-width-edit]"
+								       selected="settings.entry-edit.entry-edit.label-width-edit" width="3">
+									<values>
+										<option value="2" label="TP.CONFIG.TWO_COLUMNS"/>
+										<option value="3" label="TP.CONFIG.THREE_COLUMNS"/>
+									</values>
+								</field>
+							</div>
+							<field type="select" label="TP.CONFIG.GRID" name="settings[entry.edit][entry-edit][grid-edit]"
+							       selected="settings.entry-edit.entry-edit.grid-edit" width="3">
+								<values>
+									<option value="xs" label="TP.CONFIG.GRID_XS"/>
+									<option value="sm" label="TP.CONFIG.GRID_SM"/>
+									<option value="md" label="TP.CONFIG.GRID_MD"/>
+									<option value="lg" label="TP.CONFIG.GRID_LG"/>
+									<option value="xl" label="TP.CONFIG.GRID_XL"/>
+									<option value="xxl" label="TP.CONFIG.GRID_XXL"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[entry.edit][entry-edit][required-star]" value="settings.entry-edit.entry-edit.required-star"
+							       label="TP.CONFIG.ENTRY_STAR" prefix="yes_no"/>
+							<field type="toggle" name="settings[entry.edit][entry-edit][efb-position]" value="settings.entry-edit.entry-edit.efb-position"
+							       data-spctrl="efb-position" label="TP.CONFIG.ENTRY_FIXED" prefix="yes_no"/>
+							<div data-spctrl="label-efb-position">
+								<field type="text" label="TP.CONFIG.FIXED_TOP_VALUE" name="settings[config][less][theme][efb-top]"
+								       value="settings.config.less.theme.efb-top" width="2"/>
+								<field type="text" label="TP.CONFIG.FIXED_RIGHT_VALUE" name="settings[config][less][theme][efb-right]"
+								       value="settings.config.less.theme.efb-right" width="2"/>
+								<field type="text" label="TP.CONFIG.FIXED_BOTTOM_VALUE" name="settings[config][less][theme][efb-bottom]"
+								       value="settings.config.less.theme.efb-bottom" width="2"/>
+								<field type="text" label="TP.CONFIG.FIXED_LEFT_VALUE" name="settings[config][less][theme][efb-left]"
+								       value="settings.config.less.theme.efb-left" width="2"/>
+							</div>
+							<field type="text" label="TP.CONFIG.ENTRY_REDIRECTLOGIN" name="settings[config][general][redirectlogin]" value="settings.config.general.redirectlogin"
+							       width="8"/>
+						</fieldset>
+
+						<fieldset label="TP.SETTINGS_RECAPTCHA_V2">
+							<field type="toggle" name="settings[entry.edit][entry-edit][recaptcha]" value="settings.entry-edit.entry-edit.recaptcha" label="TP.CONFIG.USERECAPTCHA"
+							       prefix="yes_no" data-spctrl="recaptcha"/>
+							<div data-spctrl="label-recaptcha">
+								<field type="text" label="TP.CONFIG.USERECAPTCHA_PUBLIC" name="settings[entry.edit][entry-edit][republic]"
+								       value="settings.entry-edit.entry-edit.republic" width="5"/>
+								<field type="text" label="TP.CONFIG.USERECAPTCHA_SECRET" name="settings[entry.edit][entry-edit][resecret]"
+								       value="settings.entry-edit.entry-edit.resecret" width="5"/>
+							</div>
+						</fieldset>
+					</tab>
+
+					<tab label="TP.SETTINGS_SEARCH">
+						<fieldset label="TP.SETTINGS_SEARCHGENERAL">
+							<field type="select" label="TP.CONFIG.ENTRY_CSS_CLASS" name="settings[search.search][general][columns-search]"
+							       selected="settings.search-search.general.columns-search" data-spctrl="col-width-search" width="3">
+								<values>
+									<option value="onecolumn" label="TP.CONFIG.ENTRY_CSS_CLASS_INLINE"/>
+									<option value="twocolumns" label="TP.CONFIG.ENTRY_CSS_CLASS_HORIZONTAL"/>
+								</values>
+							</field>
+							<div data-spctrl="label-width-search">
+								<field type="select" label="TP.CONFIG.CLASS_LABEL_WIDTH" name="settings[search.search][general][label-width-search]"
+								       selected="settings.search-search.general.label-width-search" width="3">
+									<values>
+										<option value="2" label="TP.CONFIG.TWO_COLUMNS"/>
+										<option value="3" label="TP.CONFIG.THREE_COLUMNS"/>
+									</values>
+								</field>
+							</div>
+							<field type="select" label="TP.CONFIG.GRID" name="settings[search.search][general][grid-search]"
+							       selected="settings.search-search.general.grid-search" width="3">
+								<values>
+									<option value="xs" label="TP.CONFIG.GRID_XS"/>
+									<option value="sm" label="TP.CONFIG.GRID_SM"/>
+									<option value="md" label="TP.CONFIG.GRID_MD"/>
+									<option value="lg" label="TP.CONFIG.GRID_LG"/>
+									<option value="xl" label="TP.CONFIG.GRID_XL"/>
+									<option value="xxl" label="TP.CONFIG.GRID_XXL"/>
+								</values>
+							</field>
+							<field type="toggle" label="TP.CONFIG.EXTENDEDSEARCH" name="settings[search.search][general][extendedsearch]"
+							       value="settings.search-search.general.extendedsearch" prefix="show">
+							</field>
+							<field type="toggle" label="TP.CONFIG.HIDESEARCH" name="settings[search.search][general][hidesearch]" value="settings.search-search.general.hidesearch"
+							       prefix="show">
+							</field>
+						</fieldset>
+						<fieldset label="TP.SETTINGS_SEARCHRESULTS">
+							<field type="toggle" name="settings[search.search][search-results][searchorderlist]" value="settings.search-search.search-results.searchorderlist"
+							       label="TP.CONFIG.ORDERING" prefix="yes_no"/>
+							<field type="select" label="TP.CONFIG.LST_ENTRIESINLINE" name="settings[search.search][search-results][entries_in_line]"
+							       selected="settings.search-search.search-results.entries_in_line" width="4" data-spctrl="flex">
+								<values>
+									<option value="flex" label="TP.CONFIG.FLEX"/>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.LST_ENTRIESLIMIT" name="settings[search.search][search-results][entries_limit]"
+							       selected="settings.search-search.search-results.entries_limit" width="4"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+									<option value="6" label="6"/>
+									<option value="8" label="8"/>
+									<option value="9" label="9"/>
+									<option value="10" label="10"/>
+									<option value="12" label="12"/>
+									<option value="15" label="15"/>
+									<option value="20" label="20"/>
+									<option value="30" label="SELECT_30_NOT_RECOMMENDED"/>
+									<option value="40" label="SELECT_40_NOT_RECOMMENDED"/>
+								</values>
+							</field>
+						</fieldset>
+					</tab>
+
+					<tab label="TP.SETTINGS_ENTRIES">
+						<fieldset label="TP.SETTINGS_FEATURES">
+							<field type="select" name="settings[config][general][noimage]" selected="settings.config.general.noimage" label="TP.CONFIG.ENTRIES_NOIMG" width="3">
+								<values>
+									<option value="0" label="YES_NO_NO"/>
+									<option value="1" label="YES_NO_YES"/>
+									<option value="2" label="TP.CONFIG.PLACEHOLDER_CSS"/>
+								</values>
+							</field>
+							<field type="select" name="settings[config][general][noimage-type]" selected="settings.config.general.noimage-type" label="TP.CONFIG.NOIMGTYPE"
+							       data-spctrl="placeholder-type" width="3">
+								<values>
+									<option value="css" label="TP.CONFIG.NOIMGTYPE_CSS"/>
+									<option value="picture" label="TP.CONFIG.NOIMGTYPE_IMG"/>
+								</values>
+							</field>
+							<div data-spctrl="placeholder-css">
+								<field type="select" label="TP.CONFIG.ENTRIES_IMGRATIO" name="settings[config][less][theme][noimage-ratio]"
+								       selected="settings.config.less.theme.noimage-ratio" width="4">
+									<values>
+										<option value="1" label="1:1"/>
+										<option value="0.75" label="4:3"/>
+										<option value="1.33" label="3:4"/>
+										<option value="0.67" label="9:6"/>
+									</values>
+								</field>
+							</div>
+							<div data-spctrl="placeholder-img">
+								<field type="select" label="TP.CONFIG.ENTRIES_PIMAGE" name="settings[config][general][noimage-img]"
+								       selected="settings.config.general.noimage-img" width="4">
+									<values>
+										<option value="noimage11.png"/>
+										<option value="noimage43.png"/>
+										<option value="noimage34.png"/>
+										<option value="noimage96.png"/>
+									</values>
+								</field>
+							</div>
+						</fieldset>
+
+						<fieldset label="TP.CONFIG.CAROUSEL">
+							<field type="toggle" name="settings[config][general][showcarousel]" value="settings.config.general.showcarousel"
+							       label="TP.CONFIG.SHOWCAROUSEL" prefix="show" help-text="TP.CONFIG.CAROUSELUSED.HELP" data-spctrl="showcarousel"/>
+							<div data-spctrl="label-showcarousel">
+								<field type="select" label="TP.CONFIG.CAROUSELIMG" name="settings[config][less][theme][carousel-image]"
+								       selected="settings.config.less.theme.carousel-image" width="3">
+									<values>
+										<option value="inherit" label="inherit"/>
+										<option value="9.375rem" label="150px"/>
+										<option value="12.5rem" label="200px"/>
+										<option value="18.75rem" label="300px"/>
+										<option value="25rem" label="400px"/>
+										<option value="31.25rem" label="500px"/>
+										<option value="37.5rem" label="600px"/>
+										<option value="46.875rem" label="750px"/>
+										<option value="50rem" label="800px"/>
+									</values>
+								</field>
+								<field type="select" label="TP.CONFIG.CAROUSEL_RADIUS" name="settings[config][less][theme][carousel-image-radius]"
+								       selected="settings.config.less.theme.carousel-image-radius"
+								       width="4">
+									<values>
+										<option value="0" label="TP.CONFIG.EDGE_ANGULAR"/>
+										<option value=".0625rem" label="TP.CONFIG.1PX_ROUNDED"/>
+										<option value=".125rem" label="TP.CONFIG.2PX_ROUNDED"/>
+										<option value=".1875rem" label="TP.CONFIG.3PX_ROUNDED"/>
+										<option value=".25rem" label="TP.CONFIG.4PX_ROUNDED"/>
+										<option value=".3125rem" label="TP.CONFIG.5PX_ROUNDED"/>
+										<option value=".375rem" label="TP.CONFIG.6PX_ROUNDED"/>
+										<option value=".5rem" label="TP.CONFIG.8PX_ROUNDED"/>
+										<option value=".625rem" label="TP.CONFIG.10PX_ROUNDED"/>
+										<option value=".75rem" label="TP.CONFIG.12PX_ROUNDED"/>
+									</values>
+								</field>
+								<field type="text" label="TP.CONFIG.CAROUSEL_CONTROL_COLOR" name="settings[config][less][theme][carousel-control-color]"
+								       value="settings.config.less.theme.carousel-control-color"
+								       data-jscolor="{hash:true}" width="3">
+								</field>
+								<field type="text" label="TP.CONFIG.CAROUSEL_CAPTION_COLOR" name="settings[config][less][theme][carousel-caption-color]"
+								       value="settings.config.less.theme.carousel-caption-color"
+								       data-jscolor="{hash:true}" width="3">
+								</field>
+								<field type="text" label="TP.CONFIG.CAROUSEL_INDICATOR_COLOR" name="settings[config][less][theme][carousel-indicator-color]"
+								       value="settings.config.less.theme.carousel-indicator-color"
+								       data-jscolor="{hash:true}" width="3">
+								</field>
+							</div>
+						</fieldset>
+
+						<fieldset label="TP.CONFIG.TABS">
+							<field type="toggle" name="settings[config][general][showtabs]" value="settings.config.general.showtabs"
+							       label="TP.CONFIG.SHOWTABS" prefix="show" help-text="TP.CONFIG.TABSUSED.HELP" data-spctrl="showtabs"/>
+							<div data-spctrl="label-showtabs">
+								<field type="select" label="TP.CONFIG.TABSTYLE" name="settings[config][general][tabstyle]" selected="settings.config.general.tabstyle" width="4">
+									<values>
+										<option value="tabs sp-navtabs" label="Tabs"/>
+										<option value="pills sp-navtabs" label="Pills"/>
+										<option value="pills staples sp-navtabs" label="Staples"/>
+										<option value="tabs" label="Joomla Tabs"/>
+										<option value="pills" label="Joomla Pills"/>
+									</values>
+								</field>
+								<field type="select" label="TP.CONFIG.TABCOLOR" name="settings[config][general][tabcolor]" selected="settings.config.general.tabcolor" width="4"
+								       help-text="TP.TABCOLOR.HELP">
+									<values>
+										<option value="alpha" label="Alpha"/>
+										<option value="beta" label="Beta"/>
+										<option value="gamma" label="Gamma"/>
+										<option value="delta" label="Delta"/>
+									</values>
+								</field>
+							</div>
+
+							<field type="toggle" name="settings[config][general][showedittabs]" value="settings.config.general.showedittabs"
+							       label="TP.CONFIG.SHOWEDITTABS" prefix="show" help-text="TP.CONFIG.EDITTABSUSED.HELP" data-spctrl="showedittabs"/>
+							<div data-spctrl="label-showedittabs">
+								<field type="select" label="TP.CONFIG.TABSTYLE" name="settings[config][general][edittabstyle]" selected="settings.config.general.edittabstyle"
+								       width="4">
+									<values>
+										<option value="tabs sp-navtabs" label="Tabs"/>
+										<option value="pills sp-navtabs" label="Pills"/>
+										<option value="pills staples sp-navtabs" label="Staples"/>
+										<option value="tabs" label="Joomla Tabs"/>
+										<option value="pills" label="Joomla Pills"/>
+									</values>
+								</field>
+								<field type="select" label="TP.CONFIG.TABCOLOR" name="settings[config][general][edittabcolor]" selected="settings.config.general.edittabcolor"
+								       width="4"
+								       help-text="TP.TABCOLOR.HELP">
+									<values>
+										<option value="alpha" label="Alpha"/>
+										<option value="beta" label="Beta"/>
+										<option value="gamma" label="Gamma"/>
+										<option value="delta" label="Delta"/>
+									</values>
+								</field>
+							</div>
+						</fieldset>
+
+						<fieldset label="TP.SETTINGS_DETAILS">
+							<field type="select" label="TP.CONFIG.ENTRIES_IMGSIZESMALL" name="settings[config][less][theme][big-image]"
+							       selected="settings.config.less.theme.big-image" width="3">
+								<values>
+									<option value="inherit" label="inherit"/>
+									<option value="100%" label="100%"/>
+									<option value="6.25rem" label="100px"/>
+									<option value="9.375rem" label="150px"/>
+									<option value="11.25rem" label="180px"/>
+									<option value="12.5rem" label="200px"/>
+									<option value="15.625rem" label="250px"/>
+									<option value="18.75rem" label="300px"/>
+									<option value="21.88rem" label="350px"/>
+									<option value="25rem" label="400px"/>
+									<option value="31.25rem" label="500px"/>
+									<option value="37.5rem" label="600px"/>
+									<option value="50rem" label="800px"/>
+								</values>
+							</field>
+
+							<field type="select" label="TP.CONFIG.ENTRIES_PIMAGESTYLE" name="settings[config][general][noimage-floatdv]"
+							       selected="settings.config.general.noimage-floatdv" width="3">
+								<values>
+									<option value="none" label="none"/>
+									<option value="left" label="left"/>
+									<option value="right" label="right"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[config][general][dvtabular]"
+							       value="settings.config.general.dvtabular" label="TP.CONFIG.TABULAR"
+							       prefix="yes_no"/>
+						</fieldset>
+
+						<fieldset label="TP.SETTINGS_VCARD">
+							<field type="select" label="TP.CONFIG.ENTRIES_IMGSIZESMALL" name="settings[config][less][theme][small-image]"
+							       selected="settings.config.less.theme.small-image" width="3">
+								<values>
+									<option value="inherit" label="inherit"/>
+									<option value="100%" label="100%"/>
+									<option value="5rem" label="80px"/>
+									<option value="6.25rem" label="100px"/>
+									<option value="7.5rem" label="120px"/>
+									<option value="9.375rem" label="150px"/>
+									<option value="11.25rem" label="180px"/>
+									<option value="12.5rem" label="200px"/>
+									<option value="15.625rem" label="250px"/>
+									<option value="18.75rem" label="300px"/>
+									<option value="21.88rem" label="350px"/>
+									<option value="25rem" label="400px"/>
+									<option value="31.25rem" label="500px"/>
+									<option value="37.5rem" label="600px"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.ENTRIES_PIMAGESTYLE" name="settings[config][general][noimage-floatvc]"
+							       selected="settings.config.general.noimage-floatvc" width="3">
+								<values>
+									<option value="none" label="none"/>
+									<option value="left" label="left"/>
+									<option value="right" label="right"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[config][general][vctabular]"
+							       value="settings.config.general.vctabular" label="TP.CONFIG.TABULAR"
+							       prefix="yes_no"/>
+
+							<field type="select" label="TP.CONFIG.TEXTLENGTH" name="settings[config][general][textlength]"
+							       selected="settings.config.general.textlength" width="3">
+								<values>
+									<option value="no" label="YES_NO_NO"/>
+									<option value="50" label="50 characters"/>
+									<option value="100" label="100 characters"/>
+									<option value="150" label="150 characters"/>
+									<option value="200" label="200 characters"/>
+									<option value="300" label="300 characters"/>
+									<option value="500" label="500 characters"/>
+									<option value="1000" label="1000 characters"/>
+									<option value="1200" label="1200 characters"/>
+									<option value="1500" label="1500 characters"/>
+								</values>
+							</field>
+							<field type="text" label="TP.CONFIG.FLEX_WIDTH" name="settings[config][less][theme][flex-width]" value="settings.config.less.theme.flex-width"
+							       width="2"/>
+						</fieldset>
+					</tab>
+
+					<tab label="TP.SETTINGS_VIEW">
+						<fieldset label="TP.SETTINGS_VIEWFEATURE">
+							<field type="select" label="TP.CONFIG.HIDECATEGORIES" name="settings[config][general][hidecategories]" selected="settings.config.general.hidecategories"
+							       data-spctrl="hidecategories"
+							       width="3">
+								<values>
+									<option value="show" label="SHOW_YES"/>
+									<option value="hide" label="SHOW_NO"/>
+									<option value="none" label="TP.CONFIG.SHOW_NONE"/>
+								</values>
+							</field>
+							<div data-spctrl="cat-listing-settings">
+								<field type="toggle" name="settings[config][general][nocatname]" value="settings.config.general.nocatname" label="TP.CONFIG.SHOWCATNAME"
+								       prefix="yes_no"/>
+								<field type="toggle" name="settings[config][general][catnamebelow]" value="settings.config.general.catnamebelow" label="TP.CONFIG.SHOWCATNAMEBELOW"
+								       prefix="yes_no"/>
+								<field type="toggle" name="settings[config][general][countentries]" value="settings.config.general.countentries" label="TP.CONFIG.LST_COUNT"
+								       prefix="yes_no"/>
+								<field type="select" label="TP.CONFIG.CATICON_WIDTH" name="settings[config][general][caticon_width]"
+								       selected="settings.config.general.caticon_width" width="2">
+									<values>
+										<option value="0" label="0"/>
+										<option value="1" label="1"/>
+										<option value="2" label="2"/>
+										<option value="3" label="3"/>
+										<option value="4" label="4"/>
+										<option value="5" label="5"/>
+										<option value="6" label="6"/>
+										<option value="7" label="7"/>
+										<option value="8" label="8"/>
+										<option value="9" label="9"/>
+										<option value="10" label="10"/>
+										<option value="11" label="11"/>
+										<option value="12" label="12"/>
+									</values>
+								</field>
+							</div>
+						</fieldset>
+						<fieldset label="TP.SETTINGS_CATEGORYFEATURE">
+							<field type="toggle" name="settings[config][general][showicon]" value="settings.config.general.showicon" label="TP.CONFIG.SHOWICON" prefix="yes_no"/>
+							<field type="toggle" name="settings[config][general][addtocat]" value="settings.config.general.addtocat" label="TP.CONFIG.ADDTOCAT" prefix="yes_no"/>
+						</fieldset>
+						<fieldset label="TP.SETTINGS_ENTRYFEATURE">
+							<field type="toggle" name="settings[config][general][orderlist]" value="settings.config.general.orderlist" label="TP.CONFIG.ORDERING" prefix="yes_no"/>
+						</fieldset>
+						<fieldset label="TP.CONFIG.PAGINATION">
+							<field type="select" label="TP.CONFIG.PAGINATION_TYPE" name="settings[config][general][pagination]" selected="settings.config.general.pagination"
+							       width="3">
+								<values>
+									<option value="ajax" label="TP.CONFIG.PAG_AJAX"/>
+									<option value="pagination1" label="TP.CONFIG.PAG_STD"/>
+									<option value="pagination2" label="TP.CONFIG.PAG_STD2"/>
+								</values>
+							</field>
+							<field type="text" label="TP.CONFIG.PAGINATION_ADDON" name="settings[config][general][pagination-addon]"
+							       value="settings.config.general.pagination-addon"
+							       width="6"/>
+							<field type="select" label="TP.CONFIG.PAGINATION_PAGES" name="settings[config][general][pagination-pages]"
+							       selected="settings.config.general.pagination-pages" width="2">
+								<values>
+									<option value="3" label="3"/>
+									<option value="5" label="5"/>
+									<option value="7" label="7"/>
+									<option value="9" label="9"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.PAGINATION_SYMBOLS" name="settings[config][general][pagination-symbols]"
+							       selected="settings.config.general.pagination-symbols" width="2">
+								<values>
+									<option value="0" label="TP.CONFIG.PAGINATION_SYMBOLS_NO"/>
+									<option value="1" label="TP.CONFIG.PAGINATION_SYMBOLS_YES"/>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="TP.CONFIG.SECTION">
+							<field type="select" label="TP.CONFIG.LST_ENTRIESLIMIT" name="settings[config][section-view][entries_limit]"
+							       selected="settings.config.section-view.entries_limit" width="3"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+									<option value="6" label="6"/>
+									<option value="8" label="8"/>
+									<option value="9" label="9"/>
+									<option value="10" label="10"/>
+									<option value="12" label="12"/>
+									<option value="15" label="15"/>
+									<option value="20" label="20"/>
+									<option value="30" label="SELECT_30_NOT_RECOMMENDED"/>
+									<option value="40" label="SELECT_40_NOT_RECOMMENDED"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.LST_ENTRIESINLINE" name="settings[config][section-view][entries_in_line]"
+							       selected="settings.config.section-view.entries_in_line" width="4">
+								<values>
+									<option value="flex" label="TP.CONFIG.FLEX"/>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+							<field type="toggle" name="settings[config][section-view][entries_recursive]" value="settings.config.section-view.entries_recursive"
+							       label="TP.CONFIG.LST_RECURSIVE" prefix="yes_no"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.LST_ORDERING" name="settings[config][section-view][entries_ordering]" values="entriesOrdering"
+							       selected="settings.config.section-view.entries_ordering" width="5"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.CAT_INLINE" name="settings[config][section-view][categories_in_line]"
+							       selected="settings.config.section-view.categories_in_line" width="4">
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.CAT_ORDERING" name="settings[config][section-view][categories_ordering]"
+							       selected="settings.config.section-view.categories_ordering" width="5">
+								<values>
+									<option value="name.asc" label="ORDER_BY_NAME_ASC"/>
+									<option value="name.desc" label="ORDER_BY_NAME_DESC"/>
+									<option value="position.asc" label="ORDER_BY_POSITION_ASC"/>
+									<option value="position.desc" label="ORDER_BY_POSITION_DESC"/>
+									<option value="counter.asc" label="ORDER_BY_POPULARITY_ASC"/>
+									<option value="counter.desc" label="ORDER_BY_POPULARITY_DESC"/>
+									<option value="createdTime.asc" label="ORDER_BY_CREATION_DATE_ASC"/>
+									<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+									<option value="updatedTime.asc" label="ORDER_BY_UPDATE_DATE_ASC"/>
+									<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+									<option value="validUntil.asc" label="ORDER_BY_EXPIRATION_DATE_ASC"/>
+									<option value="validUntil.desc" label="ORDER_BY_EXPIRATION_DATE_DESC"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+						</fieldset>
+						<fieldset label="TP.CONFIG.CAT">
+							<field type="select" label="TP.CONFIG.FIELDSPOS" name="settings[config][general][fieldsposition]" selected="settings.config.general.fieldsposition"
+							       width="5">
+								<values>
+									<option value="above" label="TP.CONFIG.FIELDSPOS_ABOVE"/>
+									<option value="between" label="TP.CONFIG.FIELDSPOS_BETWEEN"/>
+									<option value="below" label="TP.CONFIG.FIELDSPOS_BELOW"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.LST_ENTRIESLIMIT" name="settings[config][category-view][entries_limit]"
+							       selected="settings.config.category-view.entries_limit" width="3"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+									<option value="6" label="6"/>
+									<option value="8" label="8"/>
+									<option value="10" label="10"/>
+									<option value="15" label="15"/>
+									<option value="20" label="20"/>
+									<option value="30" label="SELECT_30_NOT_RECOMMENDED"/>
+									<option value="40" label="SELECT_40_NOT_RECOMMENDED"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.LST_ENTRIESINLINE" name="settings[config][category-view][entries_in_line]"
+							       selected="settings.config.category-view.entries_in_line" width="4">
+								<values>
+									<option value="flex" label="TP.CONFIG.FLEX"/>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[config][category-view][entries_recursive]" value="settings.config.category-view.entries_recursive"
+							       label="TP.CONFIG.LST_RECURSIVE" prefix="yes_no"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.LST_ORDERING" name="settings[config][category-view][entries_ordering]" values="entriesOrdering"
+							       selected="settings.config.category-view.entries_ordering" width="5"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.CAT_INLINE" name="settings[config][category-view][categories_in_line]"
+							       selected="settings.config.category-view.categories_in_line" width="2">
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.CAT_ORDERING" name="settings[config][category-view][categories_ordering]"
+							       selected="settings.config.category-view.categories_ordering" width="5">
+								<values>
+									<option value="name.asc" label="ORDER_BY_NAME_ASC"/>
+									<option value="name.desc" label="ORDER_BY_NAME_DESC"/>
+									<option value="position.asc" label="ORDER_BY_POSITION_ASC"/>
+									<option value="position.desc" label="ORDER_BY_POSITION_DESC"/>
+									<option value="counter.asc" label="ORDER_BY_POPULARITY_ASC"/>
+									<option value="counter.desc" label="ORDER_BY_POPULARITY_DESC"/>
+									<option value="createdTime.asc" label="ORDER_BY_CREATION_DATE_ASC"/>
+									<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+									<option value="updatedTime.asc" label="ORDER_BY_UPDATE_DATE_ASC"/>
+									<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+									<option value="validUntil.asc" label="ORDER_BY_EXPIRATION_DATE_ASC"/>
+									<option value="validUntil.desc" label="ORDER_BY_EXPIRATION_DATE_DESC"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+						</fieldset>
+						<fieldset label="TP.CONFIG.LIST">
+							<field type="select" label="TP.CONFIG.LST_ENTRIESLIMIT" name="settings[config][general][entries_limit]" selected="settings.config.general.entries_limit"
+							       width="3"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+									<option value="6" label="6"/>
+									<option value="8" label="8"/>
+									<option value="10" label="10"/>
+									<option value="15" label="15"/>
+									<option value="20" label="20"/>
+									<option value="30" label="SELECT_30_NOT_RECOMMENDED"/>
+									<option value="40" label="SELECT_40_NOT_RECOMMENDED"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.LST_ENTRIESINLINE" name="settings[config][general][entries_in_line]"
+							       selected="settings.config.general.entries_in_line" width="4">
+								<values>
+									<option value="flex" label="TP.CONFIG.FLEX"/>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[config][general][entries_recursive]" value="settings.config.general.entries_recursive"
+							       label="TP.CONFIG.LST_RECURSIVE" prefix="yes_no"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.LST_ORDERING" name="settings[config][general][entries_ordering]" values="entriesOrdering"
+							       selected="settings.config.general.entries_ordering" width="5"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.CAT_INLINE" name="settings[config][general][categories_in_line]"
+							       selected="settings.config.general.categories_in_line" width="2">
+								<values>
+									<option value="1" label="1"/>
+									<option value="2" label="2"/>
+									<option value="3" label="3"/>
+									<option value="4" label="4"/>
+									<option value="5" label="5"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.CAT_ORDERING" name="settings[config][general][categories_ordering]"
+							       selected="settings.config.general.categories_ordering" width="5">
+								<values>
+									<option value="name.asc" label="ORDER_BY_NAME_ASC"/>
+									<option value="name.desc" label="ORDER_BY_NAME_DESC"/>
+									<option value="position.asc" label="ORDER_BY_POSITION_ASC"/>
+									<option value="position.desc" label="ORDER_BY_POSITION_DESC"/>
+									<option value="counter.asc" label="ORDER_BY_POPULARITY_ASC"/>
+									<option value="counter.desc" label="ORDER_BY_POPULARITY_DESC"/>
+									<option value="createdTime.asc" label="ORDER_BY_CREATION_DATE_ASC"/>
+									<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+									<option value="updatedTime.asc" label="ORDER_BY_UPDATE_DATE_ASC"/>
+									<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+									<option value="validUntil.asc" label="ORDER_BY_EXPIRATION_DATE_ASC"/>
+									<option value="validUntil.desc" label="ORDER_BY_EXPIRATION_DATE_DESC"/>
+								</values>
+							</field>  <!-- SobiPro setting! -->
+						</fieldset>
+					</tab>
+
+					<tab label="TP.CONFIG.RSS">
+						<fieldset label="TP.CONFIG.SECTION">
+							<field type="toggle" name="settings[config][general][deactivaterss]" value="settings.config.general.deactivaterss" label="TP.CONFIG.RSS_DEAKT"
+							       prefix="yes_no" selected="1"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.RSS_ENTRIESLIMIT" name="settings[feeds.rss][section-view][entries_limit]"
+							       selected="settings.feeds-rss.section-view.entries_limit" width="2"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="3" label="3"/>
+									<option value="5" label="5"/>
+									<option value="10" label="10"/>
+									<option value="15" label="15"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[feeds.rss][section-view][entries_recursive]"
+							       value="settings.feeds-rss.section-view.entries_recursive" label="TP.CONFIG.LST_RECURSIVE"
+							       prefix="yes_no"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.LST_ORDERING" name="settings[feeds.rss][section-view][entries-ordering]"
+							       selected="settings.feeds-rss.section-view.entries-ordering" width="4"> <!-- SobiPro setting! -->
+								<values>
+									<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+									<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="TP.CONFIG.CAT">
+							<field type="select" name="settings[feeds.rss][category-view][showrss]" selected="settings.feeds-rss.category-view.showrss"
+							       label="TP.CONFIG.RSS_SHOWFEEDS" width="3">
+								<values>
+									<option value="entries" label="TP.CONFIG.RSS_ENTRIES"/>
+									<option value="categories" label="TP.CONFIG.RSS_CATEGORIES"/>
+									<option value="both" label="TP.CONFIG.RSS_BOTH"/>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="TP.CONFIG.RSSENTRIES" class="dk-sub">
+							<field type="select" label="TP.CONFIG.RSS_ENTRIESLIMIT" name="settings[feeds.rss][category-view][entries_limit]"
+							       selected="settings.feeds-rss.category-view.entries_limit" width="2"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="3" label="3"/>
+									<option value="5" label="5"/>
+									<option value="10" label="10"/>
+									<option value="15" label="15"/>
+								</values>
+							</field>
+							<field type="toggle" name="settings[feeds.rss][category-view][entries_recursive]"
+							       value="settings.feeds-rss.category-view.entries_recursive" label="TP.CONFIG.LST_RECURSIVE"
+							       prefix="yes_no"/> <!-- SobiPro setting! -->
+							<field type="select" label="TP.CONFIG.LST_ORDERING" name="settings[feeds.rss][category-view][entries-ordering]"
+							       selected="settings.feeds-rss.category-view.entries-ordering" width="4"> <!-- SobiPro setting! -->
+								<values>
+									<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+									<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="TP.CONFIG.RSSCATS" class="dk-sub">
+							<field type="select" label="TP.CONFIG.RSS_CATSLIMIT" name="settings[feeds.rss][category-view][categories_limit]"
+							       selected="settings.feeds-rss.category-view.categories_limit" width="2"> <!-- SobiPro setting! -->
+								<values>
+									<option value="1" label="1"/>
+									<option value="3" label="3"/>
+									<option value="5" label="5"/>
+									<option value="10" label="10"/>
+									<option value="15" label="15"/>
+								</values>
+							</field>
+							<field type="select" label="TP.CONFIG.CAT_ORDERING" name="settings[feeds.rss][category-view][categories-ordering]"
+							       selected="settings.feeds-rss.category-view.categories-ordering" width="4"> <!-- SobiPro setting! -->
+								<values>
+									<option value="createdTime.desc" label="ORDER_BY_CREATION_DATE_DESC"/>
+									<option value="updatedTime.desc" label="ORDER_BY_UPDATE_DATE_DESC"/>
+								</values>
+							</field>
+						</fieldset>
+						<div>
+							<message label="TP.CONFIG.RSS_INFO" type="outline-danger" dismiss-button="false" class="mt-4"/>
+						</div>
+					</tab>
+					<include element="tab" filename="settings.applications"/>
+				</tabs>
+				<div>
+					<message label="TP.CONFIG.DOCUMENTATION" type="outline-info" dismiss-button="false" class="mt-5"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="method" default="xhr"/>
+			<field name="format" default="raw"/>
+			<field name="pid" default="pid"/>
+			<field name="settings[config][general][version]" default="8.1"/>
+			<field name="settings[config][less][theme][version]" default="8.1"/>
+			<field name="settings[feeds.rss][section-view][showrss]" default="entries"/>
+		</hidden>
+	</config>
+</definition>

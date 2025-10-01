@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 January 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+	</header>
+	<toolbar title="ERR.SITE_TITLE_DETAIL" class="config error">
+		<button type="exit" task="error.cancel" colour="exit"/>
+		<button type="help" target="_blank"/>
+	</toolbar>
+	<body>
+		<message id="spctrl-message"/>
+		<div class="row">
+			<div class="col-lg-12 sp-main-area">
+				<tabs>
+					<tab label="ERR.SITE_TITLE">
+						<fieldset>
+							<field type="output" value="error.date" label="ERR.ERROR_DATE"/>
+							<field type="output" value="error.errNum" label="ERR.ERROR_LEVEL"/>
+							<field type="output" value="error.errCode" label="ERR.RETURN_CODE"/>
+							<field type="output" value="error.errMsg" label="ERR.ERROR_MESSAGE"/>
+							<field type="output" value="error.errFile" label="ERR.IN_FILE"/>
+							<field type="output" value="error.errLine" label="ERR.ERROR_LINE"/>
+							<field type="output" value="error.errSect" label="ERR.SECTION_TYPE"/>
+							<field type="output" value="error.errUid" label="ERR.USER_ID"/>
+							<field type="output" label="ERR.USER_IP" name="category.ownerIP">
+								<value>
+									<url type="external" host="https://apps.db.ripe.net/db-web-ui/query?" content="error.errIp" target="_blank">
+										<param name="searchtext" value="error.errIp" parse="true"/>
+									</url>
+								</value>
+							</field>
+							<field type="output" value="error.errUa" label="ERR.USER_AGENT"/>
+							<field type="output" value="error.errReq" label="ERR.REQUESTED_URI"/>
+							<field type="output" value="error.errRef" label="ERR.REFERRER"/>
+						</fieldset>
+					</tab>
+					<tab label="ERR.CALLSTACK">
+						<fieldset show="no">
+							<field type="output" value="error.errBacktrace" stand-alone="true"/>
+						</fieldset>
+					</tab>
+					<tab label="ERR.VARIABLES">
+						<fieldset show="no">
+							<field type="output" value="error.errCont" stand-alone="true"/>
+						</fieldset>
+					</tab>
+				</tabs>
+			</div>
+		</div>
+	</body>
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+		</hidden>
+	</config>
+</definition>

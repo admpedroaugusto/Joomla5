@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+@modified 03 January 2024 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+		<file type="script" filename="adm.sam"/>
+	</header>
+
+	<toolbar title="MN.AVAILABLE_EXTENSIONS" class="extensions browse">
+		<button task="extensions.fetch" label="TB.FETCH_UPDATES" icon="sync-alt"/>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<div class="dk-progress">
+					<message dismiss-button="false" parse="last-update"/>
+					<message type="info" id="spctrl-progress-msg" class="alert-sm hidden"/>
+					<div class="progress mb-4 hidden" id="spctrl-progress">
+						<div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+						     aria-valuemax="100"/>
+					</div>
+				</div>
+				<div class="clearfix">
+					<tabs>
+						<tab label="APPS.LIST_APPS" condition="extensions.applications.length">
+							<div class="table-responsive">
+								<table class="dk-applications">
+									<head>
+										<cell type="text" label="EX.HEADER_NAME" class="dk-cell text-start"/>
+										<cell type="text" label="EXTENSIONS.HEADER_VERSION" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_ENABLED" class="dk-cell text-center"/>
+										<cell/>
+										<cell type="text" label="EXTENSIONS.HEADER_AUTHOR" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_LICENSE" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_AVAILABILITY" class="dk-cell text-center"/>
+									</head>
+									<loop subject="extensions.applications">
+										<cell class="dk-cell text-start dk-name">
+											<cell>
+												<popover>
+													<attribute name="content" value="description" parse="true"/>
+													<attribute name="href" value="description-url" parse="true"/>
+													<attribute name="title" value="name" parse="true"/>
+													<attribute name="class" value="wide" parse="false"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="version" class="dk-cell text-center"/>
+										<cell type="ticker" value="installed" class="dk-cell text-center" icons="{'-1':'circle','-2':'check-circle','-3':'bell'}" fa="far"
+										      colors="{'-1':'dk-text-gray','-2':'dk-text-green','-3':'dk-text-orange'}"
+										      status-text="{'-1':'EX.BRWOSE_NOT_INSTALLED_EXPL', '-2':'EX.BRWOSE_INSTALLED_EXPL', '-3':'EX.BRWOSE_INSTALLED_UPD_EXPL' }"/>
+										<cell class="dk-cell text-center dk-cloud-install">
+											<button label="var:[action.text]" rel="var:[eid]" icon="cloud-download-alt"
+											        class="btn-info btn-xs var:[action.class] spctrl-ext-install"/>
+										</cell>
+										<cell type="text" value="author" class="dk-cell text-center"/>
+										<cell type="text" value="license" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center" condition="availability-link">
+											<cell>
+												<popover>
+													<attribute name="content" value="availability-expl" parse="true"/>
+													<attribute name="href" value="availability-link" parse="true"/>
+													<attribute name="title" value="availability" parse="true"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="availability" class="dk-cell text-center" invert-condition="availability-link"/>
+									</loop>
+								</table>
+							</div>
+						</tab>
+						<tab label="APPS.LIST_FIELDS" condition="extensions.fields.length">
+							<div class="table-responsive">
+								<table class="dk-applications">
+									<head>
+										<cell type="text" label="EX.HEADER_NAME" class="dk-cell text-start"/>
+										<cell type="text" label="EXTENSIONS.HEADER_VERSION" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_ENABLED" class="dk-cell text-center"/>
+										<cell/>
+										<cell type="text" label="EXTENSIONS.HEADER_AUTHOR" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_LICENSE" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_AVAILABILITY" class="dk-cell text-center"/>
+									</head>
+									<loop subject="extensions.fields">
+										<cell class="dk-cell text-start dk-name">
+											<cell>
+												<popover>
+													<attribute name="content" value="description" parse="true"/>
+													<attribute name="href" value="description-url" parse="true"/>
+													<attribute name="title" value="name" parse="true"/>
+													<attribute name="class" value="wide" parse="false"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="version" class="dk-cell text-center"/>
+										<cell type="ticker" value="installed" class="dk-cell text-center" icons="{'-1':'circle','-2':'check-circle','-3':'bell'}" fa="far"
+										      colors="{'-1':'dk-text-gray','-2':'dk-text-green','-3':'dk-text-orange'}"
+										      status-text="{'-1':'EX.BRWOSE_NOT_INSTALLED_EXPL', '-2':'EX.BRWOSE_INSTALLED_EXPL', '-3':'EX.BRWOSE_INSTALLED_UPD_EXPL' }"/>
+										<cell class="dk-cell text-center dk-cloud-install">
+											<button label="var:[action.text]" rel="var:[eid]" icon="cloud-download-alt"
+											        class="btn-info btn-xs var:[action.class] spctrl-ext-install"/>
+										</cell>
+										<cell type="text" value="author" class="dk-cell text-center"/>
+										<cell type="text" value="license" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center" condition="availability-link">
+											<cell>
+												<popover>
+													<attribute name="content" value="availability-expl" parse="true"/>
+													<attribute name="href" value="availability-link" parse="true"/>
+													<attribute name="title" value="availability" parse="true"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="availability" class="dk-cell text-center" invert-condition="availability-link"/>
+									</loop>
+								</table>
+							</div>
+						</tab>
+						<tab label="APPS.LIST_TEMPLATES" condition="extensions.templates.length">
+							<div class="table-responsive">
+								<table class="dk-applications">
+									<head>
+										<cell label="EX.HEADER_NAME" type="text" class="dk-cell text-start"/>
+										<cell label="EXTENSIONS.HEADER_VERSION" type="text" class="dk-cell text-center"/>
+										<cell/>
+										<cell type="text" label="EXTENSIONS.HEADER_AUTHOR" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_LICENSE" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_AVAILABILITY" class="dk-cell text-center"/>
+									</head>
+									<loop subject="extensions.templates">
+										<cell class="dk-cell text-start dk-name">
+											<cell>
+												<popover>
+													<attribute name="content" value="description" parse="true"/>
+													<attribute name="href" value="description-url" parse="true"/>
+													<attribute name="title" value="name" parse="true"/>
+													<attribute name="class" value="wide" parse="false"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="version" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center dk-cloud-install">
+											<button label="var:[action.text]" rel="var:[eid]" icon="cloud-download-alt"
+											        class="btn-info btn-xs var:[action.class] spctrl-ext-install"/>
+										</cell>
+										<cell type="text" value="author" class="dk-cell text-center"/>
+										<cell type="text" value="license" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center" condition="availability-link">
+											<cell>
+												<popover>
+													<attribute name="content" value="availability-expl" parse="true"/>
+													<attribute name="href" value="availability-link" parse="true"/>
+													<attribute name="title" value="availability" parse="true"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="availability" class="dk-cell text-center" invert-condition="availability-link"/>
+									</loop>
+								</table>
+							</div>
+						</tab>
+						<tab label="APPS.LIST_LANGUAGES" condition="extensions.languages.length">
+							<div class="table-responsive">
+								<table class="dk-applications">
+									<head>
+										<cell type="text" label="EX.HEADER_NAME" class="dk-cell text-start"/>
+										<cell type="text" label="EXTENSIONS.HEADER_VERSION" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_ENABLED" class="dk-cell text-center"/>
+										<cell/>
+										<cell type="text" label="EXTENSIONS.HEADER_AUTHOR" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_LICENSE" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_AVAILABILITY" class="dk-cell text-center"/>
+									</head>
+									<loop subject="extensions.languages">
+										<cell class="dk-cell text-start dk-name">
+											<cell>
+												<popover>
+													<attribute name="content" value="description" parse="true"/>
+													<attribute name="href" value="description-url" parse="true"/>
+													<attribute name="title" value="name" parse="true"/>
+													<attribute name="class" value="wide" parse="false"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="version" class="dk-cell text-center"/>
+										<cell type="ticker" value="installed" class="dk-cell text-center" icons="{'-1':'circle','-2':'check-circle','-3':'bell'}" fa="far"
+										      colors="{'-1':'dk-text-gray','-2':'dk-text-green','-3':'dk-text-orange'}"
+										      status-text="{'-1':'EX.BRWOSE_NOT_INSTALLED_EXPL', '-2':'EX.BRWOSE_INSTALLED_EXPL', '-3':'EX.BRWOSE_INSTALLED_UPD_EXPL' }"/>
+										<cell class="dk-cell text-center dk-cloud-install">
+											<button label="var:[action.text]" rel="var:[eid]" icon="cloud-download-alt"
+											        class="btn-info btn-xs var:[action.class] spctrl-ext-install"/>
+										</cell>
+										<cell type="text" value="author" class="dk-cell text-center"/>
+										<cell type="text" value="license" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center" condition="availability-link">
+											<cell>
+												<popover>
+													<attribute name="content" value="availability-expl" parse="true"/>
+													<attribute name="href" value="availability-link" parse="true"/>
+													<attribute name="title" value="availability" parse="true"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="availability" class="dk-cell text-center" invert-condition="availability-link"/>
+									</loop>
+								</table>
+							</div>
+						</tab>
+						<tab label="APPS.LIST_MODULES" condition="extensions.others.length">
+							<div class="table-responsive">
+								<table class="dk-applications">
+									<head>
+										<cell label="EX.HEADER_NAME" type="text" class="dk-cell text-start"/>
+										<cell label="EX.HEADER_TYPE" type="text" class="dk-cell text-center"/>
+										<cell label="EXTENSIONS.HEADER_VERSION" type="text" class="dk-cell text-center"/>
+										<cell label="EXTENSIONS.HEADER_ENABLED" class="dk-cell text-center"/>
+										<cell/>
+										<cell type="text" label="EXTENSIONS.HEADER_AUTHOR" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_LICENSE" class="dk-cell text-center"/>
+										<cell type="text" label="EXTENSIONS.HEADER_AVAILABILITY" class="dk-cell text-center"/>
+									</head>
+									<loop subject="extensions.others">
+										<cell class="dk-cell text-start dk-name">
+											<cell>
+												<popover>
+													<attribute name="content" value="description" parse="true"/>
+													<attribute name="href" value="description-url" parse="true"/>
+													<attribute name="title" value="name" parse="true"/>
+													<attribute name="class" value="wide" parse="false"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="type" class="dk-cell text-center"/>
+										<cell type="text" value="version" class="dk-cell text-center"/>
+										<cell type="ticker" value="installed" class="dk-cell text-center" icons="{'-1':'circle','-2':'check-circle','-3':'bell'}" fa="far"
+										      colors="{'-1':'dk-text-gray','-2':'dk-text-green','-3':'dk-text-orange'}"
+										      status-text="{'-1':'EX.BRWOSE_NOT_INSTALLED_EXPL', '-2':'EX.BRWOSE_INSTALLED_EXPL', '-3':'EX.BRWOSE_INSTALLED_UPD_EXPL' }"/>
+										<cell class="dk-cell text-center dk-cloud-install">
+											<button label="var:[action.text]" rel="var:[eid]" icon="cloud-download-alt"
+											        class="btn-info btn-xs var:[action.class] spctrl-ext-install"/>
+										</cell>
+										<cell type="text" value="author" class="dk-cell text-center"/>
+										<cell type="text" value="license" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center" condition="availability-link">
+											<cell>
+												<popover>
+													<attribute name="content" value="availability-expl" parse="true"/>
+													<attribute name="href" value="availability-link" parse="true"/>
+													<attribute name="title" value="availability" parse="true"/>
+												</popover>
+											</cell>
+										</cell>
+										<cell type="text" value="availability" class="dk-cell text-center" invert-condition="availability-link"/>
+									</loop>
+								</table>
+							</div>
+						</tab>
+						<tab label="APPS.LIST_UPDATES" condition="extensions.updates.length">
+							<div class="table-responsive">
+								<table class="dk-applications">
+									<head>
+										<cell label="EX.HEADER_NAME" type="text" class="dk-cell text-start"/>
+										<cell label="EXTENSIONS.HEADER_VERSION" type="text" class="dk-cell text-center"/>
+										<cell label="EXTENSIONS.HEADER_ENABLED" class="dk-cell text-center"/>
+										<cell/>
+										<cell label="EXTENSIONS.HEADER_AUTHOR" type="text" class="dk-cell text-center"/>
+										<cell label="EXTENSIONS.HEADER_LICENSE" type="text" class="dk-cell text-center"/>
+										<cell label="EXTENSIONS.HEADER_AVAILABILITY" type="text" class="dk-cell text-center"/>
+									</head>
+									<loop subject="extensions.updates">
+										<cell class="dk-cell text-start dk-name">
+											<cell>
+												<tooltip>
+													<attribute name="content" value="description" parse="true"/>
+													<attribute name="href" value="description-url" parse="true"/>
+													<attribute name="title" value="name" parse="true"/>
+													<attribute name="class" value="wide" parse="false"/>
+												</tooltip>
+											</cell>
+										</cell>
+										<cell type="text" value="version" class="dk-cell text-center"/>
+										<cell type="ticker" value="installed" class="dk-cell text-center" icons="{'-1':'times-circle','-2':'check-circle','-3':'bell'}" fa="far"
+										      status-text="{'-1':'EX.UPDATE_OLD_EXPL', '-2':'', '-3':'EX.UPDATE_REQUIRED' }"/>
+										<cell class="dk-cell text-center dk-cloud-install">
+											<button label="var:[action.text]" rel="var:[eid]" icon="cloud-download-alt"
+											        class="btn-outline-info btn-sm var:[action.class] spctrl-ext-install"/>
+										</cell>
+										<cell type="text" value="author" class="dk-cell text-center"/>
+										<cell type="text" value="license" class="dk-cell text-center"/>
+										<cell class="dk-cell text-center" condition="availability-link">
+											<cell>
+												<tooltip>
+													<attribute name="content" value="availability-expl" parse="true"/>
+													<attribute name="href" value="availability-link" parse="true"/>
+													<attribute name="title" value="availability" parse="true"/>
+												</tooltip>
+											</cell>
+										</cell>
+										<cell type="text" value="availability" class="dk-cell text-center" invert-condition="availability-link"/>
+									</loop>
+								</table>
+							</div>
+						</tab>
+						<tab label="MN.MANAGE_REPOSITORIES">
+							<div class="dk-cell text-center dk-applications">
+								<fieldset>
+									<field type="text" name="RepositoryURL" value="default-repo" label="EX.ADD_NEW_REPO" length="w-lg-60">
+										<add where="before">
+											<text>https://</text>
+										</add>
+										<add where="after">
+											<button label="EX.ADD_NEW_REPO_BT" class="btn btn-info spctrl-add-repo"/>
+										</add>
+									</field>
+								</fieldset>
+							</div>
+							<div class="table-responsive">
+								<table>
+									<head>
+										<cell label="EX.REPOSITORY_NAME" type="text" class="dk-cell text-start"/>
+										<cell label="EX.REPO_DESCRIPTION" type="text" class="dk-cell text-start"/>
+										<cell label="EX.REPO_MAINTAINER" class="dk-cell text-start"/>
+										<cell label="EX.MAINT_SUPPORT" type="text" class="dk-cell text-start"/>
+										<cell/>
+									</head>
+									<loop subject="repositories">
+										<cell type="text" value="repository.name" class="dk-cell text-start"/>
+										<cell type="text" value="repository.description" class="dk-cell text-start"/>
+										<cell type="link" value="repository.maintainer.name" class="dk-cell text-start">
+											<url type="extern" host="repository.maintainer.url"/>
+										</cell>
+										<cell type="link" value="repository.maintainer.supporturl" class="dk-cell text-start">
+											<url type="extern" host="repository.maintainer.supporturl"/>
+										</cell>
+										<cell class="dk-cell">
+											<button label="TB.DELETE" rel="var:[repository.id]" icon="trash" class="btn btn-sm btn-outline-danger spctrl-remove-repo"/>
+										</cell>
+									</loop>
+								</table>
+							</div>
+						</tab>
+					</tabs>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="pid" value="pid"/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

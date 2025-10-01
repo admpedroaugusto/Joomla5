@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2022 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  @modified 20 April 2022 by Sigrid Suski
+-->
+
+<definition>
+	<body>
+		<message id="spctrl-message"/>
+		<div condition="filter.readonly">
+			<message label="FLR.FILTER_CORE_EXPL" type="outline-info" class="dk-config-alert-lg alert-sm mt-0" dismiss-button="false"/>
+		</div>
+		<div>
+			<fieldset show="no" coltype="sm">
+				<field type="text" name="filter.id" value="filter.id" label="FLR.FILTER_ID" width="4" required="true">
+					<attribute name="readonly" value="filter.readonly"/>
+				</field>
+				<field type="text" name="filter.name" value="filter.name" label="FLR.FILTER_NAME" width="5" required="true"/>
+				<field type="text" name="filter.message" value="filter.message" label="FLR.FILTER_MSG" required="true" translatable="true" width="8"/>
+				<field type="textarea" name="filter.regex" value="filter.regex" label="FLR.FILTER_REGEX" editor="false" width="8" rows="3" style="">
+					<attribute name="readonly" value="filter.readonly"/>
+				</field>
+			</fieldset>
+			<legend class="text-muted small">
+				<param icon="fas fa-star dk-sup" value="ENTRY_REQUIRED_MESSAGE" parse="true"/>
+				<param icon="fas fa-globe dk-sup" condition="multilingual" value="ENTRY_TRANSLATABLE_MESSAGE" parse="true"/>
+			</legend>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" const="com_sobipro"/>
+			<field name="task" const="filter.save"/>
+			<field name="sp-language" default=""/>
+			<field name="method" const="xhr"/>
+		</hidden>
+	</config>
+</definition>

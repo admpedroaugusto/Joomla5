@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2021 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @created 2 January 2013 by Radek Suski
+ @modified 11 August 2021 by Sigrid Suski
+-->
+
+<definition>
+	<body>
+		<div class="SobiPro modal fade" tabindex="-1" aria-labelledby="sparia-title">
+			<div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="sparia-title">
+							<text value="EX.SSL_VERIFY"/>
+						</h3>
+						<button class="btn-close cancel" data-bs-dismiss="modal" aria-label="ACCESSIBILITY.CLOSE"/>
+					</div>
+					<div class="modal-body dk-certificate">
+						<fieldset label="EX.SSL_TO">
+							<field type="output" value="certificate.subject.CN" label="EX.SSL_COMMON_NAME"/>
+						</fieldset>
+						<fieldset label="EX.SSL_CERT_INFO">
+							<field type="output" value="certificate.serialNumber" label="EX.SSL_CERT_SN"/>
+							<field type="output" value="certificate.validFrom" label="EX.SSL_CERT_SINCE"/>
+							<field type="output" value="certificate.validTo" label="EX.SSL_CERT_UNTIL"/>
+						</fieldset>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn btn-secondary cancel" data-bs-dismiss="modal" role="button">
+							<text value="EX.SSL_SKIP_BT"/>
+						</a>
+						<a href="#" class="btn btn-primary confirm" data-bs-dismiss="modal" role="button">
+							<text value="EX.SSL_CONFIRM_BT"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+	</config>
+</definition>

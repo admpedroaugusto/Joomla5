@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2023 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 11 January 2023 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+	</header>
+
+	<toolbar title="GB.CFG.GLOBAL_CONFIGURATION" class="config global">
+		<button type="apply" task="config.save" colour="save">
+			<button type="save" label="TB.SAVE_FILE" task="config.saveFile" icon="file" colour="save"/>
+			<button type="save" label="TB.SAVE_BOTH" task="config.saveFileAndData" colour="save"/>
+		</button>
+		<buttons type="sections" buttons="sections-list"/>
+		<buttons type="options">
+			<button type="url" task="panel"/>
+			<button type="url" task="config" condition="acl.config"/>
+			<button type="url" task="acl" condition="acl.admin"/>
+			<button type="url" task="extensions.installed" condition="acl.apps"/>
+			<button type="url" task="template.info" condition="acl.config"/>
+			<button type="url" task="error" condition="acl.admin"/>
+			<button type="help" target="_blank"/>
+		</buttons>
+	</toolbar>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-3" id="spctrl-menu">
+				<menu/>
+			</div>
+			<div class="col-lg-9 sp-main-area">
+				<message id="spctrl-message"/>
+				<tabs>
+					<tab label="GB.CFG.GENERAL">
+						<fieldset label="GB.CFG.LANG">
+							<field type="toggle" name="spcfg[lang.multimode]" value="lang.multimode" label="GB.CFG.MULTILANG" prefix="onoff"/>
+						</fieldset>
+						<fieldset label="GB.CFG.DATE">
+							<field type="select" name="spcfg[date.publishing_format]" selected="date.publishing_format" label="GB.CFG.DATE_PUBLISH" width="4">
+								<values>
+									<values label="GB.CFG.DATE_FORMAT_DATE">
+										<option value="d/m/Y" label="dd/mm/yy => 31/12/2025"/>
+										<option value="d.m.Y" label="dd.mm.yy => 31.12.2025"/>
+										<option value="d-m-Y" label="dd-mm-yy => 31-12-2025"/>
+										<option value="j.n.Y" label="d.m.yy => 31.12.2025"/>
+										<option value="m/d/Y" label="mm/dd/yy => 12/31/2025"/>
+										<option value="m-d-Y" label="mm-dd-yy => 12-31-2025"/>
+										<option value="Y-m-d" label="yy-mm-dd => 2025-12-31"/>
+										<option value="Y.m.d" label="yy.mm.dd => 2025.12.31"/>
+									</values>
+									<values label="GB.CFG.DATE_FORMAT_DATE_TIME">
+										<option value="d/m/Y H:i" label="dd/mm/yyyy HH:mm => 31/12/2025 14:00"/>
+										<option value="d/m/Y g:i A" label="dd/mm/yyyy hh:mm AM/PM => 31/12/2025 2:00 PM"/>
+										<option value="d.m.Y g:i A" label="dd.mm.yyyy hh:mm AM/PM => 31.12.2025 2:00 PM"/>
+										<option value="d-m-Y g:i A" label="dd-mm-yy hh:mm AM/PM => 31-12-2025 2:00 PM"/>
+										<option value="j.n.Y g:i A" label="d.m.yy hh:mm AM/PM => 31.12.2025 2:00 PM"/>
+										<option value="m/d/Y g:i A" label="mm/dd/yy hh:mm AM/PM => 12/31/2025 2:00 PM"/>
+										<option value="m-d-Y g:i A" label="mm-dd-yy hh:mm AM/PM => 12-31-2025 2:00 PM"/>
+										<option value="Y-m-d g:i A" label="yy-mm-dd hh:mm AM/PM => 2025-12-31 2:00 PM"/>
+										<option value="Y.m.d g:i A" label="yy.mm.dd hh:mm AM/PM => 2025.12.31 2:00 PM"/>
+										<option value="d.m.Y H:i" label="dd.mm.yy HH:mm => 31.12.2025 14:00"/>
+										<option value="d-m-Y H:i" label="dd-mm-yy HH:mm => 31-12-2025 14:00"/>
+										<option value="j.n.Y G:i" label="d.m.yy HH:mm => 31.12.2025 14:00"/>
+										<option value="m/d/Y H:i" label="mm/dd/yy HH:mm => 12/31/2025 14:00"/>
+										<option value="m-d-Y H:i" label="mm-dd-yy HH:mm => 12-31-2025 14:00"/>
+										<option value="Y-m-d H:i" label="yy-mm-dd HH:mm => 2025-12-31 14:00"/>
+										<option value="Y.m.d H:i" label="yy.mm.dd HH:mm => 2025.12.31 14:00"/>
+									</values>
+								</values>
+							</field>
+							<field type="select" name="spcfg[date.list_format]" selected="date.list_format" label="GB.CFG.DATE_LIST" width="4">
+								<values>
+									<values label="GB.CFG.DATE_FORMAT_DATE">
+										<option value="d/m/Y" label="dd/mm/yy => 31/12/2025"/>
+										<option value="d.m.Y" label="dd.mm.yy => 31.12.2025"/>
+										<option value="d-m-Y" label="dd-mm-yy => 31-12-2025"/>
+										<option value="j.n.Y" label="d.m.yy => 31.12.2025"/>
+										<option value="m/d/Y" label="mm/dd/yy => 12/31/2025"/>
+										<option value="m-d-Y" label="mm-dd-yy => 12-31-2025"/>
+										<option value="Y-m-d" label="yy-mm-dd => 2025-12-31"/>
+										<option value="Y.m.d" label="yy.mm.dd => 2025.12.31"/>
+									</values>
+									<values label="GB.CFG.DATE_FORMAT_DATE_TIME">
+										<option value="d/m/Y H:i" label="dd/mm/yyyy HH:mm => 31/12/2025 14:00"/>
+										<option value="d/m/Y g:i A" label="dd/mm/yyyy hh:mm AM/PM => 31/12/2025 2:00 PM"/>
+										<option value="d.m.Y g:i A" label="dd.mm.yyyy hh:mm AM/PM => 31.12.2025 2:00 PM"/>
+										<option value="d-m-Y g:i A" label="dd-mm-yy hh:mm AM/PM => 31-12-2025 2:00 PM"/>
+										<option value="j.n.Y g:i A" label="d.m.yy hh:mm AM/PM => 31.12.2025 2:00 PM"/>
+										<option value="m/d/Y g:i A" label="mm/dd/yy hh:mm AM/PM => 12/31/2025 2:00 PM"/>
+										<option value="m-d-Y g:i A" label="mm-dd-yy hh:mm AM/PM => 12-31-2025 2:00 PM"/>
+										<option value="Y-m-d g:i A" label="yy-mm-dd hh:mm AM/PM => 2025-12-31 2:00 PM"/>
+										<option value="Y.m.d g:i A" label="yy.mm.dd hh:mm AM/PM => 2025.12.31 2:00 PM"/>
+										<option value="d.m.Y H:i" label="dd.mm.yy HH:mm => 31.12.2025 14:00"/>
+										<option value="d-m-Y H:i" label="dd-mm-yy HH:mm => 31-12-2025 14:00"/>
+										<option value="j.n.Y G:i" label="d.m.yy HH:mm => 31.12.2025 14:00"/>
+										<option value="m/d/Y H:i" label="mm/dd/yy HH:mm => 12/31/2025 14:00"/>
+										<option value="m-d-Y H:i" label="mm-dd-yy HH:mm => 12-31-2025 14:00"/>
+										<option value="Y-m-d H:i" label="yy-mm-dd HH:mm => 2025-12-31 14:00"/>
+										<option value="Y.m.d H:i" label="yy.mm.dd HH:mm => 2025.12.31 14:00"/>
+									</values>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="GBN.CFG.HTML_INPUT">
+							<field type="textarea" name="spcfg[html.allowed_tags_array]" value="html.allowed_tags_array" label="GB.CFG.ALLOWED_TAGS" editor="false" width="8"
+							       rows="2" style=""/>
+							<field type="textarea" name="spcfg[html.allowed_attributes_array]" value="html.allowed_attributes_array" label="GB.CFG.ALLOWED_ATTRIBUTES"
+							       editor="false" width="8" rows="2" style=""/>
+						</fieldset>
+						<fieldset label="GBN.CFG.PBY_SUPPORT">
+							<field type="toggle" name="spcfg[general.show_pb]" value="general.show_pb" label="GB.CFG.PBY_HEAD" prefix="show"/>
+							<notice label="GBN.CFG.PBY_EXPL" class="dk-config-alert" type="outline-info" dismiss-button="false"/>
+						</fieldset>
+					</tab>
+					<tab label="GBN.CFG.PAYMENTS">
+						<fieldset>
+							<field type="select" name="spcfg[payments.dec_point]" value="payments.dec_point" selected="payments.dec_point" label="GBN.CFG.PMN_DEC_POINT"
+							       width="3">
+								<values>
+									<option value="," label=","/>
+									<option value="." label="."/>
+								</values>
+							</field>
+							<field type="text" name="spcfg[payments.currency]" value="payments.currency" label="GB.CFG.CURRENCY" width="3"/>
+							<field type="select" label="GB.CFG.PMN_FORMAT" name="spcfg[payments.format]" selected="payments.format" width="5">
+								<values>
+									<option value="%value %currency" label="GB.CFG.PMN_FORMAT_VC"/>
+									<option value="%currency %value" label="GB.CFG.PMN_FORMAT_CV"/>
+								</values>
+							</field>
+							<field type="text" name="spcfg[payments.vat]" value="payments.vat" label="GBN.CFG.PMN_VAT" width="3">
+								<add where="after">
+									<text>%</text>
+								</add>
+							</field>
+							<field type="toggle" name="spcfg[payments.vat_brutto]" value="payments.vat_brutto" label="GB.CFG.PMN_PRICE_BRUTTO" prefix="yes_no"/>
+							<field type="toggle" name="spcfg[payments.discount_to_netto]" value="payments.discount_to_netto" label="GB.CFG.DISCOUNT_TO_NETTO" prefix="yes_no"/>
+							<field type="select" label="GB.CFG.PMN_PRC_FORMAT" name="spcfg[payments.percent_format]" selected="payments.percent_format" width="5">
+								<values>
+									<option value="%number%sign" label="GB.CFG.PMN_PRC_FORMAT_NS"/>
+									<option value="%number %sign" label="GB.CFG.PMN_PRC_FORMAT_NSS"/>
+									<option value="%sign%number" label="GB.CFG.PMN_PRC_FORMAT_SN"/>
+									<option value="%sign %number" label="GB.CFG.PMN_PRC_FORMAT_SSN"/>
+								</values>
+							</field>
+						</fieldset>
+					</tab>
+					<tab label="GBN.CFG.CACHE_HEAD">
+						<fieldset>
+							<notice label="GBN.CFG.ACCEL" type="outline-info" dismiss-button="false" class="dk-config-alert-lg"/>
+							<field type="toggle" name="spcfg[cache.l3_enabled]" value="cache.l3_enabled" label="GB.CFG.DATA_ACCELERATOR" prefix="onoff"/>
+						</fieldset>
+						<fieldset label="GB.CFG.XML_ACCELERATOR">
+							<field type="toggle" name="spcfg[cache.xml_enabled]" value="cache.xml_enabled" label="GB.CFG.XML_ACCELERATOR_YES" prefix="yes_no"/>
+							<field type="toggle" name="spcfg[cache.xml_no_reg]" value="cache.xml_no_reg" label="GB.CFG.XML_ACCELERATOR_NO_REG" prefix="yes_no"/>
+						</fieldset>
+						<fieldset label="GB.CFG.FILES">
+							<field type="toggle" name="spcfg[cache.include_js_files]" value="cache.include_js_files" label="GBN.CFG.INCLUDE_JS_CACHE" prefix="onoff"/>
+							<field type="toggle" name="spcfg[cache.include_css_files]" value="cache.include_css_files" label="GBN.CFG.INCLUDE_CSS_CACHE" prefix="onoff"/>
+						</fieldset>
+						<fieldset label="GBN.CFG.COMPRESS_FILES">
+							<field type="toggle" name="spcfg[cache.compress_js]" value="cache.compress_js" label="GBN.CFG.COMPRESS_JS_FILES" prefix="onoff"/>
+						</fieldset>
+						<fieldset label="GBN.CFG.LOG_ACTION">
+							<field type="toggle" invert-condition="trim" name="spcfg[logging.action]" value="logging.action" label="GBN.CFG.LOG_ACTION_SWITCH" prefix="onoff"/>
+							<div condition="trim" class="col-lg-10 offset-lg-1">
+								<file filename="about.information.info-logging" type="html" translatable="true" start-path="administrator"/>
+							</div>
+							<field type="toggle" condition="trim" name="spcfg[logging.action]" value="0" label="GBN.CFG.LOG_ACTION_SWITCH" prefix="onoff"/>
+							<field type="select" label="GBN.CFG.LOG_DELETE_SWITCH" name="spcfg[logging.time]" selected="logging.time" width="3">
+								<values>
+									<!--									<option value="30" label="GBN.CFG.LOG_AFTER_30"/>-->
+									<!--									<option value="90" label="GBN.CFG.LOG_AFTER_90"/>-->
+									<!--									<option value="364" label="GBN.CFG.LOG_AFTER_364"/>-->
+									<!--									<option value="1820" label="GBN.CFG.LOG_AFTER_1820"/>-->
+									<option value="0" label="GBN.CFG.LOG_AFTER_NEVER"/>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="GBN.CFG.DEB_LOG">
+							<field type="select" label="GBN.CFG.DEB_LEVEL" name="spcfg[debug.level]" selected="debug.level" width="5">
+								<values>
+									<option value="0" label="GB.CFG.DEB_LEVEL_NONE"/>
+									<option value="1" label="GB.CFG.DEB_LEVEL_ERROR"/>
+									<option value="2" label="GB.CFG.DEB_LEVEL_WARNING"/>
+									<option value="30719" label="GB.CFG.DEB_LEVEL_ALL"/>
+								</values>
+							</field>
+							<field type="toggle" name="spcfg[debug.display_errors]" value="debug.display_errors" label="GBN.CFG.DEB_DISPLAY_ERRORS" prefix="yes_no"/>
+						</fieldset>
+					</tab>
+					<tab label="GBN.CFG.CONFIGFILE">
+						<notice label="GBN.CFG.CONFIG_WRITE_MSG" type="outline-info" dismiss-button="false" class="dk-config-alert-lg"/>
+						<loop subject="config.keys"/>
+					</tab>
+				</tabs>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

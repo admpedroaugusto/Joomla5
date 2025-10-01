@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2022 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @modified 26 April 2022 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.category"/>
+		<file type="script" filename="adm.tabs"/>
+	</header>
+
+	<toolbar title="{'category.add':'ADD_NEW_CATEGORY','category.edit':'EDIT_EXISTING_CATEGORY'}" class="category edit">
+		<buttons icon="globe" buttons="languages-list" label="TB.LANGUAGES"/>
+		<button task="category.apply" type="apply" condition="acl.category.edit or acl.category.add" colour="save">
+			<button type="save" task="category.save" colour="save"/>
+			<button task="category.saveAndNew" label="TB.SAVE_AND_NEW" icon="file-alt" colour="save"/>
+			<button type="duplicate" icon="clone" task="category.clone" colour="save"/>
+		</button>
+		<button type="exit" task="category.cancel" colour="exit"/>
+		<button type="help" target="_blank"/>
+	</toolbar>
+
+	<body disable-menu="true">
+		<div class="row">
+			<div class="col-lg-12 sp-main-area">
+				<message id="spctrl-message"/>
+				<tabs>
+					<tab label="CAT.CATEGORY_GENERAL_DATA">
+						<fieldset>
+							<field type="output" value="category.id" label="HEADER_ID" class="badge rounded-pill bg-secondary"/>
+							<field type="text" name="category.name" value="category.name" label="CATN.CATEGORY_NAME" width="5" maxlength="255" required="true" translatable="true"/>
+							<field type="text" name="category.nid" value="category.nid" label="CATN.CATEGORY_ALIAS" width="5" placeholder="EN.ENTRY_PLACEHOLDER_ALIAS"
+							       translatable="true"/>
+						</fieldset>
+						<fieldset label="CATN.CATEGORY_LOCATION">
+							<field type="output" value="parent_path" label="CATN.CATEGORY_PATH" id="selectedCatPath" class="sp-path"/>
+							<field type="button" label="CATN.SELECT_PARENT_BUTTON" name="parent_cat" value="parent_cat" class="btn btn-primary spctrl-category-btn"
+							       id="categoryParentName"
+							       rel="var:[cat_chooser_url]"/>
+						</fieldset>
+						<fieldset label="CATN.CATEGORY_DATA">
+							<field type="tristate" name="category.showIcon" value="category.showIcon" label="CAT.SHOW_ICON" prefix="yes_no_global"/>
+							<field type="select" label="CAT.USE_ICON_FONT" name="category.params[icon-font]" selected="category.params.icon-font" width="4">
+								<values>
+									<option value="0" label="OPT_NO"/>
+									<option value="font-awesome-3" label="SECN.CFG.ICONS_FONT_AWESOME_3"/>
+									<option value="font-awesome-4" label="SECN.CFG.ICONS_FONT_AWESOME_4"/>
+									<option value="font-awesome-5" label="SECN.CFG.ICONS_FONT_AWESOME_5"/>
+									<option value="font-google-materials" label="SECN.CFG.ICONS_MATERIAL"/>
+								</values>
+							</field>
+							<div class="hidden ctrl-add-font-class">
+								<field type="text" name="category.params[icon-font-add-class]" value="category.params.icon-font-add-class" label="CAT.ICON_FONT_ADD_CLASS"
+								       width="4"/>
+							</div>
+							<field type="button" label="CATN.SELECT_CATEGORY_ICON" name="cat_ico" class="btn btn-light sp-cat-icon-btn" id="spctrl-icon-btn"
+							       rel="var:[icon_chooser_url]"/>
+							<field type="tristate" label="CAT.SHOW_INTROTEXT" name="category.showIntrotext" value="category.showIntrotext" prefix="yes_no_global"/>
+							<field type="textarea" name="category.introtext" value="category.introtext" label="CATN.CATEGORY_INTROTEXT" editor="false" translatable="true" width="9"
+							       rows="2" style=""/>
+							<field type="textarea" name="category.description" value="category.description" label="CATN.CATEGORY_DESCRIPTION" editor="true" width="9" rows="4"
+							       style="" translatable="true"/>
+							<field type="tristate" label="CATN.PARSE_CAT_DES" name="category.parseDesc" value="category.parseDesc" prefix="yes_no_global"/>
+						</fieldset>
+
+						<legend class="text-muted small">
+							<param icon="fas fa-star dk-sup" value="ENTRY_REQUIRED_MESSAGE" parse="true"/>
+							<param icon="fas fa-globe dk-sup" condition="multilingual" value="ENTRY_TRANSLATABLE_MESSAGE" parse="true"/>
+						</legend>
+					</tab>
+
+					<tab label="CAT.CATEGORY_CUSTOM_FIELDS" condition="fields">
+						<fieldset base="12">
+							<loop subject="category.fields"/>
+						</fieldset>
+					</tab>
+
+					<tab label="CAT.CATEGORY_ENTRY_FIELDS" condition="entryFields">
+						<fieldset>
+							<field type="toggle" name="category.allFields" value="category.allFields" label="USE_ALL_FIELDS" prefix="yes_no"/>
+							<field type="output" value="" label="ONLY_SPECIFIC_FIELDS" class="novalue"/>
+							<div class="mb-3 row spctrl-entry-fields sp-entry-fields">
+								<div class="offset-lg-3 col-lg-9 " style="margin-top: -48px;">
+									<loop subject="entryFields">
+										<cell type="checkbox" name="fid" value="id" checked="included" class="spClassCheckbox" box-label="name"/>
+									</loop>
+								</div>
+							</div>
+						</fieldset>
+					</tab>
+
+					<tab label="META_DATA">
+						<fieldset>
+							<field type="textarea" name="category.metaDesc" value="category.metaDesc" label="DESCRIPTION" editor="false" width="9" rows="2" style=""
+							       translatable="true"/>
+							<field type="textarea" name="category.metaKeys" value="category.metaKeys" label="KEYS" editor="false" width="9" rows="2" style="" translatable="true"/>
+							<field type="text" name="category.metaAuthor" value="category.metaAuthor" label="AUTHOR" width="5" maxlength="255"/>
+							<field type="select" label="ROBOTS" name="category.metaRobots" selected="category.metaRobots" width="4">
+								<values>
+									<option value="" label="ROBOTS_NONE"/>
+									<option value="index, follow" label="index, follow"/>
+									<option value="index, nofollow" label="index, nofollow"/>
+									<option value="noindex, follow" label="noindex, follow"/>
+									<option value="noindex, nofollow" label="noindex, nofollow"/>
+								</values>
+							</field>
+						</fieldset>
+
+						<legend class="text-muted small">
+							<param icon="fas fa-globe dk-sup" condition="multilingual" value="ENTRY_TRANSLATABLE_MESSAGE" parse="true"/>
+						</legend>
+					</tab>
+
+					<tab label="CATN.CATEGORY_PUBLISHING">
+						<fieldset>
+							<field type="toggle" name="category.state" value="category.state" label="PUBLISHED" prefix="yes_no"/>
+							<field type="datepicker" label="VALID_SINCE" name="category.validSince" value="category.validSince" width="4" dateFormat="cfg:publishing_format"
+							       icon="unlock"/>
+							<field type="datepicker" label="VALID_UNTIL" name="category.validUntil" value="category.validUntil" width="4" dateFormat="cfg:publishing_format"
+							       icon="lock"/>
+						</fieldset>
+						<fieldset label="CATN.EDIT_DATA">
+							<field type="output" value="category.version" label="VERSION" class="badge rounded-pill bg-secondary"/>
+							<field type="datepicker" label="CREATED_AT" name="category.createdTime" value="category.createdTime" width="4" dateFormat="cfg:publishing_format"
+							       icon="calendar"/>
+							<field type="userselector" label="CREATED_BY" name="category.owner" value="category.owner" width="4" format="%name (%id)"/>
+							<field type="output" label="CREATED_BY_IP" name="category.ownerIP">
+								<value>
+									<url type="external" host="https://apps.db.ripe.net/db-web-ui/query?" content="category.ownerIP" target="_blank">
+										<param name="searchtext" value="category.ownerIP" parse="true"/>
+									</url>
+								</value>
+							</field>
+							<field type="dategetter" label="MODIFIED_AT" name="category.updatedTime" value="category.updatedTime" dateFormat="cfg:publishing_format"/>
+							<field type="userGetter" label="MODIFIED_BY" name="category.updater" value="category.updater" format="%name (%id)"/>
+							<field type="output" label="MODIFIED_BY_IP" name="category.updaterIP">
+								<value>
+									<url type="external" host="https://apps.db.ripe.net/db-web-ui/query?" content="category.updaterIP" target="_blank">
+										<param name="searchtext" value="category.updaterIP" parse="true"/>
+									</url>
+								</value>
+							</field>
+						</fieldset>
+						<fieldset label="CLICKCOUNTER">
+							<field type="button" label="CAT.RESET_COUNT" value="category.counter" name="counter" class="btn btn-secondary spctrl-counter-reset" rel="category"/>
+						</fieldset>
+					</tab>
+				</tabs>
+
+
+				<div class="modal" id="spctrl-category-modal" tabindex="-1" aria-labelledby="sparia-title">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title" id="sparia-title">
+									<text value="CAT.SELECT_CATEGORY_PATH"/>
+								</h3>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ACCESSIBILITY.CLOSE"/>
+							</div>
+							<div class="modal-body pe-0">
+								<div id="spctrl-category-chooser"/>
+							</div>
+							<div class="modal-footer">
+								<a href="#" class="btn btn-secondary" data-bs-dismiss="modal" role="button">
+									<text value="CAT.CATEGORY_CLOSE_WINDOW"/>
+								</a>
+								<a href="#" id="spctrl-category-save" class="btn btn-success" data-bs-dismiss="modal" role="button">
+									<text value="CAT.CATEGORY_SAVE_SELECTION"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- modal window to choose an icon or image -->
+				<div class="sp-icon-select modal" id="spctrl-icon" tabindex="-1" aria-labelledby="sparia-title">
+					<div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title" id="sparia-title">
+									<text value="CAT.JS_SELECT_CAT_ICON"/>
+								</h3>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ACCESSIBILITY.CLOSE"/>
+							</div>
+							<div class="modal-body pe-0">
+								<div id="spctrl-icon-chooser" class="sp-icon-chooser"/>
+							</div>
+							<div class="modal-footer">
+								<a href="#" class="btn btn-secondary" data-bs-dismiss="modal" role="button">
+									<text value="CAT.CATEGORY_CLOSE_WINDOW"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="sp-language" default=""/>
+			<field name="selectedCid" default=""/>
+			<field name="selectedCatName" default=""/>
+			<field name="selectedCatPath" default=""/>
+			<field name="categoryIconHolder" value="category_icon"/>
+			<field name="category.icon" value="category.icon"/>
+			<field name="category.id" value="category.id"/>
+			<field name="category.parent" value="category.parent"/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>

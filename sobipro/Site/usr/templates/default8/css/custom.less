@@ -1,0 +1,145 @@
+/* @package Default Template V8 for SobiPro multi-directory component with content construction support */
+/**/
+// @author
+/* Authors: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH */
+/* Url: https://www.Sigsiu.NET */
+/**/
+/* @copyright Copyright (C) 2006–2024 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved. */
+/* @license GNU/GPL Version 3 */
+/* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 */
+/* as published by the Free Software Foundation, and under the additional terms according to to section 7 of GPL v3. */
+/* See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses. */
+/**/
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+// @modified 27 November 2024 by Sigrid Suski
+
+// Special fields styling for sample data of Business Directory
+// (don't work if you change the field CSS classes in the Fields Manager)
+// ----------------------------------------
+
+//Values changed by the template settings:
+@colour-set: sobipro;
+@corner-radius: .625rem;
+@text-color: #292929;
+@back-color: #FFFFFF;
+
+@corner-radius-small: calc((@corner-radius / 2) + .08rem);
+
+@import (less) "themes/_@{colour-set}.linc";
+@import (less) "helper/_colours.linc";
+
+.SobiPro.default8 {
+	.address {
+		font-size: 1.1rem;
+		font-weight: 400;
+		margin-top: 0;
+	}
+
+	.postcode {
+		display: inline-block;
+		.address;
+	}
+
+	.city {
+		display: inline-block;
+		.address;
+		//padding-left: .3rem;
+
+		&.us {
+			//padding-right: .3rem;
+			padding-left: 0
+		}
+	}
+
+	.city.us::after {
+		content: ", ";
+	}
+
+	.street,
+	.country {
+		.address;
+	}
+
+	.country {
+		margin-bottom: .8rem;
+	}
+
+	.fulldescription {
+		padding-top: 1rem;
+	}
+
+	.days .sp-entry-value li::before,
+	.sp-entry-value::before {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		//font-family: FontAwesome; /* 3 and 4 */
+	}
+
+	.phone .sp-entry-value::before {
+		content: "";
+	}
+
+	.fax .sp-entry-value::before {
+		content: "";
+	}
+
+	.website .sp-entry-value::before {
+		content: "";
+	}
+
+	.email .sp-entry-value::before {
+		content: "";
+	}
+
+	.facebook .sp-entry-value::before {
+		font-family: "Font Awesome 5 Brands";
+		content: "";
+	}
+
+	.instagram .sp-entry-value::before {
+		font-family: "Font Awesome 5 Brands";
+		content: "";
+	}
+
+	.xtwitter .sp-entry-value::before {
+		font-family: "Font Awesome 5 Brands";
+		content: "";
+	}
+
+	.vimeo .sp-entry-value::before {
+		font-family: "Font Awesome 5 Brands";
+		content: "";
+	}
+
+	.youtube .sp-entry-value::before {
+		font-family: "Font Awesome 5 Brands";
+		content: "";
+	}
+
+	.days {
+		margin-top: .8rem;
+		margin-bottom: 1rem;
+
+		li {
+			list-style: none;
+		}
+	}
+
+	.days .sp-entry-value li::before {
+		content: "";
+		padding-right: .3rem;
+		color: #808080;
+	}
+
+	.tags .sp-entry-value::before {
+		content: "";
+		padding-right: .25rem;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

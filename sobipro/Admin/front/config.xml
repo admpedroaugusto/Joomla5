@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ @package: SobiPro multi-directory component with content construction support
+
+ @author
+ Name: Sigrid Suski & Radek Suski, Sigsiu.NET GmbH
+ Email: sobi[at]sigsiu.net
+ Url: https://www.Sigsiu.NET
+
+ @copyright Copyright (C) 2006 - 2022 Sigsiu.NET GmbH (https://www.sigsiu.net). All rights reserved.
+ @license GNU/GPL Version 3
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3
+ as published by the Free Software Foundation, and under the additional terms according section 7 of GPL v3.
+ See https://www.gnu.org/licenses/gpl.html and https://www.sigsiu.net/licenses.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ @created 15 July 2021  by Sigrid Suski
+@modified 28 February 2022 by Sigrid Suski
+-->
+
+<definition>
+	<header>
+		<file type="script" filename="adm.tabs"/>
+	</header>
+
+	<toolbar title="ADMIN.SETTINGS" class="front config">
+		<button type="apply" task="front.apply" colour="save">
+			<button type="save" task="front.save" colour="save"/>
+		</button>
+		<button type="exit" task="front.cancel" colour="exit"/>
+		<button type="help" target="_blank"/>
+	</toolbar>
+
+	<body disable-menu="true">
+		<div class="row">
+			<div class="col-lg-12 sp-main-area">
+				<message id="spctrl-message"/>
+				<tabs>
+					<tab label="PANEL.SETTINGS">
+						<fieldset label="PANEL.SETTINGS_ENTRIES">
+							<field type="toggle" name="spcfg[cpanel.show_entries]" value="cpanel.show_entries" label="SEC.STAT_ENTRIES_IN_CPANEL" prefix="show"/>
+							<field type="text" label="PANEL.SETTINGS_CNT" name="spcfg[cpanel.number_entries]" value="cpanel.number_entries" width="2"/>
+						</fieldset>
+						<fieldset label="PANEL.SETTINGS_CATEGORIES">
+							<field type="toggle" name="spcfg[cpanel.show_categories]" value="cpanel.show_categories" label="SEC.STAT_CATS_IN_CPANEL" prefix="show"/>
+							<field type="text" label="PANEL.SETTINGS_CNT" name="spcfg[cpanel.number_categories]" value="cpanel.number_categories" width="2"/>
+						</fieldset>
+						<fieldset label="HISTORY.ACTIONS">
+							<field type="toggle" invert-condition="trim" name="spcfg[cpanel.show_history]" value="cpanel.show_history" label="HISTORY.LATEST_SHOW" prefix="show"/>
+							<div condition="trim" class="col-lg-10 offset-lg-1">
+								<file filename="about.information.info-logging" type="html" translatable="true" start-path="administrator"/>
+							</div>
+							<field type="toggle" condition="trim" name="spcfg[cpanel.show_history]" value="0" label="HISTORY.LATEST_SHOW" prefix="show"/>
+							<field type="select" label="PANEL.SETTINGS_CNT" name="spcfg[cpanel.number_history]" selected="cpanel.number_history" multi="false" width="2">
+								<values>
+									<option value="5" label="5"/>
+									<option value="10" label="10"/>
+									<option value="15" label="15"/>
+								</values>
+							</field>
+						</fieldset>
+						<fieldset label="PANEL.STATUS">
+							<field type="toggle" name="spcfg[cpanel.show_faulty]" value="cpanel.show_faulty" label="PANEL.STATUS_ONLY" prefix="show"/>
+						</fieldset>
+					</tab>
+
+					<tab label="ADMIN.TEMPLATES">
+						<fieldset label="ADMIN.TEMPLATES_ENTRY">
+							<field type="select" label="ADMIN.TEMPLATES_LABELWIDTH" name="spcfg[admintemplate.entry_labelwidth]" selected="admintemplate.entry_labelwidth"
+							       multi="false" width="3">
+								<values>
+									<option value="0" label="ADMIN.TEMPLATES_LABELWIDTH_0"/>
+									<option value="1" label="1 (col-lg-1)"/>
+									<option value="2" label="2 (col-lg-2)"/>
+									<option value="3" label="3 (col-lg-3)"/>
+								</values>
+							</field>
+						</fieldset>
+					</tab>
+				</tabs>
+			</div>
+		</div>
+	</body>
+
+	<config>
+		<action value="index.php"/>
+		<hidden>
+			<field name="option" default="com_sobipro"/>
+			<field name="task" default=""/>
+			<field name="method" default="xhr"/>
+		</hidden>
+	</config>
+</definition>
